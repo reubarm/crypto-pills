@@ -1,0 +1,11 @@
+{
+  "hardhat": {
+    "CryptoPills": "0x5FbDB2315678afecb367f032d93F642f64180aa3"
+  },
+  "rinkeby": {
+    "CryptoPills": "0x863E750a424029F0005C9381648b169edca77297"
+  },
+  "mainnet": {
+    "CryptoPills": "0x7DD04448c6CD405345D03529Bff9749fd89F8F4F"
+  }
+}

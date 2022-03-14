@@ -48,20 +48,23 @@ const useStyles = makeStyles((theme) => ({
     height: "100vh",
     padding: "20rem 0",
     textAlign: "center",
+    '@media (max-width: 575px)': {
+      padding: "6rem 0",
+    },
   },
   title: {
     color: "#fff",
     fontSize: "4rem",
+    '@media (max-width: 575px)': {
+      fontSize: "2rem",
+    },
   },
   subtitle: {
     color: "#fff",
     fontSize: "1.5rem",
-  },
-  introTitle: {
-    color: "#4e3b5d",
-    letterSpacing: "-2px",
-    fontWeight: "600",
-    margin: "3rem 0",
+    '@media (max-width: 575px)': {
+      fontSize: "1rem",
+    },
   },
   openSea: {
     fontSize: "1rem",

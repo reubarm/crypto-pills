@@ -115,7 +115,7 @@ const useStyles = makeStyles((theme) => ({
         background: "rgb(244, 246, 248)",
         borderRadius: "30px",
         padding: "2rem 10rem",
-        margin: "3rem auto",
+        // margin: "2rem auto 3rem",
         '@media (max-width: 900px)': {
           padding: "2.5rem",
         },

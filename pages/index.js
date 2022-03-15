@@ -5,7 +5,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 import React from "react";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import {
   Button,
@@ -101,6 +101,7 @@ export default function Home() {
           Play Game
         </Button>
       </Container>
+
       <Container
         id="top-anchor"
         maxWidth="xl"
@@ -125,7 +126,7 @@ export default function Home() {
                 variant="body1"
                 component="p"
                 className={classes.introSubTitle}
-                style={{marginTop: '23px'}}
+                style={{ marginTop: "23px" }}
               >
                 All 10,000 Crypto-Pills were algorithmically generated from 37
                 categories and 504 traits, allowing some to be rarer than
@@ -151,6 +152,14 @@ export default function Home() {
                 className={classes.openSea}
               >
                 View the Roadmap
+              </Button>
+              <Button
+                size="large"
+                variant="contained"
+                href="/nfts"
+                className={classes.playGame}
+              >
+                Highest Last Sale
               </Button>
             </Grid>
             <Grid item xs={12} md={5} className={classes.nftsGridCell}>
@@ -190,14 +199,7 @@ export default function Home() {
             </Grid>
           </Grid>
         </Container>
-        <hr />
-        <hr />
-        <hr />
-        <Container
-          spacing={2}
-          className={classes.artworkSection}
-          maxWidth="lg"
-        >
+        <Container spacing={2} className={classes.artworkSection} maxWidth="lg">
           <Grid container spacing={2}>
             <Grid item xs={12} className={classes.detailSectionGridCell}>
               <Typography
@@ -227,35 +229,35 @@ export default function Home() {
           </Grid>
         </Container>
 
-        <div
-          style={{
-            width: "100%",
-            textAlign: "center",
-            margin: "3rem auto 1rem",
-          }}
-        >
-          {filteredMoedas.map((moeda) => {
-            return (
-              <>
-                <a
-                  href={moeda.assets[0].permalink}
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <img
-                    src={moeda.assets[0].image_url}
-                    width="200"
-                    style={{
-                      display: "inline-block",
-                      margin: "0.3rem",
-                      borderRadius: "15px",
-                    }}
-                  />
-                </a>
-              </>
-            );
-          })}
-        </div>
+        <Container maxWidth="lg">
+          <Grid container>
+            <Grid item xs={12} className={classes.detailSectionGridCell} style={{display: 'inline!important'}}>
+              {filteredMoedas.map((moeda, index) => {
+                return (
+                  index < 12 && (
+                    <>
+                      <a
+                        href={moeda.assets[0].permalink}
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        <img
+                          src={moeda.assets[0].image_url}
+                          width="190"
+                          style={{
+                            display: "inline",
+                            margin: "0.3rem",
+                            borderRadius: "15px",
+                          }}
+                        />
+                      </a>
+                    </>
+                  )
+                );
+              })}
+            </Grid>
+          </Grid>
+        </Container>
 
         <Container
           id="about-section"
@@ -330,16 +332,26 @@ export default function Home() {
           </div>
         </Container>
 
-        <Container maxWidth="lg"
+        <Container
+          maxWidth="lg"
           component="div"
-          className={classes.detailSection}>
-          <Grid container spacing={2}>
+          className={classes.detailSection}
+        >
+          <Grid
+            container
+            spacing={2}
+            style={{ background: "#41135a", borderRadius: "30px", opacity: '0.4' }}
+          >
             <Grid
               item
               xs={12}
               sm={6}
-              md={7}
               className={classes.detailSectionGridCell}
+              style={{
+                padding: "0 80px!important",
+                color: "white",
+                margin: "0!important",
+              }}
             >
               <Typography variant="h4" component="p" align="center">
                 Slim Shady Feat. Pillman
@@ -356,7 +368,7 @@ export default function Home() {
               item
               xs={12}
               sm={6}
-              md={5}
+              md={6}
               className={classes.detailSectionImageCell}
               style={{ padding: "0 2rem", margin: "4rem 0" }}
             >
@@ -374,21 +386,23 @@ export default function Home() {
               </div>
             </Grid>
           </Grid>
-          <Grid item xs={12} className={classes.contentStyle} style={{
-                background: `linear-gradient(135deg,
-                  #000 23%,
+          <Grid
+            item
+            xs={12}
+            className={classes.contentStyle}
+            style={{
+              background: `linear-gradient(135deg,
+                  #000 33%,
                   #692a97 100%)`,
-                borderRadius: "30px",
-                padding: "30px",
-                color: "white",
-              }}
-              align="center">
+              borderRadius: "30px",
+              padding: "30px",
+              color: "white",
+            }}
+            align="center"
+          >
             <Hidden smDown>
               <Box sx={{ marginRight: "40px" }}>
-                <img
-                  src="https://media4.giphy.com/media/jPMqASVsBxhZP0ldYS/giphy.gif"
-                  width="330"
-                />
+                <img src="/3dpill.png" width="330" />
               </Box>
             </Hidden>
             <Box>

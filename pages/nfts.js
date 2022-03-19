@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { useWeb3React } from "@web3-react/core";
 import { useEagerConnect, useInactiveListener } from "../hooks/web3-react";
 import Head from "next/head";
@@ -28,7 +29,7 @@ const ImageBackdrop = styled("div")(({ theme }) => ({
   top: 0,
   bottom: 0,
   background: "#883eab",
-  opacity: 0.5,
+  opacity: 0.2,
   transition: theme.transitions.create("opacity"),
 }));
 
@@ -209,10 +210,30 @@ export default function Home() {
     detail: mockData.text.description(index),
   }));
 
+  const [moedas, setMoedas] = useState([]);
+  const limit = 32;
+  const options = { method: "GET" };
+
+  useEffect(() => {
+    fetch(
+      `https://api.opensea.io/api/v1/bundles?asset_contract_address=0x7dd04448c6cd405345d03529bff9749fd89f8f4f&limit=${limit}&offset=0`,
+      options
+    )
+      .then((response) => response.json())
+      .then((response) => {
+        setMoedas(response.bundles);
+        console.log(response.bundles[0]);
+        console.log(moedas);
+      })
+      .catch((err) => console.error(err));
+  }, []);
+
+  const filteredMoedas = moedas.filter((moeda) => moeda);
+
   return (
     <>
       <Head>
-        <title>Highest Last Sale | Crypto Pills</title>
+        <title>Crypto Pill Bundles | Crypto Pills</title>
         <meta
           name="description"
           content="Micha Klein’s digital art has been around for over 30 years, and is not going away."
@@ -231,75 +252,82 @@ export default function Home() {
           component="div"
           className={classes.bannerSection}
         >
-          <Typography variant="h3" component="p" className={classes.title}>
-            Highest Last Sale Price
-          </Typography>
-          <br />
-          <Typography
-            variant="body2"
-            component="p"
-            className={classes.subtitle}
-          >
-            Crypto-Pills is a collection of Fine Art Digital Collectibles (NFTs)
-            running on the Ethereum network. This website is only an interface
-            allowing participants to purchase these digital collectibles.
-          </Typography>
-          <Button
-            variant="contained"
-            color="secondary"
-            className={classes.cta}
-            href="https://opensea.io/collection/crypto-pills-by-micha-klein?search[sortAscending]=false&search[sortBy]=LAST_SALE_PRICE"
-          >
-            View on OpenSea
-          </Button>
+          <div className={classes.titleContainer}>
+            <Typography variant="h3" component="p" className={classes.title}>
+              Crypto Pill Bundles
+            </Typography>
+            <br />
+            <Typography
+              variant="body2"
+              component="p"
+              className={classes.subtitle}
+            >
+              Crypto-Pills is a collection of Fine Art Digital Collectibles
+              (NFTs) running on the Ethereum network. This website is only an
+              interface allowing participants to purchase these digital
+              collectibles.
+            </Typography>
+            <Button
+              variant="contained"
+              color="secondary"
+              className={classes.cta}
+              href="https://opensea.io/collection/crypto-pills-by-micha-klein?search[sortAscending]=false&search[sortBy]=LAST_SALE_PRICE"
+            >
+              View Highest Last Sale
+            </Button>
+          </div>
         </Container>
 
         <Container maxWidth="lg" sx={{ mt: 8, mb: 4 }}>
           <Box sx={{ mt: 8, display: "flex", flexWrap: "wrap" }}>
-            {images.map((image) => (
-              <ImageIconButton
-                href={image.url}
-                style={{
-                  width: image.width,
-                }}
-              >
-                <Box
-                  sx={{
-                    position: "absolute",
-                    left: 0,
-                    right: 0,
-                    top: 0,
-                    bottom: 0,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center 40%",
-                    backgroundImage: `url(${image.url})`,
-                  }}
-                />
-                <ImageBackdrop className="imageBackdrop" />
-                <Box
-                  sx={{
-                    position: "absolute",
-                    left: 0,
-                    right: 0,
-                    top: 0,
-                    bottom: 0,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    color: "common.white",
-                  }}
-                >
-                  <Typography
-                    component="h3"
-                    variant="h6"
-                    color="inherit"
-                    className="imageTitle"
+            {filteredMoedas.map((moeda, index) => {
+              return (
+                index < 32 && (
+                  <ImageIconButton
+                    href={moeda.assets[0].permalink}
+                    style={{
+                      width: '25%'
+                    }}
                   >
-                    {image.number}
-                  </Typography>
-                </Box>
-              </ImageIconButton>
-            ))}
+                    <Box
+                      sx={{
+                        position: "absolute",
+                        left: 0,
+                        right: 0,
+                        top: 0,
+                        bottom: 0,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center 40%",
+                        backgroundImage: `url(${moeda.assets[0].image_url})`,
+                      }}
+                    />
+                    <ImageBackdrop className="imageBackdrop" />
+                    <Box
+                      sx={{
+                        position: "absolute",
+                        left: 0,
+                        right: 0,
+                        top: 0,
+                        bottom: 0,
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        color: "common.white",
+                      }}
+                    >
+                      <Typography
+                        component="h3"
+                        variant="h6"
+                        color="inherit"
+                        className="imageTitle"
+                      >
+                        {/* {image.number} */}
+                      </Typography>
+                    </Box>
+                  </ImageIconButton>
+                )
+              );
+            })}
           </Box>
         </Container>
       </Container>

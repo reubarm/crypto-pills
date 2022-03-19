@@ -35,35 +35,6 @@ export default function Home() {
 
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
-  const title = [
-    "How do I purchase Crypto-Pills?",
-    "How do I know which Crypto-Pill I get?",
-    "How many Crypto-Pills can I buy per single transaction?",
-    "What will be the price of Crypto-Pills?",
-  ];
-
-  const description = [
-    "The easiest way to purchase Crypto-Pills is to install a MetaMask extension in your browser and link your crypto wallet to it. Ensure you have enough ETH in your wallet to cover the cost of purchasing Crypto-Pills, in addition to any associated gas fees. Approve the desired transaction on MetaMask and you are ready to go. For more information, please refer to this link: https://nftyfarm.com/metamask/",
-    "Crypto-Pills will remain hidden until the big reveal on August 27, 2021. Upon reveal, the artwork from the pre-defined collection will be assigned to the NFT placeholder that you purchased. “Blind sales” are chosen to ensure the Crypto-Pills value is protected so no one can determine its rarity, including the project owners.",
-    "There is a limit of twenty (20) Crypto-Pills that can be purchased in one (1) transaction.",
-    "The pricing model is a flat-rate throughout the entire sale. The cost of each Crypto-Pill is set at 0.07 Eth, and 100 Crypto-Pills will be reserved for giveaways.",
-  ];
-
-  const mockData = {
-    id: (index) => `${index + 1}`,
-    text: {
-      title: (index) => title[index],
-      description: (index) => description[index],
-    },
-  };
-
-  const MOCK_FAQS = [...Array(4)].map((_, index) => ({
-    id: mockData.id(index),
-    value: `panel${index + 1}`,
-    heading: mockData.text.title(index),
-    detail: mockData.text.description(index),
-  }));
-
   return (
     <>
       <Head>
@@ -86,31 +57,34 @@ export default function Home() {
           component="div"
           className={classes.bannerSection}
         >
-          <Typography variant="h3" component="p" className={classes.title}>
-            Crypto Pills Roadmap
-          </Typography>
-          <br />
-          <Typography
-            variant="body2"
-            component="p"
-            className={classes.subtitle}
-          >
-            <strong>
-              Micha Klein will donate 5% of sales to Save The Children Charity
-              for children in need worldwide.
-            </strong>
+          <div className={classes.titleContainer}>
+            <Typography variant="h3" component="p" className={classes.title}>
+              Roadmap and Achievements
+            </Typography>
             <br />
-            <br />
-            Written in the Smart Contract for full transparancy!
-          </Typography>
-          <Button
-            variant="contained"
-            color="secondary"
-            className={classes.cta}
-            href="https://discord.gg/UV4FnNGYdp"
-          >
-            Join Discord
-          </Button>
+            <Typography
+              variant="body2"
+              component="p"
+              className={classes.subtitle}
+            >
+              We have already rolled out a large portion of our roadmap and have
+              some cool perks to come!
+              <br />
+              <br />
+              <strong>
+                Micha Klein will donate 5% of sales to Save The Children Charity
+                for children in need worldwide.
+              </strong>
+            </Typography>
+            <Button
+              variant="contained"
+              color="secondary"
+              className={classes.cta}
+              href="https://discord.gg/UV4FnNGYdp"
+            >
+              Join Discord Community
+            </Button>
+          </div>
         </Container>
 
         <Container
@@ -127,223 +101,399 @@ export default function Home() {
               md={10}
               lg={8}
               style={{
-                background: `linear-gradient(135deg,
-                #351148 0%,
-                #692a97 100%)`,
+                background: "#402651",
                 borderRadius: "30px",
                 margin: "3rem auto",
               }}
             >
               <br />
               <Typography
-                variant="h4"
+                variant="h3"
                 component="p"
                 align="center"
                 style={{ margin: "30px auto 0", color: "white" }}
               >
-                Crypto Pills ✅
+                Crypto Pills NFT Launch
               </Typography>
               <Typography
-                variant="h6"
+                variant="p"
                 component="p"
                 align="center"
                 style={{ margin: "10px auto 30px", color: "white" }}
               >
                 August 27th 2021
               </Typography>
-              <Grid container justify="center" alignItems="center">
+              <Typography
+                variant="h6"
+                component="p"
+                align="center"
+                style={{
+                  margin: "10px auto 30px",
+                  color: "white",
+                  fontWeight: "500",
+                }}
+              >
+                Start of sale Crypto Pills -{" "}
+                <strong>Project sold out in 11 minutes</strong>
+              </Typography>
+              <Typography
+                variant="p"
+                component="p"
+                align="center"
+                style={{
+                  margin: "10px auto 30px",
+                  color: "white",
+                  width: "80%",
+                }}
+              >
+                <strong>
+                  Artist donates over $150.000 of sales to Save The Children
+                  Charity for children in need worldwide
+                </strong>
+                , which is written in the Smart Contract for full transparency
+                24/7{" "}
+              </Typography>
+              <Typography
+                variant="p"
+                component="p"
+                align="center"
+                style={{ margin: "10px auto 30px", color: "white" }}
+              >
+                Crypto Pills Fanclub Room started on Clubhouse
+              </Typography>
+              <Container>
                 <Grid
-                  item
-                  xs={12}
-                  sm={6}
-                  md={4}
-                  style={{ alignItems: "center", justifyContent: "center" }}
-                  align="center"
+                  container
+                  justify="center"
+                  alignItems="center"
+                  spacing={4}
+                  style={{ marginTop: "3rem" }}
                 >
-                  <Box
-                    className={classes.roadmapGridCell}
+                  <Grid
+                    item
+                    xs={12}
+                    sm={6}
                     style={{ alignItems: "center", justifyContent: "center" }}
+                    align="center"
                   >
-                    <Typography
-                      variant="h2"
-                      component="p"
-                      align="center"
-                      style={{
-                        marginBlockEnd: "1rem",
-                        color: "#72209c",
-                        color: "#72209c",
-                      }}
+                    <Box
+                      className={classes.roadmapGridCell}
+                      style={{ alignItems: "center", justifyContent: "center" }}
                     >
-                      10%
-                    </Typography>
-                    <Typography variant="body2" align="center">
-                      Airdrop of 10 Crypto-Pills to random Pill owners, and
-                      owners with three (3) pills will receive an upgraded role
-                      in Discord: Pill Popper
-                    </Typography>
-                  </Box>
-                </Grid>
-                <Grid
-                  item
-                  xs={12}
-                  sm={6}
-                  md={4}
-                  style={{ alignItems: "center", justifyContent: "center" }}
-                  align="center"
-                >
-                  <Box
-                    className={classes.roadmapGridCell}
+                      <Typography
+                        variant="h3"
+                        component="p"
+                        align="center"
+                        style={{
+                          marginBlockEnd: "1rem",
+                          color: "white",
+                        }}
+                      >
+                        Week 1
+                      </Typography>
+                      <Typography variant="body2" align="center">
+                        Airdrop of 10 Crypto-Pills to random Pill owners
+                        <br />
+                        <br />
+                        Upgraded role in Discord for holders by number of pills
+                      </Typography>
+                    </Box>
+                  </Grid>
+                  <Grid
+                    item
+                    xs={12}
+                    sm={6}
                     style={{ alignItems: "center", justifyContent: "center" }}
+                    align="center"
                   >
-                    <Typography
-                      variant="h2"
-                      component="p"
-                      align="center"
-                      style={{ marginBlockEnd: "1rem", color: "#72209c" }}
+                    <Box
+                      className={classes.roadmapGridCell}
+                      style={{ alignItems: "center", justifyContent: "center" }}
                     >
-                      20%
-                    </Typography>
-                    <Typography variant="body2" align="center">
-                      Airdrop of 10 Crypto-Pills to random Pill owners and the
-                      20 most active Pill owner members in the Discord server
-                      will receive a physical OG Pillman Giclee print of their
-                      Crypto-Pill Edition 1/1, signed by Micha.
-                    </Typography>
-                  </Box>
-                </Grid>
-                <Grid
-                  item
-                  xs={12}
-                  sm={6}
-                  md={4}
-                  style={{ alignItems: "center", justifyContent: "center" }}
-                  align="center"
-                >
-                  <Box
-                    className={classes.roadmapGridCell}
+                      <Typography
+                        variant="h3"
+                        component="p"
+                        align="center"
+                        style={{ marginBlockEnd: "1rem", color: "white" }}
+                      >
+                        Week 2
+                      </Typography>
+                      <Typography variant="body2" align="center">
+                        Airdrop of 10 Crypto-Pills to random Pill owners
+                        <br />
+                        <br />2 POAPS with future utility released for white
+                        list and official launch minters
+                      </Typography>
+                    </Box>
+                  </Grid>
+                  <Grid
+                    item
+                    xs={12}
+                    sm={6}
                     style={{ alignItems: "center", justifyContent: "center" }}
+                    align="center"
                   >
-                    <Typography
-                      variant="h2"
-                      component="p"
-                      align="center"
-                      style={{ marginBlockEnd: "1rem", color: "#72209c" }}
+                    <Box
+                      className={classes.roadmapGridCell}
+                      style={{ alignItems: "center", justifyContent: "center" }}
                     >
-                      30%
-                    </Typography>
-                    <Typography variant="body2" align="center">
-                      A selection of 3D and AR files that owner's can download
-                      will be provided. Plus free limited edition merch for the
-                      most active and loyal members on our Discord server.
-                    </Typography>
-                  </Box>
-                </Grid>
-                <Grid
-                  item
-                  xs={12}
-                  sm={6}
-                  md={4}
-                  style={{ alignItems: "center", justifyContent: "center" }}
-                  align="center"
-                >
-                  <Box
-                    className={classes.roadmapGridCell}
+                      <Typography
+                        variant="h3"
+                        component="p"
+                        align="center"
+                        style={{ marginBlockEnd: "1rem", color: "white" }}
+                      >
+                        Week 3
+                      </Typography>
+                      <Typography variant="body2" align="center">
+                        The 20 most active Pill owner members in the Discord
+                        server received a physical OG Pillman Giclee print of
+                        their Crypto-Pill Edition 1/1, and signed by artist
+                        <br />
+                        <br />
+                        Crypto Pills Billboard on Times Square with release POAP
+                        for all holders
+                      </Typography>
+                    </Box>
+                  </Grid>
+                  <Grid
+                    item
+                    xs={12}
+                    sm={6}
                     style={{ alignItems: "center", justifyContent: "center" }}
+                    align="center"
                   >
-                    <Typography
-                      variant="h2"
-                      component="p"
-                      align="center"
-                      style={{ marginBlockEnd: "1rem", color: "#72209c" }}
+                    <Box
+                      className={classes.roadmapGridCell}
+                      style={{ alignItems: "center", justifyContent: "center" }}
                     >
-                      50%
-                    </Typography>
+                      <Typography
+                        variant="h3"
+                        component="p"
+                        align="center"
+                        style={{ marginBlockEnd: "1rem", color: "white" }}
+                      >
+                        Week 4
+                      </Typography>
 
-                    <Typography variant="body2" align="center">
-                      Sandbox and CryptoVoxels land will be purchased for Pill
-                      Parties. Plus 10 Pill owners will be chosen to have their
-                      custom Pill designed and minted.
-                    </Typography>
-                  </Box>
-                </Grid>
-                <Grid
-                  item
-                  xs={12}
-                  sm={6}
-                  md={4}
-                  style={{ alignItems: "center", justifyContent: "center" }}
-                  align="center"
-                >
-                  <Box
-                    className={classes.roadmapGridCell}
+                      <Typography variant="body2" align="center">
+                        30 limited edition official Crypto Pills T-Shirts for
+                        the most active and loyal members on our Discord and
+                        Clubhouse
+                        <br />
+                        <br />
+                        Production of a pair of handmade custom Crypto Pills
+                        sneakers started for winner raffle
+                      </Typography>
+                    </Box>
+                  </Grid>
+                  <Grid
+                    item
+                    xs={12}
+                    sm={6}
                     style={{ alignItems: "center", justifyContent: "center" }}
+                    align="center"
                   >
-                    <Typography
-                      variant="h2"
-                      component="p"
-                      align="center"
-                      style={{ marginBlockEnd: "1rem", color: "#72209c" }}
+                    <Box
+                      className={classes.roadmapGridCell}
+                      style={{ alignItems: "center", justifyContent: "center" }}
                     >
-                      60%
-                    </Typography>
-                    <Typography variant="body2" component="p" align="center">
-                      Start of the DTP Pharmacy exclusive merch shop.
-                      <br />
-                      <br />
-                      <a
+                      <Typography
+                        variant="h3"
+                        component="p"
+                        align="center"
+                        style={{ marginBlockEnd: "1rem", color: "white" }}
+                      >
+                        Week 5
+                      </Typography>
+                      <Typography variant="body2" component="p" align="center">
+                        Airdrops of Crypto Pills wearables by Eddy Gangland for
+                        Cryptovoxels with big party in Cryptovoxels The project
+                        enters the Metaverse
+                        <br />
+                        NFTX Liquidity Pool implemented
+                        <br />
+                        Start of the DTP Pharmacy exclusive merch shop.
+                        {/* <a
                         href="https://dropthepill.com/"
-                        style={{ fontWeight: "700", textDecoration: "none" }}
+                        style={{
+                          fontWeight: "700",
+                          textDecoration: "none",
+                          color: "white",
+                        }}
                       >
                         You can visit the store here.
-                      </a>
-                    </Typography>
-                  </Box>
-                </Grid>
-                <Grid
-                  item
-                  xs={12}
-                  sm={6}
-                  md={4}
-                  style={{ alignItems: "center", justifyContent: "center" }}
-                  align="center"
-                >
-                  <Box
-                    className={classes.roadmapGridCell}
+                      </a> */}
+                      </Typography>
+                    </Box>
+                  </Grid>
+                  <Grid
+                    item
+                    xs={12}
+                    sm={6}
                     style={{ alignItems: "center", justifyContent: "center" }}
+                    align="center"
                   >
-                    <Typography
-                      variant="h2"
-                      component="p"
-                      align="center"
-                      style={{ marginBlockEnd: "1rem", color: "#72209c" }}
+                    <Box
+                      className={classes.roadmapGridCell}
+                      style={{ alignItems: "center", justifyContent: "center" }}
                     >
-                      100%
-                    </Typography>
-                    <Typography variant="body2" component="p" align="center">
-                      Launch of the Crypto Pill Laboratory Studio. The mind of
-                      Micha Klein comes to the metaverses with state-of-the-art
-                      3D digital animation, animated shorts &amp; interactive
-                      NFTs.
-                    </Typography>
-                  </Box>
+                      <Typography
+                        variant="h3"
+                        component="p"
+                        align="center"
+                        style={{ marginBlockEnd: "1rem", color: "white" }}
+                      >
+                        Week 6
+                      </Typography>
+                      <Typography variant="body2" component="p" align="center">
+                        CryptoVoxels land purchased on Vibes Island for Pill
+                        Parties, and Crypto Pills Club / Gallery build
+                        <br />
+                        <br />
+                        3D Pillman AR Snapchat Filter released
+                      </Typography>
+                    </Box>
+                  </Grid>
+                  <Grid
+                    item
+                    xs={12}
+                    sm={6}
+                    style={{ alignItems: "center", justifyContent: "center" }}
+                    align="center"
+                  >
+                    <Box
+                      className={classes.roadmapGridCell}
+                      style={{ alignItems: "center", justifyContent: "center" }}
+                    >
+                      <Typography
+                        variant="h3"
+                        component="p"
+                        align="center"
+                        style={{ marginBlockEnd: "1rem", color: "white" }}
+                      >
+                        Week 7
+                      </Typography>
+                      <Typography variant="body2" component="p" align="center">
+                        Presentation of test for animated shorts with 3D and 2D
+                        animations & Collaboration with Hollywood director
+                        announced
+                        <br />
+                        Announcement $PILLCOIN token for community economics
+                      </Typography>
+                    </Box>
+                  </Grid>
+                  <Grid
+                    item
+                    xs={12}
+                    sm={6}
+                    style={{ alignItems: "center", justifyContent: "center" }}
+                    align="center"
+                  >
+                    <Box
+                      className={classes.roadmapGridCell}
+                      style={{ alignItems: "center", justifyContent: "center" }}
+                    >
+                      <Typography
+                        variant="h3"
+                        component="p"
+                        align="center"
+                        style={{ marginBlockEnd: "1rem", color: "white" }}
+                      >
+                        Week 8
+                      </Typography>
+                      <Typography variant="body2" component="p" align="center">
+                        Free Halloween airdrop for top holders and giveaway of
+                        60 Spooky Pills limited edition and 1/1 NFTs Halloween
+                        POAP in 3K resolution for all holders with future
+                        utility released
+                        <br />
+                        <br />
+                        Start Collaboration with Liquid NFTs
+                      </Typography>
+                    </Box>
+                  </Grid>
+                  <Grid
+                    item
+                    xs={12}
+                    sm={6}
+                    style={{ alignItems: "center", justifyContent: "center" }}
+                    align="center"
+                  >
+                    <Box
+                      className={classes.roadmapGridCell}
+                      style={{ alignItems: "center", justifyContent: "center" }}
+                    >
+                      <Typography
+                        variant="h3"
+                        component="p"
+                        align="center"
+                        style={{ marginBlockEnd: "1rem", color: "white" }}
+                      >
+                        Week 9
+                      </Typography>
+                      <Typography variant="body2" component="p" align="center">
+                        Artist &amp; founder of Crypto Pills awarded Best
+                        Digital NFT Artist 2021 at NFT.NYC Convention New York
+                        <br />
+                        Crypto Pills sponsors NFT Hypebeast party, New York
+                        <br />
+                        Crypto Pills sponsors NFTme launch party, New York
+                      </Typography>
+                    </Box>
+                  </Grid>
+                  <Grid
+                    item
+                    xs={12}
+                    sm={6}
+                    style={{ alignItems: "center", justifyContent: "center" }}
+                    align="center"
+                  >
+                    <Box
+                      className={classes.roadmapGridCell}
+                      style={{ alignItems: "center", justifyContent: "center" }}
+                    >
+                      <Typography
+                        variant="h3"
+                        component="p"
+                        align="center"
+                        style={{ marginBlockEnd: "1rem", color: "white" }}
+                      >
+                        Week 10
+                      </Typography>
+                      <Typography variant="body2" component="p" align="center">
+                        Crypto Pills featured in Plotagraph, top creative app on
+                        iOS with 3.8 million users, future collaboration and NFT
+                        drop announced
+                        <br />
+                        Release Crypto Pill Rap Anthem by Artz
+                        <br />
+                        Announcement Thanksgiving and Christmas airdrops and
+                        first exclusive Crypto Pills Video game for pill holders
+                      </Typography>
+                    </Box>
+                  </Grid>
+                  <Button
+                    variant="contained"
+                    color="secondary"
+                    className={classes.playGame}
+                    href="https://discord.gg/UV4FnNGYdp"
+                    style={{ margin: "20px 0 30px" }}
+                  >
+                    Purchase on OpenSea
+                  </Button>
                 </Grid>
-                <Button
-                  variant="contained"
-                  color="secondary"
-                  className={classes.cta}
-                  href="https://discord.gg/UV4FnNGYdp"
-                  style={{ margin: "20px 0 30px" }}
-                >
-                  Purchase on OpenSea
-                </Button>
-              </Grid>
+                <br />
+                <br />
+              </Container>
             </Grid>
             <Grid item sm></Grid>
           </Grid>{" "}
           <Typography variant="h1" component="p" align="center">
             &#8595;
           </Typography>{" "}
-          <br /><br />
+          <br />
+          <br />
           <Grid container>
             <Grid item sm></Grid>
             <Grid
@@ -352,9 +502,7 @@ export default function Home() {
               md={10}
               lg={8}
               style={{
-                background: `linear-gradient(135deg,
-                  #351148 0%,
-                  #692a97 100%)`,
+                background: "#402651",
                 borderRadius: "30px",
                 padding: "30px",
                 color: "white",
@@ -362,12 +510,12 @@ export default function Home() {
               align="center"
             >
               <br />
-              <Typography variant="h4" component="p" align="center">
-                Game Development (BETA) ✅
+              <Typography variant="h3" component="p" align="center">
+                Game Development
               </Typography>
               <br />
               <br />
-              
+
               <img
                 src="/gamescreens.png"
                 alt="game screens"
@@ -377,7 +525,7 @@ export default function Home() {
               <Button
                 variant="contained"
                 color="secondary"
-                className={classes.cta}
+                className={classes.playGame}
                 href="https://discord.gg/UV4FnNGYdp"
                 style={{ margin: "40px auto 0" }}
               >
@@ -386,42 +534,40 @@ export default function Home() {
             </Grid>
             <Grid item sm></Grid>
           </Grid>
-          <br /><br />
+          <br />
+          <br />
           <Typography variant="h1" component="p" align="center">
             &#8595;
           </Typography>
-          <Grid item xs={12} md={10} lg={8} className={classes.contentStyle} style={{
-                background: `linear-gradient(135deg,
-                  #351148 0%,
-                  #692a97 100%)`,
-                borderRadius: "30px",
-                padding: "30px",
-                color: "white",
-              }}
-              align="center">
-            {/* <Hidden smDown>
-              <Box sx={{ marginRight: "40px" }}>
-                <img
-                  src="https://media4.giphy.com/media/jPMqASVsBxhZP0ldYS/giphy.gif"
-                  width="330"
-                />
-              </Box>
-            </Hidden> */}
+          <Grid
+            item
+            xs={12}
+            md={10}
+            lg={8}
+            className={classes.contentStyle}
+            style={{
+              background: "#402651",
+              borderRadius: "30px",
+              padding: "30px",
+              color: "white",
+            }}
+            align="center"
+          >
             <Box>
               <Typography variant="h4">
                 <span style={{ fontWeight: "400!important", color: "#a679bd" }}>
-                  March 31st 2022
+                  Launch of Online Store
                 </span>
               </Typography>
-              <Typography variant="h2" className={classes.title}>
-                3D Crypto Pills
+              <Typography variant="h3" className={classes.title}>
+                DTP Pharmacy Merchandise Store
               </Typography>
               <br />
               <Typography variant="p" className={classes.subtitle}>
-                Crypto-Pills are stored as ERC-721 tokens on the Ethereum
-                blockchain and hosted on IPFS. Purchasing a Crypto-Pill costs
-                0.07 ETH, with no bonding curves, and fair distribution.
-                Crypto-Pills will be revealed when they are minted.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat
               </Typography>
               <br />
               <Button
@@ -429,7 +575,52 @@ export default function Home() {
                 variant="contained"
                 target="_blank"
                 href="https://discord.gg/UV4FnNGYdp"
-                className={classes.cta}
+                className={classes.playGame}
+              >
+                Shop the Latest Merchandise
+              </Button>
+            </Box>
+          </Grid>
+          <Typography variant="h1" component="p" align="center">
+            &#8595;
+          </Typography>
+          <Grid
+            item
+            xs={12}
+            md={10}
+            lg={8}
+            className={classes.contentStyle}
+            style={{
+              background: "#402651",
+              borderRadius: "30px",
+              padding: "30px",
+              color: "white",
+            }}
+            align="center"
+          >
+            <Box>
+              <Typography variant="h4">
+                <span style={{ fontWeight: "400!important", color: "#a679bd" }}>
+                  March 31st 2022
+                </span>
+              </Typography>
+              <Typography variant="h3" className={classes.title}>
+                3D Crypto Pills Teaser
+              </Typography>
+              <br />
+              <Typography variant="p" className={classes.subtitle}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat
+              </Typography>
+              <br />
+              <Button
+                size="large"
+                variant="contained"
+                target="_blank"
+                href="https://discord.gg/UV4FnNGYdp"
+                className={classes.playGame}
               >
                 Join the Discord Whitelist
               </Button>
@@ -438,7 +629,8 @@ export default function Home() {
           <Typography variant="h1" component="p" align="center">
             &#8595;
           </Typography>{" "}
-          <br /><br />
+          <br />
+          <br />
           <Grid container>
             <Grid item sm></Grid>
             <Grid
@@ -447,15 +639,16 @@ export default function Home() {
               md={10}
               lg={8}
               style={{
-                background: `linear-gradient(135deg,
-                  #351148 0%,
-                  #692a97 100%)`,
+                background: "#402651",
                 borderRadius: "30px",
                 padding: "30px",
                 color: "white",
               }}
-            ><br /><br /><br />
-              <Typography variant="h4" component="p" align="center">
+            >
+              <br />
+              <br />
+              <br />
+              <Typography variant="h3" component="p" align="center">
                 Pill Coin Token Launch
               </Typography>
               <br />
@@ -464,11 +657,48 @@ export default function Home() {
             </Grid>
             <Grid item sm></Grid>
           </Grid>
-<br/><br />
+          <br />
+          <br />
           <Typography variant="h1" component="p" align="center">
             &#8595;
           </Typography>{" "}
-          <br /><br />
+          <Grid
+            item
+            xs={12}
+            md={10}
+            lg={8}
+            className={classes.contentStyle}
+            style={{
+              background: "#402651",
+              borderRadius: "30px",
+              padding: "30px",
+              color: "white",
+            }}
+            align="center"
+          >
+            <Box>
+              <Typography variant="h4">
+                <span style={{ fontWeight: "400!important", color: "#a679bd" }}>
+                  First Episode
+                </span>
+              </Typography>
+              <Typography variant="h3" className={classes.title}>
+                Crypto Pills Animated Series
+              </Typography>
+              <br />
+              <Typography variant="p" className={classes.subtitle}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat
+              </Typography>
+            </Box>
+          </Grid>
+          <Typography variant="h1" component="p" align="center">
+            &#8595;
+          </Typography>{" "}
+          <br />
+          <br />
           <Grid container>
             <Grid item sm></Grid>
             <Grid
@@ -477,17 +707,17 @@ export default function Home() {
               md={10}
               lg={8}
               style={{
-                background: `linear-gradient(135deg,
-                  #351148 0%,
-                  #692a97 100%)`,
+                background: "#402651",
                 borderRadius: "30px",
                 padding: "30px",
                 color: "white",
               }}
               align="center"
             >
-              <br /><br /><br />
-              <Typography variant="h4" component="p" align="center">
+              <br />
+              <br />
+              <br />
+              <Typography variant="h3" component="p" align="center">
                 Play to Earn Game (iOS &amp; Android)
               </Typography>
               <br />
@@ -496,11 +726,13 @@ export default function Home() {
             </Grid>
             <Grid item sm></Grid>
           </Grid>
-          <br/><br />
+          <br />
+          <br />
           <Typography variant="h1" component="p" align="center">
             &#8595;
           </Typography>{" "}
-          <br /><br />
+          <br />
+          <br />
           <Grid container>
             <Grid item sm></Grid>
             <Grid
@@ -509,17 +741,17 @@ export default function Home() {
               md={10}
               lg={8}
               style={{
-                background: `linear-gradient(135deg,
-                  #351148 0%,
-                  #692a97 100%)`,
+                background: "#402651",
                 borderRadius: "30px",
                 padding: "30px",
                 color: "white",
               }}
               align="center"
             >
-              <br /><br /><br />
-              <Typography variant="h4" component="p" align="center">
+              <br />
+              <br />
+              <br />
+              <Typography variant="h3" component="p" align="center">
                 Live Pillman Exhibitions
               </Typography>
               <br />
@@ -528,11 +760,13 @@ export default function Home() {
             </Grid>
             <Grid item sm></Grid>
           </Grid>
-          <br/><br />
+          <br />
+          <br />
           <Typography variant="h1" component="p" align="center">
             &#8595;
           </Typography>{" "}
-          <br /><br />
+          <br />
+          <br />
           <Grid container>
             <Grid item sm></Grid>
             <Grid
@@ -541,17 +775,17 @@ export default function Home() {
               md={10}
               lg={8}
               style={{
-                background: `linear-gradient(135deg,
-                  #351148 0%,
-                  #692a97 100%)`,
+                background: "#402651",
                 borderRadius: "30px",
                 padding: "30px",
                 color: "white",
               }}
               align="center"
             >
-              <br /><br /><br />
-              <Typography variant="h4" component="p" align="center">
+              <br />
+              <br />
+              <br />
+              <Typography variant="h3" component="p" align="center">
                 Animated TV Series &amp; Movie Release
               </Typography>
               <br />

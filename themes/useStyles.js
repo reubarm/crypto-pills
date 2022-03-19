@@ -19,14 +19,24 @@ const useStyles = makeStyles((theme) => ({
       bannerSection: {
         marginTop: "50px",
         position: "relative",
-        backgroundImage:  "linear-gradient(rgba(114, 32, 156, 0.9), rgba(76, 19, 102, 0.7)), url(/background.png)",
+        backgroundImage:  "url(/background.png)",
+        // backgroundImage:  "linear-gradient(rgba(114, 32, 156, 0.9), rgba(76, 19, 102, 0.7)), url(/background.png)",
         backgroundSize: "cover",
         height: 600,
-        padding: "10rem",
+        padding: "8rem 20rem",
         textAlign: "center",
-        '@media (max-width: 875px)': {
-          padding: '7rem 1rem',
+        '@media (max-width: 1420px)': {
+          padding: '7rem 12rem',
         },
+        '@media (max-width: 1100px)': {
+          padding: '7rem',
+        },
+        '@media (max-width: 875px)': {
+          padding: '3rem 1rem',
+        },
+      },
+      titleContainer: {
+        background: '#703673', maxWidth: '900px', padding: '2rem', margin: '0 auto',
       },
       title: {
         color: "#fff",
@@ -66,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
         margin: "3rem 1rem 0 0",
         minWidth: "250px",
         minHeight: "50px",
-        backgroundColor: "#8e4bbf",
+        backgroundColor: "#703673",
         color: "#FFF",
         "&:hover": {
           backgroundColor: "#873fbd",
@@ -84,10 +94,10 @@ const useStyles = makeStyles((theme) => ({
         margin: "3rem 1rem 0 0",
         minWidth: "250px",
         minHeight: "50px",
-        backgroundColor: "#9a47c1",
+        backgroundColor: "#402651",
         color: "#FFF",
         "&:hover": {
-          backgroundColor: "#883eab",
+          backgroundColor: "#322751",
         },
         '@media (max-width: 520px)': {
           margin: "2rem 0 0",
@@ -178,12 +188,13 @@ const useStyles = makeStyles((theme) => ({
         margin: "3rem auto 2rem",
       },
       roadmapGridCell: {
-        background: "rgb(244, 246, 248)",
-        margin: "0 0 2rem",
+        background: "#703673",
+        margin: "0",
         padding: "1rem 2rem",
         borderRadius: "30px",
-        width: "90%",
+        width: "100%",
         height: "250px",
+        color: 'white!important'
       },
     
       youtube: {

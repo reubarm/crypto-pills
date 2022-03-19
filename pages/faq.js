@@ -91,27 +91,30 @@ export default function Home() {
           component="div"
           className={classes.bannerSection}
         >
-          <Typography variant="h3" component="p" className={classes.title}>
-            What can we help you with?
-          </Typography>
-          <br />
-          <Typography
-            variant="body2"
-            component="p"
-            className={classes.subtitle}
-          >
-            Crypto-Pills is a collection of Fine Art Digital Collectibles (NFTs)
-            running on the Ethereum network. This website is only an interface
-            allowing participants to purchase these digital collectibles.
-          </Typography>
-          <Button
-            variant="contained"
-            color="secondary"
-            className={classes.cta}
-            href="#contact"
-          >
-            Contact Us
-          </Button>
+          <div className={classes.titleContainer}>
+            <Typography variant="h3" component="p" className={classes.title}>
+              What can we help you with?
+            </Typography>
+            <br />
+            <Typography
+              variant="body2"
+              component="p"
+              className={classes.subtitle}
+            >
+              Crypto-Pills is a collection of Fine Art Digital Collectibles
+              (NFTs) running on the Ethereum network. This website is only an
+              interface allowing participants to purchase these digital
+              collectibles.
+            </Typography>
+            <Button
+              variant="contained"
+              color="secondary"
+              className={classes.cta}
+              href="#contact"
+            >
+              Contact Us
+            </Button>
+          </div>
         </Container>
 
         <Container
@@ -147,41 +150,44 @@ export default function Home() {
           ))}
 
           <Grid id="contact" container spacing={2} style={{ margin: "5rem 0" }}>
-  
             <Grid
               item
               xs={12}
-              style={{background: "rgb(244, 246, 248)", borderRadius: "30px", padding: "3rem 5rem" }}
+              style={{
+                background: "rgb(244, 246, 248)",
+                borderRadius: "30px",
+                padding: "3rem 5rem",
+              }}
             >
-                  <Typography
-                    variant="h4"
-                    component="p"
-                    align="center"
-                    style={{ fontWeight: "600", color: "#555" }}
-                  >
-                    Haven't found the right help?
-                  </Typography>
-                  <br />
-                  <TextField fullWidth label="Name" variant="outlined" />
-                  <TextField fullWidth label="Email" variant="outlined" />
-                  <TextField fullWidth label="Subject" variant="outlined" />
-                  <TextField
-                    fullWidth
-                    label="Enter your message here."
-                    multiline
-                    rows={4}
-                    variant="outlined"
-                  />
-                  <div className={classes.center}>
-                    <Button
-                      size="large"
-                      variant="contained"
-                      className={classes.openSea}
-                    >
-                      Send us a Message
-                    </Button>
-                  </div>
-                </Grid>
+              <Typography
+                variant="h4"
+                component="p"
+                align="center"
+                style={{ fontWeight: "600", color: "#555" }}
+              >
+                Haven't found the right help?
+              </Typography>
+              <br />
+              <TextField fullWidth label="Name" variant="outlined" />
+              <TextField fullWidth label="Email" variant="outlined" />
+              <TextField fullWidth label="Subject" variant="outlined" />
+              <TextField
+                fullWidth
+                label="Enter your message here."
+                multiline
+                rows={4}
+                variant="outlined"
+              />
+              <div className={classes.center}>
+                <Button
+                  size="large"
+                  variant="contained"
+                  className={classes.openSea}
+                >
+                  Send us a Message
+                </Button>
+              </div>
+            </Grid>
 
             <Grid item xs={12} style={{ margin: "2rem 0" }}>
               <hr />

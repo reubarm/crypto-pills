@@ -23,12 +23,11 @@ import Footer from "../components/Footer/Footer";
 // import MintControl from "../components/MintControl";
 import useStyles from "../themes/useStyles";
 
-const options = { method: "GET" };
-
 export default function Home() {
   const [moedas, setMoedas] = useState([]);
-
+  const [datastats, setDatastats] = useState([]);
   const limit = 16;
+  const options = { method: "GET", headers: { Accept: "application/json" } };
 
   useEffect(() => {
     fetch(
@@ -38,13 +37,33 @@ export default function Home() {
       .then((response) => response.json())
       .then((response) => {
         setMoedas(response.bundles);
-        console.log(response.bundles[0]);
-        console.log(moedas);
       })
       .catch((err) => console.error(err));
   }, []);
 
   const filteredMoedas = moedas.filter((moeda) => moeda);
+
+  useEffect(() => {
+    fetch(
+      "https://api.opensea.io/api/v1/collection/crypto-pills-by-micha-klein/stats",
+      options
+    )
+      .then((response) => response.json())
+      .then((response) => {
+        setDatastats(response.stats);
+        console.log(response.stats);
+      })
+      .catch((err) => console.error(err));
+  }, []);
+
+  let marketcap = 0;
+  let avgprice = 0;
+  if (datastats.market_cap) {
+    marketcap = datastats.market_cap.toFixed(2);
+  }
+  if (datastats.average_price) {
+    avgprice = datastats.average_price.toFixed(2);
+  }
 
   const { active } = useWeb3React();
   const router = useRouter();
@@ -75,31 +94,37 @@ export default function Home() {
         component="div"
         className={classes.bannerSection}
       >
-        <Typography variant="h3" component="p" className={classes.title}>
-          Virtual Medicine for
-          <br />a Sick Society
-        </Typography>
-        <Typography variant="body1" component="p" className={classes.subtitle}>
-          Crypto-Pills are a limited NFT collection… Some escaped from a lab; a
-          few were dropped from a van; others were prescribed by a doctor; or
-          simply bought over the counter.
-        </Typography>
-        <Button
-          variant="contained"
-          color="secondary"
-          className={classes.openSea}
-          href="https://opensea.io/collection/crypto-pills-by-micha-klein"
-        >
-          Buy on OpenSea
-        </Button>
-        <Button
-          variant="contained"
-          color="secondary"
-          className={classes.playGame}
-          href="/play"
-        >
-          Play Game
-        </Button>
+        <div className={classes.titleContainer}>
+          <Typography variant="h3" component="p" className={classes.title}>
+            Virtual Medicine for
+            <br />a Sick Society
+          </Typography>
+          <Typography
+            variant="body1"
+            component="p"
+            className={classes.subtitle}
+          >
+            Crypto-Pills are a limited NFT collection… Some escaped from a lab;
+            a few were dropped from a van; others were prescribed by a doctor;
+            or simply bought over the counter.
+          </Typography>
+          <Button
+            variant="contained"
+            color="secondary"
+            className={classes.cta}
+            href="https://opensea.io/collection/crypto-pills-by-micha-klein"
+          >
+            Buy on OpenSea
+          </Button>
+          <Button
+            variant="contained"
+            color="secondary"
+            className={classes.playGame}
+            href="/play"
+          >
+            Play Game
+          </Button>
+        </div>
       </Container>
 
       <Container
@@ -159,7 +184,7 @@ export default function Home() {
                 href="/nfts"
                 className={classes.playGame}
               >
-                Highest Last Sale
+                View NFT Bundles
               </Button>
             </Grid>
             <Grid item xs={12} md={5} className={classes.nftsGridCell}>
@@ -199,6 +224,84 @@ export default function Home() {
             </Grid>
           </Grid>
         </Container>
+
+        <Container maxWidth="lg"  style={{ margin: "0 auto 5rem" }}>
+          <Grid container spacing={2}>
+            <Grid item xs={12} sm={3}>
+              <Box
+                style={{
+                  background: "#322751",
+                  color: "white",
+                  padding: "2rem",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Typography variant="h2" component="p" align="center">
+                  {datastats.floor_price}
+                </Typography>
+                <Typography variant="h5" component="p" align="center">
+                  Floor Price
+                </Typography>
+              </Box>
+            </Grid>
+            <Grid item xs={12} sm={3}>
+              <Box
+                style={{
+                  background: "#322751",
+                  color: "white",
+                  padding: "2rem",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Typography variant="h2" component="p" align="center">
+                  {marketcap}
+                </Typography>
+                <Typography variant="h5" component="p" align="center">
+                  Market Cap
+                </Typography>
+              </Box>
+            </Grid>
+            <Grid item xs={12} sm={3}>
+              <Box
+                style={{
+                  background: "#322751",
+                  color: "white",
+                  padding: "2rem",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Typography variant="h2" component="p" align="center">
+                  {avgprice}
+                </Typography>
+                <Typography variant="h5" component="p" align="center">
+                  Average Price
+                </Typography>
+              </Box>
+            </Grid>
+            <Grid item xs={12} sm={3}>
+              <Box
+                style={{
+                  background: "#322751",
+                  color: "white",
+                  padding: "2rem",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Typography variant="h2" component="p" align="center">
+                  {datastats.thirty_day_sales}
+                </Typography>
+                <Typography variant="h5" component="p" align="center">
+                  Monthly Sales
+                </Typography>
+              </Box>
+            </Grid>
+          </Grid>
+        </Container>
+
         <Container spacing={2} className={classes.artworkSection} maxWidth="lg">
           <Grid container spacing={2}>
             <Grid item xs={12} className={classes.detailSectionGridCell}>
@@ -231,7 +334,12 @@ export default function Home() {
 
         <Container maxWidth="lg">
           <Grid container>
-            <Grid item xs={12} className={classes.detailSectionGridCell} style={{display: 'inline!important'}}>
+            <Grid
+              item
+              xs={12}
+              className={classes.detailSectionGridCell}
+              style={{ display: "inline!important" }}
+            >
               {filteredMoedas.map((moeda, index) => {
                 return (
                   index < 12 && (
@@ -340,7 +448,11 @@ export default function Home() {
           <Grid
             container
             spacing={2}
-            style={{ background: "#41135a", borderRadius: "30px", opacity: '0.4' }}
+            style={{
+              background: "#a289ab",
+              borderRadius: "30px",
+              opacity: "1",
+            }}
           >
             <Grid
               item

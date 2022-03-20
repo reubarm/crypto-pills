@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { useWeb3React } from "@web3-react/core";
 import { useEagerConnect, useInactiveListener } from "../hooks/web3-react";
 import Head from "next/head";
@@ -34,6 +35,31 @@ export default function Home() {
   const classes = useStyles();
 
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
+  const [datastats, setDatastats] = useState([]);
+  const limit = 16;
+  const options = { method: "GET", headers: { Accept: "application/json" } };
+  useEffect(() => {
+    fetch(
+      "https://api.opensea.io/api/v1/collection/crypto-pills-by-micha-klein/stats",
+      options
+    )
+      .then((response) => response.json())
+      .then((response) => {
+        setDatastats(response.stats);
+        console.log(response.stats);
+      })
+      .catch((err) => console.error(err));
+  }, []);
+
+  let marketcap = 0;
+  let avgprice = 0;
+  if (datastats.market_cap) {
+    marketcap = datastats.market_cap.toFixed(2);
+  }
+  if (datastats.average_price) {
+    avgprice = datastats.average_price.toFixed(2);
+  }
 
   return (
     <>
@@ -488,6 +514,82 @@ export default function Home() {
               </Container>
             </Grid>
             <Grid item sm></Grid>
+            <Container maxWidth="lg"  style={{ margin: "0 auto 5rem" }}>
+          <Grid container spacing={2}>
+            <Grid item xs={12} sm={3}>
+              <Box
+                style={{
+                  background: "#322751",
+                  color: "white",
+                  padding: "2rem",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Typography variant="h2" component="p" align="center">
+                  {datastats.floor_price}
+                </Typography>
+                <Typography variant="h5" component="p" align="center">
+                  Floor Price
+                </Typography>
+              </Box>
+            </Grid>
+            <Grid item xs={12} sm={3}>
+              <Box
+                style={{
+                  background: "#322751",
+                  color: "white",
+                  padding: "2rem",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Typography variant="h2" component="p" align="center">
+                  {marketcap}
+                </Typography>
+                <Typography variant="h5" component="p" align="center">
+                  Market Cap
+                </Typography>
+              </Box>
+            </Grid>
+            <Grid item xs={12} sm={3}>
+              <Box
+                style={{
+                  background: "#322751",
+                  color: "white",
+                  padding: "2rem",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Typography variant="h2" component="p" align="center">
+                  {avgprice}
+                </Typography>
+                <Typography variant="h5" component="p" align="center">
+                  Average Price
+                </Typography>
+              </Box>
+            </Grid>
+            <Grid item xs={12} sm={3}>
+              <Box
+                style={{
+                  background: "#322751",
+                  color: "white",
+                  padding: "2rem",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Typography variant="h2" component="p" align="center">
+                  {datastats.thirty_day_sales}
+                </Typography>
+                <Typography variant="h5" component="p" align="center">
+                  Monthly Sales
+                </Typography>
+              </Box>
+            </Grid>
+          </Grid>
+        </Container>
           </Grid>{" "}
           <Typography variant="h1" component="p" align="center">
             &#8595;

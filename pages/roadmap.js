@@ -128,7 +128,7 @@ export default function Home() {
               lg={8}
               style={{
                 background: "#402651",
-                borderRadius: "30px",
+                borderRadius: "20px",
                 margin: "3rem auto",
               }}
             >
@@ -524,6 +524,7 @@ export default function Home() {
                   padding: "2rem",
                   alignItems: "center",
                   justifyContent: "center",
+                  borderRadius: "20px"
                 }}
               >
                 <Typography variant="h2" component="p" align="center">
@@ -542,6 +543,7 @@ export default function Home() {
                   padding: "2rem",
                   alignItems: "center",
                   justifyContent: "center",
+                  borderRadius: "20px"
                 }}
               >
                 <Typography variant="h2" component="p" align="center">
@@ -560,6 +562,7 @@ export default function Home() {
                   padding: "2rem",
                   alignItems: "center",
                   justifyContent: "center",
+                  borderRadius: "20px"
                 }}
               >
                 <Typography variant="h2" component="p" align="center">
@@ -578,6 +581,7 @@ export default function Home() {
                   padding: "2rem",
                   alignItems: "center",
                   justifyContent: "center",
+                  borderRadius: "20px"
                 }}
               >
                 <Typography variant="h2" component="p" align="center">
@@ -605,7 +609,7 @@ export default function Home() {
               lg={8}
               style={{
                 background: "#402651",
-                borderRadius: "30px",
+                borderRadius: "20px",
                 padding: "30px",
                 color: "white",
               }}
@@ -649,7 +653,7 @@ export default function Home() {
             className={classes.contentStyle}
             style={{
               background: "#402651",
-              borderRadius: "30px",
+              borderRadius: "20px",
               padding: "30px",
               color: "white",
             }}
@@ -694,7 +698,7 @@ export default function Home() {
             className={classes.contentStyle}
             style={{
               background: "#402651",
-              borderRadius: "30px",
+              borderRadius: "20px",
               padding: "30px",
               color: "white",
             }}
@@ -742,7 +746,7 @@ export default function Home() {
               lg={8}
               style={{
                 background: "#402651",
-                borderRadius: "30px",
+                borderRadius: "20px",
                 padding: "30px",
                 color: "white",
               }}
@@ -772,7 +776,7 @@ export default function Home() {
             className={classes.contentStyle}
             style={{
               background: "#402651",
-              borderRadius: "30px",
+              borderRadius: "20px",
               padding: "30px",
               color: "white",
             }}
@@ -810,7 +814,7 @@ export default function Home() {
               lg={8}
               style={{
                 background: "#402651",
-                borderRadius: "30px",
+                borderRadius: "20px",
                 padding: "30px",
                 color: "white",
               }}
@@ -844,7 +848,7 @@ export default function Home() {
               lg={8}
               style={{
                 background: "#402651",
-                borderRadius: "30px",
+                borderRadius: "20px",
                 padding: "30px",
                 color: "white",
               }}
@@ -878,7 +882,7 @@ export default function Home() {
               lg={8}
               style={{
                 background: "#402651",
-                borderRadius: "30px",
+                borderRadius: "20px",
                 padding: "30px",
                 color: "white",
               }}

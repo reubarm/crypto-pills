@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
         },
       },
       titleContainer: {
-        background: '#703673', maxWidth: '900px', padding: '2rem', margin: '0 auto',
+        background: '#703673', maxWidth: '900px', padding: '2rem', margin: '0 auto', borderRadius: '20px'
       },
       title: {
         color: "#fff",
@@ -123,7 +123,7 @@ const useStyles = makeStyles((theme) => ({
       },
       artworkSection: {
         background: "rgb(244, 246, 248)",
-        borderRadius: "30px",
+        borderRadius: "20px",
         padding: "2rem 10rem",
         // margin: "2rem auto 3rem",
         '@media (max-width: 900px)': {
@@ -136,7 +136,7 @@ const useStyles = makeStyles((theme) => ({
           #000 30%,
           #333 100%)`,
         width: "100%",
-        borderRadius: "30px",
+        borderRadius: "20px",
         color: "#fff!important",
         padding: "3rem",
         textAlign: "left",
@@ -167,7 +167,7 @@ const useStyles = makeStyles((theme) => ({
           #692a97 100%)`,
         margin: "3rem auto",
         textAlign: "center",
-        borderRadius: "30px",
+        borderRadius: "20px",
         padding: "2rem 0 1rem!important",
       },
       detailSectionGridCell: {
@@ -191,7 +191,7 @@ const useStyles = makeStyles((theme) => ({
         background: "#703673",
         margin: "0",
         padding: "1rem 2rem",
-        borderRadius: "30px",
+        borderRadius: "20px",
         width: "100%",
         height: "250px",
         color: 'white!important'
@@ -222,7 +222,7 @@ const useStyles = makeStyles((theme) => ({
         margin: "3rem auto",
         overflow: "hidden",
         padding: "50px",
-        borderRadius: "30px",
+        borderRadius: "20px",
         background: `linear-gradient(135deg,
           #000 30%,
           #692a97 100%)`,

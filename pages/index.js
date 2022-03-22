@@ -235,6 +235,7 @@ export default function Home() {
                   padding: "2rem",
                   alignItems: "center",
                   justifyContent: "center",
+                  borderRadius: "20px"
                 }}
               >
                 <Typography variant="h2" component="p" align="center">
@@ -253,6 +254,7 @@ export default function Home() {
                   padding: "2rem",
                   alignItems: "center",
                   justifyContent: "center",
+                  borderRadius: "20px"
                 }}
               >
                 <Typography variant="h2" component="p" align="center">
@@ -271,6 +273,7 @@ export default function Home() {
                   padding: "2rem",
                   alignItems: "center",
                   justifyContent: "center",
+                  borderRadius: "20px"
                 }}
               >
                 <Typography variant="h2" component="p" align="center">
@@ -289,6 +292,7 @@ export default function Home() {
                   padding: "2rem",
                   alignItems: "center",
                   justifyContent: "center",
+                  borderRadius: "20px"
                 }}
               >
                 <Typography variant="h2" component="p" align="center">
@@ -450,7 +454,7 @@ export default function Home() {
             spacing={2}
             style={{
               background: "#a289ab",
-              borderRadius: "30px",
+              borderRadius: "20px",
               opacity: "1",
             }}
           >
@@ -506,7 +510,7 @@ export default function Home() {
               background: `linear-gradient(135deg,
                   #000 33%,
                   #692a97 100%)`,
-              borderRadius: "30px",
+              borderRadius: "20px",
               padding: "30px",
               color: "white",
             }}

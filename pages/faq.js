@@ -155,7 +155,7 @@ export default function Home() {
               xs={12}
               style={{
                 background: "rgb(244, 246, 248)",
-                borderRadius: "30px",
+                borderRadius: "20px",
                 padding: "3rem 5rem",
               }}
             >

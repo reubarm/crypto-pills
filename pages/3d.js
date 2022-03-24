@@ -15,34 +15,78 @@ import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import Divider from "@material-ui/core/Divider";
 
+import Head from "next/head";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 
 const useStyles = makeStyles((theme) => ({
-  topSection: {
+  root: {
+    padding: "0",
+  },
+  headerLink: {
+    margin: theme.spacing(1, 2),
+    cursor: "pointer",
+    fontWeight: "600",
+    fontSize: "1rem",
+    color: "#555",
+    letterSpacing: "-0.5px",
+    "&:hover": {
+      textDecoration: "none",
+      color: "#000",
+    },
+  },
+  bannerSection: {
+    marginTop: "50px",
+    position: "relative",
+    backgroundSize: "cover",
+    backgroundImage: "url(/overlay.svg), url(/game.png)",
+    height: "100vh",
+    padding: "10rem 0",
     textAlign: "center",
+    '@media (max-width: 575px)': {
+      padding: "6rem 0",
+    },
+  },
+  title: {
+    color: "#fff",
+    fontSize: "4rem",
+    '@media (max-width: 575px)': {
+      fontSize: "2rem",
+    },
+  },
+  subtitle: {
+    color: "#fff",
+    fontSize: "1.5rem",
+    '@media (max-width: 575px)': {
+      fontSize: "1rem",
+    },
+  },
+  openSea: {
+    fontSize: "1rem",
+    fontWeight: "700",
+    letterSpacing: "0",
+    textTransform: "none",
+    borderRadius: "10",
+    margin: "3rem 1rem 0 0",
+    minWidth: "250px",
+    minHeight: "50px",
+    backgroundColor: "#703673",
+    color: "#FFF",
+    "&:hover": {
+      backgroundColor: "#873fbd",
+    },
+    '@media (max-width: 520px)': {
+      margin: "2rem 0 0",
+    },
+  },
+  detailSection: {
     marginTop: "100px",
   },
-  gridCell: {
-    margin: "5px 0",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
+  majorHeading: {
+    marginBlockStart: "3rem",
   },
-  button: {
-    width: "100%",
-    height: "100%",
-  },
-  textValue: {
-    overflowWrap: "anywhere",
-    fontSize: "0.9rem",
-  },
-  input: {
-    textSize: "0.5rem",
-  },
-  button: {
-    height: "50px",
-    width: "100%",
+  pointHeading: {
+    marginBlockStart: "2rem",
   },
 }));
 
@@ -308,7 +352,7 @@ export default function Admin() {
       let accountAddress = "";
       accountAddress = account;
       fetch(
-        `https://api.opensea.io/api/v1/assets?format=json&owner=${accountAddress}`,
+        `https://api.opensea.io/api/v1/assets?format=json&owner=${account}`,
         options
       )
         .then((response) => response.json())
@@ -320,33 +364,40 @@ export default function Admin() {
     }
   }, [CryptoPillsContract, account]);
 
-  const filteredNfts = nfts.filter((nft) => nft);
+
+ const filteredNfts = nfts.filter((nft) => nft.collection.payout_address === "0xb41f146670ce3dedac51d79956cd5e292be26ec4");
 
   console.log(nfts);
   console.log(howmany);
 
   return (
     <>
-      <Header />
-      <Container maxWidth="lg" component="main">
-        <Grid
-          container
-          spacing={2}
-          justifyContent="space-evenly"
-          className={classes.topSection}
-        >
-          <Grid item sx={12} md={12} className={classes.gridCell}>
-            <Typography variant="h2" component="h1" align="center">
-              {isOwner
-                ? "You are the contract owner"
-                : "You are not the contract owner"}
-            </Typography>
-          </Grid>
-          
-          <Typography variant="h5" component="h5" align="center">
-              You have {howmany} Crypto Pills 😊
-            </Typography>
+      
+      <Head>
+        <title>3D Crypto Pills | Crypto Pills</title>
+        <meta
+          name="description"
+          content="Micha Klein’s digital art has been around for over 30 years, and is not going away."
+        />
+      </Head>
+      <Container
+        id="top-anchor"
+        maxWidth={false}
+        component="main"
+        className={classes.root}
+      >
+        <Header />
 
+        <Container
+          maxWidth={false}
+          component="div"
+          className={classes.bannerSection}
+        >
+          <Typography variant="h3" component="p" className={classes.title}>
+           {(CryptoPillsContract ? `You have ${howmany} Crypto Pills` : "You don't have any Crypto Pills")}
+           <span style={{display: 'block', margin: '1.5rem'}}>💊😊</span>
+          </Typography>
+          <br />
           <Grid item sx={12} md={12} className={classes.gridCell}>
           {filteredNfts.map((nft, index) => {
             return (
@@ -368,12 +419,38 @@ export default function Admin() {
             );
           })}
           </Grid>
+          <br/>
+          <Typography
+            variant="body2"
+            component="p"
+            className={classes.subtitle}
+          >
+            {(CryptoPillsContract ? `You are officially a Gold Member, because you are the owner of ${howmany} Crypto Pills.` : "If you own a Crypto Pill, you can become an exclusive member of the community and mint for free.")}
+            
+          </Typography>
+          <br />
+          <Typography
+            variant="body2"
+            component="p"
+            className={classes.subtitle}
+          >
+            {(CryptoPillsContract ? `Mint some of the rarest and best for FREE - you're amazing!` : `Mint our new 3D Crypto Pills for 0.1 ETH` )}
+            
+          </Typography>
+          <Button
+            variant="contained"
+            color="secondary"
+            className={classes.openSea}
+            onClick={() => alert("Coming soon!")}
+          >
+            {(CryptoPillsContract ? "Mint 3D Crypto Pill for FREE" : "Mint 3D Crypto Pill for 0.1 ETH" )}
+          </Button>
+        </Container>
+      </Container>
 
-          <Grid item sx={12} md={12}>
-            <Divider />
-          </Grid>
 
-          <Grid item sx={12} md={12} className={classes.gridCell}>
+
+          {/* <Grid item sx={12} md={12} className={classes.gridCell}>
             <Typography
               variant="h4"
               component="p"
@@ -705,8 +782,7 @@ export default function Admin() {
             </Button>
           </Grid>
           <Grid item sx={12} md={4} className={classes.gridCell}></Grid>
-        </Grid>
-      </Container>
+        </Grid> */}
       <Footer />
     </>
   );

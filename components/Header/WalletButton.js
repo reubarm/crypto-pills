@@ -138,6 +138,9 @@ export default function WalletButton(props) {
     getAddressDisplay();
   }, [account]);
 
+
+  // console.log(account);
+
   const anchorRef = React.useRef(null);
   
   const [dropDownOpen, setDropDownOpen] = React.useState(false);

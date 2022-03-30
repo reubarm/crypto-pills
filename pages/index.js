@@ -558,8 +558,7 @@ export default function Home() {
                     data-aos-duration={1000}
                   >
                     Since launch on <strong>August 27th 2021</strong>, Cryto
-                    Pills floor price has always been higher than mint (0.07
-                    ETH) 😊.
+                    Pills has created a total volume of <strong>{volume} ETH ($7,267,340.47)</strong>, whilst the current OpenSea floor price is <strong>{datastats.floor_price} ETH</strong>.
                   </p>
                 </div>
               </div>

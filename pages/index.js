@@ -159,7 +159,6 @@ export default function Home() {
                   >
                     Crypto Pill Roadmap
                   </a>
-                  &nbsp;&nbsp;&nbsp;&nbsp;
                   <a
                     href="https://opensea.io/collection/crypto-pills-by-micha-klein"
                     className="btn-action style-2"
@@ -806,8 +805,7 @@ export default function Home() {
               <div className="col-12">
                 <div className="newsletter__body" data-aos="fade-up">
                   <div
-                    className="col-md-6"
-                    style={{ borderRight: "1px solid white" }}
+                    className="col-md-6 border-right"
                   >
                     <div className="block-text center">
                       <h3 className="mb-13" style={{ color: "white" }}>
@@ -1041,10 +1039,12 @@ export default function Home() {
               <div className="col-12">
                 <div className="newsletter__body" data-aos="fade-up">
                   <div className="block-text">
-                    <h3 className="mb-13" style={{ color: "white" }}>
+                    <h3 className="mb-13" style={{ color: "white",
+                      marginTop: '20px' }}>
                       Let's be Friends
                     </h3>
-                    <p className="fs-21 mb-7" style={{ color: "white" }}>
+                    <p className="fs-21 mb-7" style={{ color: "white",
+                      marginBottom: '20px' }}>
                       Join us on our journey to the moon.
                     </p>
                   </div>
@@ -1053,6 +1053,7 @@ export default function Home() {
                       width: "300px",
                       display: "flex",
                       justifyContent: "space-between",
+                      margin: '20px 0'
                     }}
                   >
                     <Link

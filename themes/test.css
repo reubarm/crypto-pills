@@ -19,8 +19,9 @@
     font-size: 18px;
     font-weight: 400;
     color: #333;
-    padding-top: 170px;
+    padding-top: 120px;
     background: white;
+    text-align: center!important;
   }
   h1,
   .h1,
@@ -265,6 +266,10 @@
     .pd-0 {
       padding: 0;
     }
+    .pt-24, .mt-27 {
+      padding-top: 0;
+      margin-top: 0;
+    }
   }
   
   .pb-team {
@@ -307,7 +312,11 @@
   }
   
   .center {
-    text-align: center;
+    text-align: center!important;
+  }
+
+  .border-right {
+    border-right: 1px solid white;
   }
   
   .color-main {
@@ -550,6 +559,9 @@
     .header .header__right .button {
       display: none;
     }
+    h1, h2, h3, .h1, .h2, .h3 {
+      font-size: 33px!important;
+    }
   }
   .header .header__right .social {
     display: flex;
@@ -713,6 +725,7 @@
     border-radius: 33px;
     z-index: 1;
     border: none;
+    margin-left: 10px;
   }
   .btn-action.style-2:hover {
     color: #333;
@@ -729,6 +742,14 @@
   @media only screen and (max-width: 767px) {
     .blog-list .btn-action.style-2 {
       padding: 12px 15px;
+    }
+    .btn-action.style-2 {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+    .border-right {
+      border-right: none!important;
+    margin: 0 0 50px 0;
     }
   }
 
@@ -843,6 +864,14 @@
     .block-text h1.heading-bg {
       font-size: 80px;
       top: 10px;
+    }
+    .sub-title::after {
+      content: "";
+      bottom: 0;
+      left: 0;
+      width: 0!important;
+      height: 0!important;
+      background: #fff!important;
     }
   }
   .block-text h1.heading-bg span {
@@ -2204,6 +2233,9 @@
     .road-map__content .box-time::before {
       display: none;
     }
+    .road-map__content::before {
+      left: 50%!important;
+    }
   }
   .road-map__content .box-time.left::before {
     right: -116px;
@@ -2284,7 +2316,10 @@
   }
   @media only screen and (max-width: 767px) {
     .team-box {
-      padding: 20px 35px;
+      padding: 20px 0;
+    }
+    .team-info {
+      padding: 0!important;
     }
   }
   .team-box:hover .img-team .social::before {

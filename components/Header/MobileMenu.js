@@ -64,6 +64,24 @@ export default function MobileMenu(props) {
           <List component="nav">
             <WalletButton />
             <Divider />
+            <ListItem button component="a" href="/">
+              <ListItemText
+                primary="Home"
+                primaryTypographyProps={{
+                  variant: "h5",
+                  className: classes.menuItem,
+                }}
+              />
+            </ListItem>
+            <ListItem button component="a" href="/#roadmap">
+              <ListItemText
+                primary="Roadmap"
+                primaryTypographyProps={{
+                  variant: "h5",
+                  className: classes.menuItem,
+                }}
+              />
+            </ListItem>
             <ListItem button component="a" href="/play">
               <ListItemText
                 primary="Play"
@@ -82,33 +100,9 @@ export default function MobileMenu(props) {
                 }}
               />
             </ListItem>{" "}
-            <ListItem button component="a" href="/roadmap">
-              <ListItemText
-                primary="Roadmap"
-                primaryTypographyProps={{
-                  variant: "h5",
-                  className: classes.menuItem,
-                }}
-              />
-            </ListItem>
-            <ListItem button component="a" href="/faq">
-              <ListItemText
-                primary="FAQ"
-                primaryTypographyProps={{
-                  variant: "h5",
-                  className: classes.menuItem,
-                }}
-              />
-            </ListItem>
-            <ListItem button component="a" href="#about-section">
-              <ListItemText
-                primary="About"
-                primaryTypographyProps={{
-                  variant: "h5",
-                  className: classes.menuItem,
-                }}
-              />
-            </ListItem>
+
+   
+          
           </List>
         </div>
       </Drawer>

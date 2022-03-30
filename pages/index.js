@@ -3,6 +3,7 @@ import { useWeb3React } from "@web3-react/core";
 import { useEagerConnect, useInactiveListener } from "../hooks/web3-react";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import ReactPlayer from "react-player";
 
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
@@ -103,7 +104,9 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Play Game | Crypto Pills</title>
+        <title>
+          Crypto Pills | NFTs, Games, Movies and Merchandise by Micha Klein
+        </title>
         <meta
           name="description"
           content="Micha Klein’s digital art has been around for over 30 years, and is not going away."
@@ -148,13 +151,23 @@ export default function Home() {
               </div>
               <div className="col-xl-6 col-md-6 col-12">
                 <div className="content-right d-flex">
-                  <iframe
+                  <ReactPlayer
+                    url="/123.mov"
+                    playing={true}
+                    loop={true}
+                    controls={false}
+                    muted={true}
+                    width="600"
+                    height="540"
+                    style={{ borderRadius: "30px" }}
+                  />
+                  {/* <iframe
                     src="/animation/pillman.html"
                     width="600"
                     height="540"
                     scrolling="no"
                     style={{ borderRadius: "30px" }}
-                  ></iframe>
+                  ></iframe> */}
 
                   {/* <div className="swiper-container swiper mySwiper1 swiper-h">
                     <div className="swiper-wrapper">
@@ -545,18 +558,14 @@ export default function Home() {
                     data-aos-duration={1000}
                   >
                     <h2>{marketcap}</h2>
-                    <span className="h5">
-                      Market Cap (ETH)
-                    </span>
+                    <span className="h5">Market Cap (ETH)</span>
                   </div>
                   <div
                     className="box-item bg-2 mr-28 mt--16 center"
                     data-aos="flip-left"
                   >
                     <h2>{avgprice}</h2>
-                    <span className="h5">
-                      Average Price (ETH)
-                    </span>
+                    <span className="h5">Average Price (ETH)</span>
                   </div>
                   <div
                     className="box-item bg-2 mt-29 center"
@@ -564,9 +573,7 @@ export default function Home() {
                     data-aos-duration={1000}
                   >
                     <h2>{datastats.thirty_day_sales}</h2>
-                    <span className="h5">
-                      Monthly Sales
-                    </span>
+                    <span className="h5">Monthly Sales</span>
                   </div>
                 </div>
               </div>
@@ -884,14 +891,15 @@ export default function Home() {
                 <div className="team-box">
                   <div className="team-info">
                     <p className="fs-21">
-                      <a href="https://michaklein.com">Micha Klein</a> has been a pioneer in digital
-                      3D animation since before Steve Jobs invested in Pixar.
-                      Blockchain technology has allowed Micha to fulfill a dream
-                      of his, bringing his legendary (Eminem’s Anger Management
-                      Tour) OG Pillman to the masses and to the metaverse. He
-                      has created 10,000 wildly intricate and unique,
-                      computer-generated avatars. Every pill is represented by a
-                      token that has a 3000x3000 pixel depth.
+                      <a href="https://michaklein.com">Micha Klein</a> has been
+                      a pioneer in digital 3D animation since before Steve Jobs
+                      invested in Pixar. Blockchain technology has allowed Micha
+                      to fulfill a dream of his, bringing his legendary
+                      (Eminem’s Anger Management Tour) OG Pillman to the masses
+                      and to the metaverse. He has created 10,000 wildly
+                      intricate and unique, computer-generated avatars. Every
+                      pill is represented by a token that has a 3000x3000 pixel
+                      depth.
                       <br />
                       <br />
                       Micha is dedicated to adding value to this project, every

@@ -34,10 +34,16 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: '700',
     letterSpacing: '0',
     textTransform: 'none',
-    borderRadius: '10',
-    backgroundColor: '#692a97',
+    borderRadius: '23px',
+    padding: '10px 50px',
+    marginLeft: '10px',
+    backgroundColor: '#BFD7EA',
+    border: '2px solid #c5e4f9',
+    boxShadow: 'none',
+    color: '#333',
     '&:hover': {
-      backgroundColor: '#471d66'
+      backgroundColor: '#a8c6dc',
+      boxShadow: 'none',
     }
   },
   buttonProgress: {

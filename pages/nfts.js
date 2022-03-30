@@ -28,8 +28,8 @@ const ImageBackdrop = styled("div")(({ theme }) => ({
   right: 0,
   top: 0,
   bottom: 0,
-  background: "#883eab",
-  opacity: 0.2,
+  background: "white",
+  opacity: 0,
   transition: theme.transitions.create("opacity"),
 }));
 
@@ -43,22 +43,22 @@ const ImageIconButton = styled(Button)(({ theme }) => ({
     width: "100% !important",
     height: 100,
   },
-  "&:hover": {
-    zIndex: 1,
-  },
-  "&:hover .imageBackdrop": {
-    opacity: 0.15,
-  },
-  "&:hover .imageMarked": {
-    opacity: 0,
-  },
-  "&:hover .imageTitle": {
-    background: "white",
-  },
+  // "&:hover": {
+  //   zIndex: 1,
+  // },
+  // "&:hover .imageBackdrop": {
+  //   opacity: 0.15,
+  // },
+  // "&:hover .imageMarked": {
+  //   opacity: 0,
+  // },
+  // "&:hover .imageTitle": {
+  //   background: "white",
+  // },
   "& .imageTitle": {
     position: "relative",
     padding: "0 30px",
-    background: "#ffdeeb",
+    background: "white",
     marginTop: "200px",
   },
 }));
@@ -181,35 +181,6 @@ export default function Home() {
 
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
-  const title = [
-    "How do I purchase Crypto-Pills?",
-    "How do I know which Crypto-Pill I get?",
-    "How many Crypto-Pills can I buy per single transaction?",
-    "What will be the price of Crypto-Pills?",
-  ];
-
-  const description = [
-    "The easiest way to purchase Crypto-Pills is to install a MetaMask extension in your browser and link your crypto wallet to it. Ensure you have enough ETH in your wallet to cover the cost of purchasing Crypto-Pills, in addition to any associated gas fees. Approve the desired transaction on MetaMask and you are ready to go. For more information, please refer to this link: https://nftyfarm.com/metamask/",
-    "Crypto-Pills will remain hidden until the big reveal on August 27, 2021. Upon reveal, the artwork from the pre-defined collection will be assigned to the NFT placeholder that you purchased. “Blind sales” are chosen to ensure the Crypto-Pills value is protected so no one can determine its rarity, including the project owners.",
-    "There is a limit of twenty (20) Crypto-Pills that can be purchased in one (1) transaction.",
-    "The pricing model is a flat-rate throughout the entire sale. The cost of each Crypto-Pill is set at 0.07 Eth, and 100 Crypto-Pills will be reserved for giveaways.",
-  ];
-
-  const mockData = {
-    id: (index) => `${index + 1}`,
-    text: {
-      title: (index) => title[index],
-      description: (index) => description[index],
-    },
-  };
-
-  const MOCK_FAQS = [...Array(4)].map((_, index) => ({
-    id: mockData.id(index),
-    value: `panel${index + 1}`,
-    heading: mockData.text.title(index),
-    detail: mockData.text.description(index),
-  }));
-
   const [moedas, setMoedas] = useState([]);
   const limit = 32;
   const options = { method: "GET" };
@@ -282,7 +253,7 @@ export default function Home() {
           <Box sx={{ mt: 8, display: "flex", flexWrap: "wrap" }}>
             {filteredMoedas.map((moeda, index) => {
               return (
-                index < 32 && (
+                index < 48 && (
                   <ImageIconButton
                     href={moeda.assets[0].permalink}
                     style={{
@@ -299,9 +270,11 @@ export default function Home() {
                         backgroundSize: "cover",
                         backgroundPosition: "center 40%",
                         backgroundImage: `url(${moeda.assets[0].image_url})`,
+                        borderRadius: '30px',
+                        margin: '0.5rem'
                       }}
                     />
-                    <ImageBackdrop className="imageBackdrop" />
+                    {/* <ImageBackdrop className="imageBackdrop" /> */}
                     <Box
                       sx={{
                         position: "absolute",

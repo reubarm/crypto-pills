@@ -8,7 +8,9 @@ import Head from 'next/head';
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from '../themes/theme';
-import getLibrary from '../utils/getLibrary'
+import getLibrary from '../utils/getLibrary';
+import '../themes/test.css';
+import AOS from "aos";
 
 function MyApp({ Component, pageProps }) {
   React.useEffect(() => {
@@ -17,6 +19,10 @@ function MyApp({ Component, pageProps }) {
     if (jssStyles) {
       jssStyles.parentElement.removeChild(jssStyles);
     }
+  }, []);
+
+  React.useEffect(() => {
+    AOS.init();
   }, []);
 
   return (
@@ -34,6 +40,10 @@ function MyApp({ Component, pageProps }) {
         <link rel="icon" href="/favicon.png" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans:200,300,400,500,600,700,800&display=swap" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="/font/font-awesome.css" />
+        <link href="/dist/aos.css" rel="stylesheet" />
+        {/* <link rel="stylesheet" href="/dist/swiper-bundle.min.css" /> */}
       </Head>
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
@@ -46,6 +56,13 @@ function MyApp({ Component, pageProps }) {
           </Web3ReactProvider>
         </SnackbarProvider>
       </ThemeProvider>
+
+      {/* <script src="/js/jquery.min.js" />
+      <script src="/js/swiper-bundle.min.js" />
+      <script src="/js/swiper.js" />
+      <script src="/js/app.js" />
+      <script src="/js/aos.js" />
+      <script type="text/javascript" src="/js/vanilla-tilt.js" /> */}
     </>
   )
 }

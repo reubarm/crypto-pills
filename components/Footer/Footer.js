@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   },
   link: {
     margin: '0 10px',
-    color: '#692a97',
+    color: '#457B9D',
     display:'flex',
     flexDirection:'column',
     justifyContent:'center',

@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
   },
   link: {
     margin: "10px 10px 5px",
-    color: "#692a97",
+    color: "#4662b3",
   },
   headerLink: {
     margin: theme.spacing(1, 2),
@@ -123,14 +123,6 @@ export default function Header(props) {
               className={classes.headerLink}
             >
               FAQs
-            </Link>
-            <Link
-              variant="h6"
-              color="textPrimary"
-              href="#about-section"
-              className={classes.headerLink}
-            >
-              About
             </Link>
             {/* <Link variant='h6' color="textPrimary" href="#mint-section" className={classes.headerLink}>Mint</Link> */}
             <Link

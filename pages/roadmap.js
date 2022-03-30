@@ -127,7 +127,7 @@ export default function Home() {
               md={10}
               lg={8}
               style={{
-                background: "#402651",
+                background: "#eef9fa",
                 borderRadius: "20px",
                 margin: "3rem auto",
               }}
@@ -137,7 +137,7 @@ export default function Home() {
                 variant="h3"
                 component="p"
                 align="center"
-                style={{ margin: "30px auto 0", color: "white" }}
+                style={{ margin: "30px auto 0", color: "#1D3557" }}
               >
                 Crypto Pills NFT Launch
               </Typography>
@@ -145,7 +145,7 @@ export default function Home() {
                 variant="p"
                 component="p"
                 align="center"
-                style={{ margin: "10px auto 30px", color: "white" }}
+                style={{ margin: "10px auto 30px", color: "#1D3557" }}
               >
                 August 27th 2021
               </Typography>
@@ -155,7 +155,7 @@ export default function Home() {
                 align="center"
                 style={{
                   margin: "10px auto 30px",
-                  color: "white",
+                  color: "#1D3557",
                   fontWeight: "500",
                 }}
               >
@@ -168,7 +168,7 @@ export default function Home() {
                 align="center"
                 style={{
                   margin: "10px auto 30px",
-                  color: "white",
+                  color: "#1D3557",
                   width: "80%",
                 }}
               >
@@ -183,7 +183,7 @@ export default function Home() {
                 variant="p"
                 component="p"
                 align="center"
-                style={{ margin: "10px auto 30px", color: "white" }}
+                style={{ margin: "10px auto 30px", color: "#1D3557" }}
               >
                 Crypto Pills Fanclub Room started on Clubhouse
               </Typography>
@@ -212,7 +212,7 @@ export default function Home() {
                         align="center"
                         style={{
                           marginBlockEnd: "1rem",
-                          color: "white",
+                          color: "#1D3557",
                         }}
                       >
                         Week 1
@@ -240,7 +240,7 @@ export default function Home() {
                         variant="h3"
                         component="p"
                         align="center"
-                        style={{ marginBlockEnd: "1rem", color: "white" }}
+                        style={{ marginBlockEnd: "1rem", color: "#1D3557" }}
                       >
                         Week 2
                       </Typography>
@@ -267,7 +267,7 @@ export default function Home() {
                         variant="h3"
                         component="p"
                         align="center"
-                        style={{ marginBlockEnd: "1rem", color: "white" }}
+                        style={{ marginBlockEnd: "1rem", color: "#1D3557" }}
                       >
                         Week 3
                       </Typography>
@@ -297,7 +297,7 @@ export default function Home() {
                         variant="h3"
                         component="p"
                         align="center"
-                        style={{ marginBlockEnd: "1rem", color: "white" }}
+                        style={{ marginBlockEnd: "1rem", color: "#1D3557" }}
                       >
                         Week 4
                       </Typography>
@@ -328,7 +328,7 @@ export default function Home() {
                         variant="h3"
                         component="p"
                         align="center"
-                        style={{ marginBlockEnd: "1rem", color: "white" }}
+                        style={{ marginBlockEnd: "1rem", color: "#1D3557" }}
                       >
                         Week 5
                       </Typography>
@@ -345,7 +345,7 @@ export default function Home() {
                         style={{
                           fontWeight: "700",
                           textDecoration: "none",
-                          color: "white",
+                          color: "#1D3557",
                         }}
                       >
                         You can visit the store here.
@@ -368,7 +368,7 @@ export default function Home() {
                         variant="h3"
                         component="p"
                         align="center"
-                        style={{ marginBlockEnd: "1rem", color: "white" }}
+                        style={{ marginBlockEnd: "1rem", color: "#1D3557" }}
                       >
                         Week 6
                       </Typography>
@@ -396,7 +396,7 @@ export default function Home() {
                         variant="h3"
                         component="p"
                         align="center"
-                        style={{ marginBlockEnd: "1rem", color: "white" }}
+                        style={{ marginBlockEnd: "1rem", color: "#1D3557" }}
                       >
                         Week 7
                       </Typography>
@@ -424,7 +424,7 @@ export default function Home() {
                         variant="h3"
                         component="p"
                         align="center"
-                        style={{ marginBlockEnd: "1rem", color: "white" }}
+                        style={{ marginBlockEnd: "1rem", color: "#1D3557" }}
                       >
                         Week 8
                       </Typography>
@@ -454,7 +454,7 @@ export default function Home() {
                         variant="h3"
                         component="p"
                         align="center"
-                        style={{ marginBlockEnd: "1rem", color: "white" }}
+                        style={{ marginBlockEnd: "1rem", color: "#1D3557" }}
                       >
                         Week 9
                       </Typography>
@@ -483,7 +483,7 @@ export default function Home() {
                         variant="h3"
                         component="p"
                         align="center"
-                        style={{ marginBlockEnd: "1rem", color: "white" }}
+                        style={{ marginBlockEnd: "1rem", color: "#1D3557" }}
                       >
                         Week 10
                       </Typography>
@@ -514,17 +514,18 @@ export default function Home() {
               </Container>
             </Grid>
             <Grid item sm></Grid>
-            <Container maxWidth="lg"  style={{ margin: "0 auto 5rem" }}>
+        
+            <Container maxWidth="lg" style={{ margin: "0 auto 5rem" }}>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={3}>
               <Box
                 style={{
-                  background: "#322751",
+                  background: "#457B9D",
                   color: "white",
                   padding: "2rem",
                   alignItems: "center",
                   justifyContent: "center",
-                  borderRadius: "20px"
+                  borderRadius: "20px",
                 }}
               >
                 <Typography variant="h2" component="p" align="center">
@@ -538,12 +539,12 @@ export default function Home() {
             <Grid item xs={12} sm={3}>
               <Box
                 style={{
-                  background: "#322751",
+                  background: "#457B9D",
                   color: "white",
                   padding: "2rem",
                   alignItems: "center",
                   justifyContent: "center",
-                  borderRadius: "20px"
+                  borderRadius: "20px",
                 }}
               >
                 <Typography variant="h2" component="p" align="center">
@@ -557,12 +558,12 @@ export default function Home() {
             <Grid item xs={12} sm={3}>
               <Box
                 style={{
-                  background: "#322751",
+                  background: "#457B9D",
                   color: "white",
                   padding: "2rem",
                   alignItems: "center",
                   justifyContent: "center",
-                  borderRadius: "20px"
+                  borderRadius: "20px",
                 }}
               >
                 <Typography variant="h2" component="p" align="center">
@@ -576,12 +577,12 @@ export default function Home() {
             <Grid item xs={12} sm={3}>
               <Box
                 style={{
-                  background: "#322751",
+                  background: "#457B9D",
                   color: "white",
                   padding: "2rem",
                   alignItems: "center",
                   justifyContent: "center",
-                  borderRadius: "20px"
+                  borderRadius: "20px",
                 }}
               >
                 <Typography variant="h2" component="p" align="center">
@@ -608,14 +609,19 @@ export default function Home() {
               md={10}
               lg={8}
               style={{
-                background: "#402651",
+                background: "#eef9fa",
                 borderRadius: "20px",
                 padding: "30px",
-                color: "white",
+                color: "#1D3557",
               }}
               align="center"
             >
               <br />
+              <Typography variant="h4">
+                <span style={{ fontWeight: "400!important", color: "#a679bd" }}>
+                  BETA Launch
+                </span>
+              </Typography>
               <Typography variant="h3" component="p" align="center">
                 Game Development
               </Typography>
@@ -652,15 +658,16 @@ export default function Home() {
             lg={8}
             className={classes.contentStyle}
             style={{
-              background: "#402651",
+              background: "#eef9fa",
               borderRadius: "20px",
               padding: "30px",
-              color: "white",
+              color: "#1D3557",
             }}
             align="center"
           >
             <Box>
               <Typography variant="h4">
+                <br/>
                 <span style={{ fontWeight: "400!important", color: "#a679bd" }}>
                   Launch of Online Store
                 </span>
@@ -675,7 +682,12 @@ export default function Home() {
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
                 nisi ut aliquip ex ea commodo consequat
               </Typography>
-              <br />
+              <div style={{display: 'block'}}>
+              <img src="1.png" width="250" height="250" style={{display: 'inline', margin: '2rem 1rem 0'}}/>
+              <img src="2.png" width="250" height="250" style={{display: 'inline', margin: '2rem 1rem 0'}}/>
+              <img src="3.png" width="250" height="250" style={{display: 'inline', margin: '2rem 1rem 0'}}/>
+              <img src="4.png" width="250" height="250" style={{display: 'inline', margin: '2rem 1rem 0'}}/>
+              </div><br />
               <Button
                 size="large"
                 variant="contained"
@@ -697,10 +709,10 @@ export default function Home() {
             lg={8}
             className={classes.contentStyle}
             style={{
-              background: "#402651",
+              background: "#eef9fa",
               borderRadius: "20px",
               padding: "30px",
-              color: "white",
+              color: "#1D3557",
             }}
             align="center"
           >
@@ -734,37 +746,183 @@ export default function Home() {
           </Grid>
           <Typography variant="h1" component="p" align="center">
             &#8595;
-          </Typography>{" "}
-          <br />
-          <br />
-          <Grid container>
-            <Grid item sm></Grid>
-            <Grid
-              item
-              xs={12}
-              md={10}
-              lg={8}
-              style={{
-                background: "#402651",
-                borderRadius: "20px",
-                padding: "30px",
-                color: "white",
-              }}
-            >
-              <br />
-              <br />
-              <br />
-              <Typography variant="h3" component="p" align="center">
-                Pill Coin Token Launch
+          </Typography>
+          <Grid
+            item
+            xs={12}
+            md={10}
+            lg={8}
+            className={classes.contentStyle}
+            style={{
+              background: "#eef9fa",
+              borderRadius: "20px",
+              padding: "30px",
+              color: "#1D3557",
+            }}
+            align="center"
+          >
+            <Box>
+              <Typography variant="h4">
+                <span style={{ fontWeight: "400!important", color: "#a679bd" }}>
+                  June 1st 2022
+                </span>
+              </Typography>
+              <Typography variant="h3" className={classes.title}>
+              Pill Coin Token Launch
               </Typography>
               <br />
+              <Typography variant="p" className={classes.subtitle}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat
+              </Typography>
               <br />
-              <br />
-            </Grid>
-            <Grid item sm></Grid>
+              <Button
+                size="large"
+                variant="contained"
+                target="_blank"
+                href="https://discord.gg/UV4FnNGYdp"
+                className={classes.playGame}
+              >
+                View the Whitepaper
+              </Button>
+            </Box>
           </Grid>
-          <br />
-          <br />
+          <Typography variant="h1" component="p" align="center">
+            &#8595;
+          </Typography>
+          <Grid
+            item
+            xs={12}
+            md={10}
+            lg={8}
+            className={classes.contentStyle}
+            style={{
+              background: "#eef9fa",
+              borderRadius: "20px",
+              padding: "30px",
+              color: "#1D3557",
+            }}
+            align="center"
+          >
+            <Box>
+              <Typography variant="h4">
+                <span style={{ fontWeight: "400!important", color: "#a679bd" }}>
+                  July 1st 2022
+                </span>
+              </Typography>
+              <Typography variant="h3" className={classes.title}>
+              Play to Earn Game (iOS & Android)
+              </Typography>
+              <br />
+              <Typography variant="p" className={classes.subtitle}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat
+              </Typography>
+              <br />
+              <Button
+                size="large"
+                variant="contained"
+                target="_blank"
+                href="https://discord.gg/UV4FnNGYdp"
+                className={classes.playGame}
+              >
+                Play the Game
+              </Button>
+            </Box>
+          </Grid> <Typography variant="h1" component="p" align="center">
+            &#8595;
+          </Typography>
+          <Grid
+            item
+            xs={12}
+            md={10}
+            lg={8}
+            className={classes.contentStyle}
+            style={{
+              background: "#eef9fa",
+              borderRadius: "20px",
+              padding: "30px",
+              color: "#1D3557",
+            }}
+            align="center"
+          >
+            <Box>
+              <Typography variant="h4">
+                <span style={{ fontWeight: "400!important", color: "#a679bd" }}>
+                  July 1st 2022
+                </span>
+              </Typography>
+              <Typography variant="h3" className={classes.title}>
+                3D Crypto Pills Launch
+              </Typography>
+              <br />
+              <Typography variant="p" className={classes.subtitle}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat
+              </Typography>
+              <br />
+              <Button
+                size="large"
+                variant="contained"
+                target="_blank"
+                href="https://discord.gg/UV4FnNGYdp"
+                className={classes.playGame}
+              >
+                Join the Discord Whitelist
+              </Button>
+            </Box>
+          </Grid>
+          <Typography variant="h1" component="p" align="center">
+            &#8595;
+          </Typography>
+          <Grid
+            item
+            xs={12}
+            md={10}
+            lg={8}
+            className={classes.contentStyle}
+            style={{
+              background: "#eef9fa",
+              borderRadius: "20px",
+              padding: "30px",
+              color: "#1D3557",
+            }}
+            align="center"
+          >
+            <Box>
+              <Typography variant="h4">
+                <span style={{ fontWeight: "400!important", color: "#a679bd" }}>
+                  October 1st 2022
+                </span>
+              </Typography>
+              <Typography variant="h3" className={classes.title}>
+              Live 3D Pillman Exhibitions
+              </Typography>
+              <br />
+              <Typography variant="p" className={classes.subtitle}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat
+              </Typography>
+              <br />
+              <Button
+                size="large"
+                variant="contained"
+                target="_blank"
+                href="https://discord.gg/UV4FnNGYdp"
+                className={classes.playGame}
+              >
+                Join the Discord Whitelist
+              </Button>
+            </Box>
+          </Grid>
           <Typography variant="h1" component="p" align="center">
             &#8595;
           </Typography>{" "}
@@ -775,10 +933,10 @@ export default function Home() {
             lg={8}
             className={classes.contentStyle}
             style={{
-              background: "#402651",
+              background: "#eef9fa",
               borderRadius: "20px",
               padding: "30px",
-              color: "white",
+              color: "#1D3557",
             }}
             align="center"
           >
@@ -789,7 +947,7 @@ export default function Home() {
                 </span>
               </Typography>
               <Typography variant="h3" className={classes.title}>
-                Crypto Pills Animated Series
+              Animated TV Series &amp; Movie Release
               </Typography>
               <br />
               <Typography variant="p" className={classes.subtitle}>
@@ -800,106 +958,9 @@ export default function Home() {
               </Typography>
             </Box>
           </Grid>
-          <Typography variant="h1" component="p" align="center">
-            &#8595;
-          </Typography>{" "}
-          <br />
-          <br />
-          <Grid container>
-            <Grid item sm></Grid>
-            <Grid
-              item
-              xs={12}
-              md={10}
-              lg={8}
-              style={{
-                background: "#402651",
-                borderRadius: "20px",
-                padding: "30px",
-                color: "white",
-              }}
-              align="center"
-            >
-              <br />
-              <br />
-              <br />
-              <Typography variant="h3" component="p" align="center">
-                Play to Earn Game (iOS &amp; Android)
-              </Typography>
-              <br />
-              <br />
-              <br />
-            </Grid>
-            <Grid item sm></Grid>
-          </Grid>
-          <br />
-          <br />
-          <Typography variant="h1" component="p" align="center">
-            &#8595;
-          </Typography>{" "}
-          <br />
-          <br />
-          <Grid container>
-            <Grid item sm></Grid>
-            <Grid
-              item
-              xs={12}
-              md={10}
-              lg={8}
-              style={{
-                background: "#402651",
-                borderRadius: "20px",
-                padding: "30px",
-                color: "white",
-              }}
-              align="center"
-            >
-              <br />
-              <br />
-              <br />
-              <Typography variant="h3" component="p" align="center">
-                Live Pillman Exhibitions
-              </Typography>
-              <br />
-              <br />
-              <br />
-            </Grid>
-            <Grid item sm></Grid>
-          </Grid>
-          <br />
-          <br />
-          <Typography variant="h1" component="p" align="center">
-            &#8595;
-          </Typography>{" "}
-          <br />
-          <br />
-          <Grid container>
-            <Grid item sm></Grid>
-            <Grid
-              item
-              xs={12}
-              md={10}
-              lg={8}
-              style={{
-                background: "#402651",
-                borderRadius: "20px",
-                padding: "30px",
-                color: "white",
-              }}
-              align="center"
-            >
-              <br />
-              <br />
-              <br />
-              <Typography variant="h3" component="p" align="center">
-                Animated TV Series &amp; Movie Release
-              </Typography>
-              <br />
-              <br />
-              <br />
-            </Grid>
-            <Grid item sm></Grid>
-          </Grid>
+    
+        
+    
         </Container>
       </Container>
       <Footer />

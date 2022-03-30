@@ -151,16 +151,18 @@ export default function Home() {
               </div>
               <div className="col-xl-6 col-md-6 col-12">
                 <div className="content-right d-flex">
-                  <ReactPlayer
-                    url="/123.mov"
-                    playing={true}
-                    loop={true}
-                    controls={false}
-                    muted={true}
-                    width="600"
-                    height="540"
-                    style={{ borderRadius: "30px" }}
-                  />
+                  <div style={{ borderRadius: "30px", overflow:'hidden' }}>
+                    <ReactPlayer
+                      url="/123.mov"
+                      playing={true}
+                      loop={true}
+                      controls={false}
+                      muted={true}
+                      width="600"
+                      height="540"
+                      style={{ borderRadius: "30px" }}
+                    />
+                  </div>
                   {/* <iframe
                     src="/animation/pillman.html"
                     width="600"

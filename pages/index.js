@@ -65,11 +65,16 @@ export default function Home() {
 
   let marketcap = 0;
   let avgprice = 0;
+  let volume = 0;
   if (datastats.market_cap) {
     marketcap = datastats.market_cap.toFixed(1);
   }
   if (datastats.average_price) {
-    avgprice = datastats.average_price.toFixed(2);
+    avgprice = datastats.average_price.toFixed(3);
+  }
+
+  if (datastats.total_volume) {
+    volume = datastats.total_volume.toFixed(1);
   }
 
   const title = [
@@ -127,39 +132,55 @@ export default function Home() {
           <div className="container">
             <div className="row">
               <div className="col-xl-6 col-md-6 col-12">
-                <div className="block-text pt-24">
+                <div className="block-text pt-24 mt-27">
                   <h6 className="sub-title mb-6" data-aos={"fade-up"}>
                     Welcome to Crypto Pills
                   </h6>
                   <h2 className="title mb-26" data-aos="fade-up">
                     Virtual Medicine for a Sick Society
                   </h2>
-                  <p className="desc mb-43" data-aos="fade-up">
+                  <p className="desc mb-20" data-aos="fade-up">
                     Some escaped from a lab; a few were dropped from a van;
                     others were prescribed by a doctor; or simply bought over
                     the counter.
                   </p>
+                  <p
+                    className="desc mb-43"
+                    data-aos="fade-up"
+                    style={{ fontWeight: "900" }}
+                  >
+                    Crypto-Pills are here to make you happy!
+                  </p>
                   <a
                     href="#roadmap"
-                    className="btn-action style-2"
+                    className="btn-action style-3"
                     data-aos="fade-up"
                     data-aos-duration={1200}
                   >
                     Crypto Pill Roadmap
                   </a>
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <a
+                    href="https://opensea.io/collection/crypto-pills-by-micha-klein"
+                    className="btn-action style-2"
+                    data-aos="fade-up"
+                    data-aos-duration={1200}
+                  >
+                    Buy on OpenSea
+                  </a>
                 </div>
               </div>
               <div className="col-xl-6 col-md-6 col-12">
                 <div className="content-right d-flex">
-                  <div style={{ borderRadius: "30px", overflow:'hidden' }}>
+                  <div style={{ borderRadius: "30px", overflow: "hidden" }}>
                     <ReactPlayer
-                      url="/123.mov"
+                      url="/123.mp4"
                       playing={true}
                       loop={true}
                       controls={false}
                       muted={true}
-                      width="600"
-                      height="540"
+                      width="560"
+                      height="640"
                       style={{ borderRadius: "30px" }}
                     />
                   </div>
@@ -548,11 +569,9 @@ export default function Home() {
                     className="box-item bg-2 mr-28 center"
                     data-aos="flip-left"
                   >
-                    <h2>{datastats.floor_price}</h2>
-                    <span className="h5">
-                      Floor Price <br />
-                      (ETH)
-                    </span>
+                  <h2>{avgprice}</h2>
+                  <span className="h5">Average Price (ETH)</span>
+                   
                   </div>
                   <div
                     className="box-item bg-2 mt-45 center"
@@ -566,8 +585,11 @@ export default function Home() {
                     className="box-item bg-2 mr-28 mt--16 center"
                     data-aos="flip-left"
                   >
-                    <h2>{avgprice}</h2>
-                    <span className="h5">Average Price (ETH)</span>
+                    <h2>{volume}</h2>
+                    <span className="h5">
+                      Total Volume<br />
+                      (ETH)
+                    </span>
                   </div>
                   <div
                     className="box-item bg-2 mt-29 center"
@@ -655,8 +677,7 @@ export default function Home() {
                     <p className="fs-16 color-main mb-0">September 2nd, 2021</p>
                     <h5 className="title mb-20">Merchandise Store Launch</h5>
                     <p className="fs-18">
-                      Oficia dese runt mollit anim id est labo met conse ctetur
-                      adipi smod tempor inc ididunt ut labore et dolore quis{" "}
+                    A full range of contemporary artwork, with MetaMask integration allowing owners of Crypto Pills to claim free merch or merch with discounts.
                     </p>
                     <a
                       href="https://dropthepill.com/"
@@ -679,8 +700,7 @@ export default function Home() {
                     <p className="fs-16 color-main mb-0">February 19th, 2022</p>
                     <h5 className="title mb-20">NFT Game Release</h5>
                     <p className="fs-18">
-                      Oficia dese runt mollit anim id est labo met conse ctetur
-                      adipi smod tempor inc ididunt ut labore et dolore quis{" "}
+                    An exciting skill based NFT collectors game launched as a BETA. Soon users can earn Pillcoins and Merchandise on the next release on iOS & Android.
                     </p>
                     <a
                       href="https://pillman-proto.netlify.app/"
@@ -702,8 +722,7 @@ export default function Home() {
                     <p className="fs-16 color-main mb-0">March 31st, 2022</p>
                     <h5 className="title mb-20">3D Pillman NFT Drop</h5>
                     <p className="fs-18">
-                      Oficia dese runt mollit anim id est labo met conse ctetur
-                      adipi smod tempor inc ididunt ut labore et dolore quis{" "}
+                    This collection will add value to the original collection, bring in new collectors and expand Crypto Pills IP into the Metaverse.
                     </p>
                     <a
                       href="https://discord.gg/UV4FnNGYdp"
@@ -725,8 +744,7 @@ export default function Home() {
                     <p className="fs-16 color-main mb-0">Date: TBC</p>
                     <h5 className="title mb-20">Pillcoin Token Launch</h5>
                     <p className="fs-18">
-                      Oficia dese runt mollit anim id est labo met conse ctetur
-                      adipi smod tempor inc ididunt ut labore et dolore quis{" "}
+                    The community gains voting rights on the Play-to-Earn games, NFTs, mini-movies, merchandise and events within the community launchpad.
                     </p>
                   </div>
                   <div
@@ -740,8 +758,7 @@ export default function Home() {
                     <p className="fs-16 color-main mb-0">Date: TBC</p>
                     <h5 className="title mb-20">Play to Earn Game</h5>
                     <p className="fs-18">
-                      Oficia dese runt mollit anim id est labo met conse ctetur
-                      adipi smod tempor inc ididunt ut labore et dolore quis{" "}
+                    The game will be available for free on iOS, Android and web platforms for Crypto Pill holders as a play-to-earn model with Pill Coins.
                     </p>
                   </div>
                   <div
@@ -755,8 +772,7 @@ export default function Home() {
                     <p className="fs-16 color-main mb-0">Date: TBC</p>
                     <h5 className="title mb-20">Live Crypto Pill Exhibition</h5>
                     <p className="fs-18">
-                      Oficia dese runt mollit anim id est labo met conse ctetur
-                      adipi smod tempor inc ididunt ut labore et dolore quis{" "}
+                    From large prints and paintings, to video installations and large sculptures, in various materials. Some really elaborate, like the Crypto-Pills sculptures, some even incorporating robotics.
                     </p>
                   </div>
                   <div
@@ -770,8 +786,7 @@ export default function Home() {
                     <p className="fs-16 color-main mb-0">Date: TBC</p>
                     <h5 className="title mb-20">Animated Mini-Movie Series</h5>
                     <p className="fs-18">
-                      Oficia dese runt mollit anim id est labo met conse ctetur
-                      adipi smod tempor inc ididunt ut labore et dolore quis{" "}
+                    We have already produced teasers for an animated movie / TV series, and there will be a complete launch of 5 episodes written by Hollywood director Frank Coraci.
                     </p>
                   </div>
                 </div>
@@ -1073,7 +1088,7 @@ export default function Home() {
         </section>
         {/* end Newsletter */}
         {/* FAQ */}
-        <section className="tf-section faq mt-200">
+        <section className="tf-section faq mt-200" id="faq">
           <div className="container">
             <div className="row">
               <div className="col-12">

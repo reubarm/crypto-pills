@@ -78,7 +78,7 @@ export default function Home() {
       >
         <Header />
 
-        <Container
+        {/* <Container
           maxWidth={false}
           component="div"
           className={classes.bannerSection}
@@ -111,7 +111,7 @@ export default function Home() {
               Join Discord Community
             </Button>
           </div>
-        </Container>
+        </Container> */}
 
         <Container
           id="roadmap-section"

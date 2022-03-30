@@ -977,12 +977,12 @@ export default function Home() {
                       Tour
                     </p>
                     <a
-                      href="#"
+                      href="https://www.techtimes.com/articles/264990/20210904/crypto-pills-nfts-offered-artist-who-created-pillman-character-used.htm"
                       className="btn-action style-3"
                       data-aos="fade-up"
                       data-aos-duration={1200}
                     >
-                      Watch Video
+                      Read Article
                     </a>
                   </div>
                 </div>
@@ -997,12 +997,12 @@ export default function Home() {
                       home… the #MOON!
                     </p>
                     <a
-                      href="#"
+                      href="https://twitter.com/timman_d/status/1476634196735049733"
                       className="btn-action style-3"
                       data-aos="fade-up"
                       data-aos-duration={1200}
                     >
-                      Read Article
+                      Read Tweets
                     </a>
                   </div>
                 </div>
@@ -1017,7 +1017,7 @@ export default function Home() {
                       category.
                     </p>
                     <a
-                      href="#"
+                      href="https://lawire.com/blockchain-creative-powerhouse-micha-klein-bags-first-ever-best-digital-nft-artist-award/"
                       className="btn-action style-3"
                       data-aos="fade-up"
                       data-aos-duration={1200}

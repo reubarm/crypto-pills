@@ -139,18 +139,22 @@ export default function Home() {
                   <h2 className="title mb-26" data-aos="fade-up">
                     Virtual Medicine for a Sick Society
                   </h2>
-                  <p className="desc mb-20" data-aos="fade-up">
-                    Some escaped from a lab; a few were dropped from a van;
-                    others were prescribed by a doctor; or simply bought over
-                    the counter.
+                  <p className="mb-20 fs-18" data-aos="fade-up">
+                  Crypto Pills are a limited NFT collection… Some escaped from a lab; a few were dropped from a van; others were prescribed by a doctor; or simply bought over the counter.
+<br/><br/>
+All 10,000 Crypto-Pills are algorithmically generated from 37 categories and 504 traits, allowing some to be rarer than others.
+<br/><br/>
+<strong>All Crypto-Pill’s features were created by the winner of the NYC Digital NFT Artist  Of The Year 2021 Award;  Micha Klein. They are multi-gender, multi-color and based on Micha’s infamous Pillman character Eminem brought on his first tour in 2000.
+<br/><br/>
+The Crypto Pills Collection dropped on August 27, 2021 and sold out in 11 minutes. They are available on secondary market at OpenSea and LooksRare; with Coinbase coming soon.</strong>
                   </p>
-                  <p
+                  {/* <p
                     className="desc mb-43"
                     data-aos="fade-up"
                     style={{ fontWeight: "900" }}
                   >
                     Crypto-Pills are here to make you happy!
-                  </p>
+                  </p> */}
                   <a
                     href="#roadmap"
                     className="btn-action style-3"
@@ -170,7 +174,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="col-xl-6 col-md-6 col-12">
-                <div className="content-right d-flex">
+                <div className="content-right d-flex mt-107">
                   <div style={{ borderRadius: "30px", overflow: "hidden" }}>
                     <ReactPlayer
                       url="/123.mp4"
@@ -369,29 +373,22 @@ export default function Home() {
                     Crypto-Pills Artwork
                   </h5>
                   <h3
-                    className="title mb-58"
+                    className="title"
                     data-aos="fade-up"
                     data-aos-duration={1000}
                   >
                     High Quality NFT Collection
                   </h3>
                   <p
-                    className="fs-21 mb-33"
+                    className="fs-18 mb-33"
                     data-aos="fade-up"
                     data-aos-duration={1000}
-                  >
-                    All Crypto-Pills vector artwork is rendered in glorious
-                    3,000 pixels resolution. This allows collectors to create
-                    crisp prints and avatars without loss of detail.
-                  </p>
-                  <p
-                    className="fs-18 line-h17 mb-41"
-                    data-aos="fade-up"
-                    data-aos-duration={1000}
-                  >
-                    Crypto-Pills are Fine Art Collectibles, offering you a
-                    unique chance to obtain an original Micha Klein artwork. His
-                    work has firm roots in digital art history.
+                  ><br/>
+                    All Crypto Pills vector artwork is rendered in glorious 3,000 pixels resolution. This allows collectors to create crisp prints and avatars without loss of detail.
+<br/><br/>
+Crypto-Pills are Fine Art Collectibles, offering you a unique chance to obtain an original Micha Klein artwork. His work has firm roots in digital art history.
+<br/><br/>
+Your Crypto-Pill serves as your digital identity, allowing you access to the Crypto Pills Origins P2E videogame, as well as other perks like discount on merch, airdrops of $PILL coins and NFTs , white list on future NFT drops by Micha Klein, and entry to raffles. 
                   </p>
                   <a
                     href="https://opensea.io/collection/crypto-pills-by-micha-klein"
@@ -647,8 +644,15 @@ export default function Home() {
                     <span data-aos="zoom-in" data-aos-offset={300}>
                       <i className="fa fa-check" />
                     </span>
+                    <div style={{display: 'flex', flexDirection: 'row'}}>
+                    <div style={{ width: '300px', display: 'inline' }}>
                     <p className="fs-16 color-main mb-2">August 24th, 2021</p>
                     <h5 className="title mb-10">Crypto Pills NFT Launch</h5>
+                    </div>
+                    <div style={{ width: '50px', display: 'inline', marginTop: '-25px' }}>
+                      <img src="/Avatar-Large.19.png" alt="" width="80" />
+                      </div></div>
+
                     <p className="fs-18">
                       All 10,000 Crypto-Pills were algorithmically generated
                       from 37 categories and 504 traits, allowing some to be
@@ -672,8 +676,15 @@ export default function Home() {
                     <span data-aos="zoom-in" data-aos-offset={300}>
                       <i className="fa fa-check" />
                     </span>
+                    <div style={{display: 'flex', flexDirection: 'row'}}>
+                    <div style={{ width: '300px', display: 'inline' }}>
                     <p className="fs-16 color-main mb-0">September 2nd, 2021</p>
-                    <h5 className="title mb-20">Merchandise Store Launch</h5>
+                    <h5 className="title mb-20">Merchandise Launch</h5>
+                    </div>
+                    <div style={{ width: '50px', display: 'inline', marginTop: '-25px' }}>
+                      <img src="/Avatar-Large.18.png" alt="" width="80" />
+                      </div></div>
+
                     <p className="fs-18">
                     A full range of contemporary artwork, with MetaMask integration allowing owners of Crypto Pills to claim free merch or merch with discounts.
                     </p>
@@ -695,8 +706,13 @@ export default function Home() {
                     <span data-aos="zoom-in" data-aos-offset={300}>
                       <i className="fa fa-circle" />
                     </span>
+                    <div style={{display: 'flex', flexDirection: 'row'}}>
+                    <div style={{ width: '300px', display: 'inline' }}>
                     <p className="fs-16 color-main mb-0">February 19th, 2022</p>
-                    <h5 className="title mb-20">NFT Game Release</h5>
+                    <h5 className="title mb-20">NFT Game Release</h5>   </div>
+                    <div style={{ width: '50px', display: 'inline', marginTop: '-25px' }}>
+                      <img src="/Avatar-Large.17.png" alt="" width="80" />
+                      </div></div>
                     <p className="fs-18">
                     An exciting skill based NFT collectors game launched as a BETA. Soon users can earn Pillcoins and Merchandise on the next release on iOS & Android.
                     </p>
@@ -717,8 +733,13 @@ export default function Home() {
                     <span data-aos="zoom-in" data-aos-offset={300}>
                       <i className="fa fa-angle-down color2" />
                     </span>
+                    <div style={{display: 'flex', flexDirection: 'row'}}>
+                    <div style={{ width: '300px', display: 'inline' }}>
                     <p className="fs-16 color-main mb-0">March 31st, 2022</p>
-                    <h5 className="title mb-20">3D Pillman NFT Drop</h5>
+                    <h5 className="title mb-20">3D Pillman NFT Drop</h5>   </div>
+                    <div style={{ width: '50px', display: 'inline', marginTop: '-25px' }}>
+                      <img src="/Avatar-Large.16.png" alt="" width="80" />
+                      </div></div>
                     <p className="fs-18">
                     This collection will add value to the original collection, bring in new collectors and expand Crypto Pills IP into the Metaverse.
                     </p>
@@ -739,8 +760,13 @@ export default function Home() {
                     <span data-aos="zoom-in" data-aos-offset={300}>
                       <i className="fa fa-circle" />
                     </span>
+                    <div style={{display: 'flex', flexDirection: 'row'}}>
+                    <div style={{ width: '300px', display: 'inline' }}>
                     <p className="fs-16 color-main mb-0">Date: TBC</p>
-                    <h5 className="title mb-20">Pillcoin Token Launch</h5>
+                    <h5 className="title mb-20">Pillcoin Token Launch</h5>   </div>
+                    <div style={{ width: '50px', display: 'inline', marginTop: '-25px' }}>
+                      <img src="/Avatar-Large.15.png" alt="" width="80" />
+                      </div></div>
                     <p className="fs-18">
                     The community gains voting rights on the Play-to-Earn games, NFTs, mini-movies, merchandise and events within the community launchpad.
                     </p>
@@ -753,8 +779,13 @@ export default function Home() {
                     <span data-aos="zoom-in" data-aos-offset={300}>
                       <i className="fa fa-angle-down color2" />
                     </span>
+                    <div style={{display: 'flex', flexDirection: 'row'}}>
+                    <div style={{ width: '300px', display: 'inline' }}>
                     <p className="fs-16 color-main mb-0">Date: TBC</p>
-                    <h5 className="title mb-20">Play to Earn Game</h5>
+                    <h5 className="title mb-20">Play to Earn Game</h5>   </div>
+                    <div style={{ width: '50px', display: 'inline', marginTop: '-25px' }}>
+                      <img src="/Avatar-Large.14.png" alt="" width="80" />
+                      </div></div>
                     <p className="fs-18">
                     The game will be available for free on iOS, Android and web platforms for Crypto Pill holders as a play-to-earn model with Pill Coins.
                     </p>
@@ -767,8 +798,13 @@ export default function Home() {
                     <span data-aos="zoom-in" data-aos-offset={300}>
                       <i className="fa fa-circle" />
                     </span>
+                    <div style={{display: 'flex', flexDirection: 'row'}}>
+                    <div style={{ width: '300px', display: 'inline' }}>
                     <p className="fs-16 color-main mb-0">Date: TBC</p>
-                    <h5 className="title mb-20">Live Crypto Pill Exhibition</h5>
+                    <h5 className="title mb-20">Live Crypto Pill Exhibition</h5>   </div>
+                    <div style={{ width: '50px', display: 'inline', marginTop: '-25px' }}>
+                      <img src="/Avatar-Large.19.png" alt="" width="80" />
+                      </div></div>
                     <p className="fs-18">
                     From large prints and paintings, to video installations and large sculptures, in various materials. Some really elaborate, like the Crypto-Pills sculptures, some even incorporating robotics.
                     </p>
@@ -781,8 +817,13 @@ export default function Home() {
                     <span data-aos="zoom-in" data-aos-offset={300}>
                       <i className="fa fa-angle-down color2" />
                     </span>
+                    <div style={{display: 'flex', flexDirection: 'row'}}>
+                    <div style={{ width: '300px', display: 'inline' }}>
                     <p className="fs-16 color-main mb-0">Date: TBC</p>
-                    <h5 className="title mb-20">Animated Mini-Movie Series</h5>
+                    <h5 className="title mb-20">Animated Mini-Movie Series</h5>   </div>
+                    <div style={{ width: '50px', display: 'inline', marginTop: '-25px' }}>
+                      <img src="/Avatar-Large.13.png" alt="" width="80" />
+                      </div></div>
                     <p className="fs-18">
                     We have already produced teasers for an animated movie / TV series, and there will be a complete launch of 5 episodes written by Hollywood director Frank Coraci.
                     </p>
@@ -905,29 +946,11 @@ export default function Home() {
                 <div className="team-box">
                   <div className="team-info">
                     <p className="fs-21">
-                      <a href="https://michaklein.com">Micha Klein</a> has been
-                      a pioneer in digital 3D animation since before Steve Jobs
-                      invested in Pixar. Blockchain technology has allowed Micha
-                      to fulfill a dream of his, bringing his legendary
-                      (Eminem’s Anger Management Tour) OG Pillman to the masses
-                      and to the metaverse. He has created 10,000 wildly
-                      intricate and unique, computer-generated avatars. Every
-                      pill is represented by a token that has a 3000x3000 pixel
-                      depth.
-                      <br />
-                      <br />
-                      Micha is dedicated to adding value to this project, every
-                      step of the way, for his fans and collectors. Immediately,
-                      Micha is donating 5% of the total proceeds to a special
-                      charity that helps less fortunate children receive the
-                      medicine that they need. This donation will be written
-                      directly into the contract.
-                      <br />
-                      <br />
-                      Micha Klein’s digital art has been around for over 30
-                      years and has stood the test of time. He has delivered
-                      huge projects for the likes of Disney and Coca-Cola and is
-                      dedicated to the digital art and NFT community.
+                      <a href="https://michaklein.com">Micha Klein</a> {' '}has been a pioneer in digital 3D animation since before Steve Jobs invested in Pixar. Blockchain technology has allowed Micha to fulfill a dream of his, bringing his legendary (Eminem’s Anger Management Tour) OG Pillman to the masses and to the metaverse. He has created 10,000 wildly intricate and unique, computer-generated avatars. Every pill is represented by a token that has a 3000x3000 pixel depth.
+<br/><br/>
+Micha is dedicated to adding value to this project, every step of the way, for his fans and collectors. Immediately, Micha has donated  5% of the total proceeds to Save The Children, a charity that helps less fortunate children receive the medicine that they need. This donation was written directly into the smart contract.
+<br/><br/>
+Micha Klein’s digital art has been around for over 30 years and has stood the test of time. He has delivered huge projects for the likes of Disney and Coca-Cola and is dedicated to the digital art and NFT community.
                     </p>
                   </div>
                 </div>

@@ -56,13 +56,6 @@ function MyApp({ Component, pageProps }) {
           </Web3ReactProvider>
         </SnackbarProvider>
       </ThemeProvider>
-
-      {/* <script src="/js/jquery.min.js" />
-      <script src="/js/swiper-bundle.min.js" />
-      <script src="/js/swiper.js" />
-      <script src="/js/app.js" />
-      <script src="/js/aos.js" />
-      <script type="text/javascript" src="/js/vanilla-tilt.js" /> */}
     </>
   )
 }

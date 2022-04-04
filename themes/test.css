@@ -1,12 +1,12 @@
-/**
-  * Name: Monteno | NFT Marketplace ReactJS Template
-  * Version: 1.0.2
-  * Author: Themesflat
-  * Author URI: http://www.themesflat.com
-*/
 @font-face {
-    font-family: "Gilroy-Bold";
-    src: url("/font/Gilroy-Bold.ttf") format("truetype");
+  font-family: "vag-rounded-regular";
+  src: url(vag.otf);
+}
+
+
+@font-face {
+    font-family: "vag-rounded-regular";
+    src: url("/font/vag-rounded-regular.ttf") format("truetype");
   }
   * {
     margin: 0;
@@ -34,7 +34,7 @@
   .h5,
   h6,
   .h6 {
-    font-family: "Gilroy-Bold";
+    font-family: "vag-rounded-regular";
     font-weight: bold;
     line-height: 1.2;
   }
@@ -306,11 +306,11 @@
     color: unset;
     transition: all 0.3s;
     cursor: pointer;
-    font-family: "Gilroy-Bold";
+    font-family: "vag-rounded-regular", "vag-rounded-regular", sans-serif;
     display: inline-block;
   }
   a:hover {
-    color: #BFD7EA;
+    color: #000;
     transition: all 0.3s;
   }
   
@@ -689,7 +689,7 @@
     position: relative;
     overflow: hidden;
     display: inline-block;
-    font-family: "Gilroy-Bold";
+    font-family: "vag-rounded-regular";
   }
   .btn-action:hover {
     color: #fff;
@@ -2673,7 +2673,7 @@
   }
   .counter__body .counter .number-counter {
     font-size: 48px;
-    font-family: "Gilroy-Bold";
+    font-family: "vag-rounded-regular";
     margin-bottom: 6px;
   }
   @media only screen and (max-width: 767px) {
@@ -2780,7 +2780,7 @@
   }
   .flat-tabs .menu-tab .item-title {
     font-size: 21px;
-    font-family: "Gilroy-Bold";
+    font-family: "vag-rounded-regular";
     border-bottom: 1px solid #7153d9;
     padding-bottom: 15px;
     margin-bottom: 12px;

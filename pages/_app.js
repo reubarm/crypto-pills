@@ -38,6 +38,7 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:image" content="/images/pills-logo.jpg" />
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width"/>
         <link rel="icon" href="/favicon.png" />
+        <link href="https://www.dafontfree.net/embed/dmFnLXJvdW5kZWQtcmVndWxhciZkYXRhLzUwL3YvMjgxMzAvVkFHUm91bmRlZEJULVJlZ3VsYXIub3Rm" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans:200,300,400,500,600,700,800&display=swap" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>

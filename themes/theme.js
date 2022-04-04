@@ -23,7 +23,6 @@ let theme = createTheme({
   },
   typography: {
     fontFamily: [
-      'Work Sans',
       'Roboto',
       'Arial',
       'sans-serif'

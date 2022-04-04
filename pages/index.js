@@ -984,7 +984,7 @@ export default function Home() {
                     data-aos-offset={300}
                   >
                     <span data-aos="zoom-in" data-aos-offset={300}>
-                      <i className="fa fa-circle" />
+                      <i className="fa fa-check" />
                     </span>
                     <div style={{ display: "flex", flexDirection: "row" }}>
                       <div style={{ width: "300px", display: "inline" }}>
@@ -1023,7 +1023,7 @@ export default function Home() {
                     data-aos-offset={300}
                   >
                     <span data-aos="zoom-in" data-aos-offset={300}>
-                      <i className="fa fa-angle-down color2" />
+                      <i className="fa fa-circle color2" />
                     </span>
                     <div style={{ display: "flex", flexDirection: "row" }}>
                       <div style={{ width: "300px", display: "inline" }}>
@@ -1093,7 +1093,7 @@ export default function Home() {
                     data-aos-offset={300}
                   >
                     <span data-aos="zoom-in" data-aos-offset={300}>
-                      <i className="fa fa-angle-down color2" />
+                      <i className="fa fa-circle color2" />
                     </span>
                     <div style={{ display: "flex", flexDirection: "row" }}>
                       <div style={{ width: "300px", display: "inline" }}>
@@ -1154,7 +1154,7 @@ export default function Home() {
                     data-aos-offset={300}
                   >
                     <span data-aos="zoom-in" data-aos-offset={300}>
-                      <i className="fa fa-angle-down color2" />
+                      <i className="fa fa-circle color2" />
                     </span>
                     <div style={{ display: "flex", flexDirection: "row" }}>
                       <div style={{ width: "300px", display: "inline" }}>

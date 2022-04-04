@@ -5,8 +5,8 @@
   * Author URI: http://www.themesflat.com
 */
 @font-face {
-  font-family: "Gilroy-Bold";
-  src: url("../../assets/font/Gilroy-Bold.ttf") format("truetype");
+  font-family: "vag-rounded-regular";
+  src: url("../../assets/font/vag-rounded-regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "Roboto";
@@ -38,7 +38,7 @@ h5,
 .h5,
 h6,
 .h6 {
-  font-family: "Gilroy-Bold";
+  font-family: "vag-rounded-regular";
   font-weight: bold;
   line-height: 1.2;
 }
@@ -301,7 +301,7 @@ a {
   color: unset;
   transition: all 0.3s;
   cursor: pointer;
-  font-family: "Gilroy-Bold";
+  font-family: "vag-rounded-regular";
   display: inline-block;
 }
 a:hover {
@@ -673,7 +673,7 @@ a:hover {
   position: relative;
   overflow: hidden;
   display: inline-block;
-  font-family: "Gilroy-Bold";
+  font-family: "vag-rounded-regular";
 }
 .btn-action:hover {
   color: #fff;
@@ -2576,7 +2576,7 @@ a:hover {
 }
 .counter__body .counter .number-counter {
   font-size: 48px;
-  font-family: "Gilroy-Bold";
+  font-family: "vag-rounded-regular";
   margin-bottom: 6px;
 }
 @media only screen and (max-width: 767px) {
@@ -2683,7 +2683,7 @@ a:hover {
 }
 .flat-tabs .menu-tab .item-title {
   font-size: 21px;
-  font-family: "Gilroy-Bold";
+  font-family: "vag-rounded-regular";
   border-bottom: 1px solid #7153d9;
   padding-bottom: 15px;
   margin-bottom: 12px;

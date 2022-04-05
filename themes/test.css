@@ -4036,7 +4036,24 @@ a:hover {
   }
 }
 
+.os-photo {
+  width: 183px;
+  display: inline-block;
+  margin: 0.4rem;
+  border-radius: 15px;
+}
+
 @media only screen and (max-width: 768px) {
+  .pl-30 {
+    padding-left: 0!important;
+  }
+  .os-photo {
+    width: 100px;
+  }
+  .item {
+    width: 120px;
+    height: 170px;
+  }
   .full-width {
     width: 100%!important;
   }

@@ -205,12 +205,12 @@ export default function Home() {
                     Crypto Pill Roadmap
                   </a>
                   <a
-                    href="https://opensea.io/collection/crypto-pills-by-micha-klein"
+                    href="https://pillman-beta.netlify.app/"
                     className="btn-action style-2"
                     data-aos="fade-up"
                     data-aos-duration={1200}
                   >
-                    Buy on OpenSea
+                    Play Pillman Origins
                   </a>
                 </div>
               </div>
@@ -822,42 +822,35 @@ export default function Home() {
 
         <section className="tf-section mt-200 mb-58">
           <div className="container">
-            <div className="row" style={{textAlign: 'center'}}>
-            <h3
-                    className="title mb-28"
-                    data-aos="fade-up"
-                    data-aos-duration={1000}
-                  >
-                    OpenSea Bundles
-                  </h3>
-              <div style={{ flexDirection: 'row'}}>
-              {filteredMoedas.map((moeda, index) => {
-                return (
-                  index < 12 && (
-                    <>
-                      <a
-                        href={moeda.assets[0].permalink}
-                        target="_blank"
-                        rel="noopener"
-                      >
-                        <img
-                          src={moeda.assets[0].image_url}
-                          width="183"
-                          style={{
-                            display: "inline-block",
-                            margin: "0.4rem",
-                            borderRadius: "15px",
-                          }}
-                        />
-                      </a>
-                    </>
-                  )
-                );
-              })}
+            <div className="row" style={{ textAlign: "center" }}>
+              <h3
+                className="title mb-28"
+                data-aos="fade-up"
+                data-aos-duration={1000}
+              >
+                OpenSea Bundles
+              </h3>
+              <div style={{ flexDirection: "row" }}>
+                {filteredMoedas.map((moeda, index) => {
+                  return (
+                    index < 12 && (
+                      <>
+                        <a
+                          href={moeda.assets[0].permalink}
+                          target="_blank"
+                          rel="noopener"
+                        >
+                          <img
+                            src={moeda.assets[0].image_url}
+                            className="os-photo"
+                          />
+                        </a>
+                      </>
+                    )
+                  );
+                })}
+              </div>
             </div>
-
-            </div>
-     
           </div>
         </section>
 
@@ -904,20 +897,14 @@ export default function Home() {
                     <span data-aos="zoom-in" data-aos-offset={300}>
                       <i className="fa fa-check" />
                     </span>
-                    <div style={{ display: "flex", flexDirection: "row" }}>
-                      <div style={{ width: "300px", display: "inline" }}>
+                    <div className="rm-box">
+                      <div className="rm-tite full-width">
                         <p className="fs-16 color-main mb-2">
                           August 24th, 2021
                         </p>
                         <h5 className="title mb-10">Crypto Pills NFT Launch</h5>
                       </div>
-                      <div
-                        style={{
-                          width: "50px",
-                          display: "inline",
-                          marginTop: "-25px",
-                        }}
-                      >
+                      <div className="rm-photo">
                         <img src="/Avatar-Large.19.png" alt="" width="80" />
                       </div>
                     </div>
@@ -945,20 +932,14 @@ export default function Home() {
                     <span data-aos="zoom-in" data-aos-offset={300}>
                       <i className="fa fa-check" />
                     </span>
-                    <div style={{ display: "flex", flexDirection: "row" }}>
-                      <div style={{ width: "300px", display: "inline" }}>
+                    <div className="rm-box">
+                      <div className="rm-tite full-width">
                         <p className="fs-16 color-main mb-0">
                           September 2nd, 2021
                         </p>
                         <h5 className="title mb-20">Merchandise Launch</h5>
                       </div>
-                      <div
-                        style={{
-                          width: "50px",
-                          display: "inline",
-                          marginTop: "-25px",
-                        }}
-                      >
+                      <div className="rm-photo">
                         <img src="/Avatar-Large.18.png" alt="" width="80" />
                       </div>
                     </div>
@@ -986,20 +967,14 @@ export default function Home() {
                     <span data-aos="zoom-in" data-aos-offset={300}>
                       <i className="fa fa-check" />
                     </span>
-                    <div style={{ display: "flex", flexDirection: "row" }}>
-                      <div style={{ width: "300px", display: "inline" }}>
+                    <div className="rm-box">
+                      <div className="rm-tite full-width">
                         <p className="fs-16 color-main mb-0">
                           February 19th, 2022
                         </p>
                         <h5 className="title mb-20">NFT Game Release</h5>{" "}
                       </div>
-                      <div
-                        style={{
-                          width: "50px",
-                          display: "inline",
-                          marginTop: "-25px",
-                        }}
-                      >
+                      <div className="rm-photo">
                         <img src="/Avatar-Large.17.png" alt="" width="80" />
                       </div>
                     </div>
@@ -1025,20 +1000,14 @@ export default function Home() {
                     <span data-aos="zoom-in" data-aos-offset={300}>
                       <i className="fa fa-circle color2" />
                     </span>
-                    <div style={{ display: "flex", flexDirection: "row" }}>
-                      <div style={{ width: "300px", display: "inline" }}>
+                    <div className="rm-box">
+                      <div className="rm-tite full-width">
                         <p className="fs-16 color-main mb-0">
                           March 31st, 2022
                         </p>
                         <h5 className="title mb-20">3D Pillman NFT Drop</h5>{" "}
                       </div>
-                      <div
-                        style={{
-                          width: "50px",
-                          display: "inline",
-                          marginTop: "-25px",
-                        }}
-                      >
+                      <div className="rm-photo">
                         <img src="/Avatar-Large.16.png" alt="" width="80" />
                       </div>
                     </div>
@@ -1064,20 +1033,14 @@ export default function Home() {
                     <span data-aos="zoom-in" data-aos-offset={300}>
                       <i className="fa fa-circle" />
                     </span>
-                    <div style={{ display: "flex", flexDirection: "row" }}>
-                      <div style={{ width: "300px", display: "inline" }}>
+                    <div className="rm-box">
+                      <div className="rm-tite full-width">
                         <p className="fs-16 color-main mb-0">Date: TBC</p>
                         <h5 className="title mb-20">
                           Pillcoin Token Launch
                         </h5>{" "}
                       </div>
-                      <div
-                        style={{
-                          width: "50px",
-                          display: "inline",
-                          marginTop: "-25px",
-                        }}
-                      >
+                      <div className="rm-photo">
                         <img src="/Avatar-Large.15.png" alt="" width="80" />
                       </div>
                     </div>
@@ -1095,18 +1058,12 @@ export default function Home() {
                     <span data-aos="zoom-in" data-aos-offset={300}>
                       <i className="fa fa-circle color2" />
                     </span>
-                    <div style={{ display: "flex", flexDirection: "row" }}>
-                      <div style={{ width: "300px", display: "inline" }}>
+                    <div className="rm-box">
+                      <div className="rm-tite full-width">
                         <p className="fs-16 color-main mb-0">Date: TBC</p>
                         <h5 className="title mb-20">Play to Earn Game</h5>{" "}
                       </div>
-                      <div
-                        style={{
-                          width: "50px",
-                          display: "inline",
-                          marginTop: "-25px",
-                        }}
-                      >
+                      <div className="rm-photo">
                         <img src="/Avatar-Large.14.png" alt="" width="80" />
                       </div>
                     </div>
@@ -1124,20 +1081,14 @@ export default function Home() {
                     <span data-aos="zoom-in" data-aos-offset={300}>
                       <i className="fa fa-circle" />
                     </span>
-                    <div style={{ display: "flex", flexDirection: "row" }}>
-                      <div style={{ width: "300px", display: "inline" }}>
+                    <div className="rm-box">
+                      <div className="rm-tite full-width">
                         <p className="fs-16 color-main mb-0">Date: TBC</p>
                         <h5 className="title mb-20">
                           Live Crypto Pill Exhibition
                         </h5>{" "}
                       </div>
-                      <div
-                        style={{
-                          width: "50px",
-                          display: "inline",
-                          marginTop: "-25px",
-                        }}
-                      >
+                      <div className="rm-photo">
                         <img src="/Avatar-Large.19.png" alt="" width="80" />
                       </div>
                     </div>
@@ -1156,20 +1107,14 @@ export default function Home() {
                     <span data-aos="zoom-in" data-aos-offset={300}>
                       <i className="fa fa-circle color2" />
                     </span>
-                    <div style={{ display: "flex", flexDirection: "row" }}>
-                      <div style={{ width: "300px", display: "inline" }}>
+                    <div className="rm-box">
+                      <div className="rm-tite full-width">
                         <p className="fs-16 color-main mb-0">Date: TBC</p>
                         <h5 className="title mb-20">
                           Animated Mini-Movie Series
                         </h5>{" "}
                       </div>
-                      <div
-                        style={{
-                          width: "50px",
-                          display: "inline",
-                          marginTop: "-25px",
-                        }}
-                      >
+                      <div className="rm-photo">
                         <img src="/Avatar-Large.13.png" alt="" width="80" />
                       </div>
                     </div>

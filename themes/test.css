@@ -2269,6 +2269,10 @@ a:hover {
   height: 4px;
   background: #999;
 }
+.rm-box {
+  display: flex;
+  flex-direction: row;
+}
 @media only screen and (max-width: 767px) {
   .road-map__content .box-time {
     padding: 67px 15px;
@@ -2280,8 +2284,12 @@ a:hover {
   .road-map__content::before {
     left: 50% !important;
   }
-  img {
-    display: none;
+  .road-map__content img {
+    /* display: none; */
+  }
+  .rm-box {
+    display: flex;
+    flex-direction: column;
   }
 }
 .road-map__content .box-time.left::before {
@@ -3974,6 +3982,9 @@ a:hover {
     padding: 52px 25px 61px;
     text-align: center;
   }
+  .page-title__body .block-text {
+    text-align: center;
+  }
 }
 .page-title__body::before {
   content: "";
@@ -4000,16 +4011,44 @@ a:hover {
   bottom: 0;
   right: 57px;
 }
+
+.rm-tite {
+  width: 300px;
+  display: inline;
+}
+
+.rm-photo {
+  display: inline;
+  margin-top: -25px;
+
+}
+.rm-icon {
+  width: 80px;
+}
+
 @media only screen and (max-width: 1024px) {
   .page-title__body img {
     position: relative;
     right: auto !important;
   }
   .hide-mb {
-    display: none;
+    display: none!important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .full-width {
+    width: 100%!important;
   }
   .center-mb {
     text-align: center!important;
+  }
+  .rm-photo {
+    margin: 0 auto;
+    width: 150px;
+  }
+  .rm-icon {
+    width: 150px;
   }
 }
 .page-title__body.rm img {

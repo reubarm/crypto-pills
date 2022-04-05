@@ -153,7 +153,7 @@ export default function Home() {
             variant="contained"
             color="secondary"
             className={classes.openSea}
-            href="https://pillman-proto.netlify.app/"
+            href="https://pillman-beta.netlify.app/"
           >
             Play Game
           </Button>

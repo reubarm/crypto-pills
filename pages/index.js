@@ -668,7 +668,7 @@ export default function Home() {
                       &amp; Android.
                     </p>
                     <a
-                      href="https://pillman-proto.netlify.app/"
+                      href="https://pillman-beta.netlify.app/"
                       className="btn-action style-3"
                       data-aos="fade-up"
                       data-aos-duration={1200}
@@ -1009,7 +1009,7 @@ export default function Home() {
                       next release on iOS & Android.
                     </p>
                     <a
-                      href="https://pillman-proto.netlify.app/"
+                      href="https://pillman-beta.netlify.app/"
                       className="btn-action style-3"
                       data-aos="fade-up"
                       data-aos-duration={1200}

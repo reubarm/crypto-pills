@@ -95,7 +95,7 @@ export default function Header(props) {
             <Link
               variant="h6"
               color="textPrimary"
-              href="/#roadmap"
+              href="/roadmap"
               className={classes.headerLink}
             >
               Roadmap
@@ -103,7 +103,7 @@ export default function Header(props) {
             <Link
               variant="h6"
               color="textPrimary"
-              href="https://pillman-proto.netlify.app/"
+              href="https://pillman-beta.netlify.app/"
               className={classes.headerLink}
             >
               Play Game
@@ -119,10 +119,10 @@ export default function Header(props) {
             <Link
               variant="h6"
               color="textPrimary"
-              onClick={() => router.push("/#faq")}
+              onClick={() => router.push("/press")}
               className={classes.headerLink}
             >
-              FAQs
+              Press
             </Link>
             {/* <Link variant='h6' color="textPrimary" href="#mint-section" className={classes.headerLink}>Mint</Link> */}
             <Link

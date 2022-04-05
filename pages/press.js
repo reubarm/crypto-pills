@@ -65,14 +65,14 @@ export default function Home() {
       <>
         <>
           {/* PageTitle */}
-          <section className="tf-section page-title">
+          <section className="tf-section page-title mt-50">
             <div className="container">
               <div className="col-md-12">
-                <div className="page-title__body rm">
+                <div className="page-title__body rm"  style={{background: '#3e61b9'}}>
                   <div className="block-text">
-                    <h2 className="sub-title mb-20">Crypto Pills News</h2>
-                    <p className="fs-24 mb-33">
-                    We have made headlines with Crypto Pills so far;<br/>and there's many more exciting stories coming soon!
+                    <h2 className="sub-title mb-20"style={{color:'white!important'}}>Crypto Pills News</h2>
+                    <p className="fs-24 mb-33"style={{color:'white!important'}}>
+                    We have made headlines with Crypto Pills so far;<br/>and there's many more exciting stories to come!
                     </p>
                   </div>
                   <img

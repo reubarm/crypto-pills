@@ -65,7 +65,7 @@ export default function Home() {
       <>
         <>
           {/* PageTitle */}
-          <section className="tf-section page-title">
+          <section className="tf-section page-title mt-50">
             <div className="container">
               <div className="col-md-12">
                 <div className="page-title__body rm">
@@ -132,19 +132,15 @@ export default function Home() {
                       <span data-aos="zoom-in" data-aos-offset={300}>
                         <i className="fa fa-check" />
                       </span>
-                      <div style={{ display: "flex", flexDirection: "row" }}>
-                        <div style={{ width: "300px", display: "inline" }}>
+                      <div className="rm-box">
+                        <div className="rm-tite full-width">
                           <p className="fs-16 color-main mb-2"></p>
                           <h4 className="title mb-10">August 2021</h4>
                         </div>
                         <div
-                          style={{
-                            width: "50px",
-                            display: "inline",
-                            marginTop: "-25px",
-                          }}
+                          className="rm-photo"
                         >
-                          <img src="/Avatar-Large.19.png" alt="" width="80" />
+                          <img src="/Avatar-Large.19.png" alt="" className="rm-icon" />
                         </div>
                       </div>
 
@@ -169,19 +165,15 @@ export default function Home() {
                       <span data-aos="zoom-in" data-aos-offset={300}>
                         <i className="fa fa-check" />
                       </span>
-                      <div style={{ display: "flex", flexDirection: "row" }}>
-                        <div style={{ width: "300px", display: "inline" }}>
+                      <div className="rm-box">
+                        <div className="rm-tite full-width">
                           <p className="fs-16 color-main mb-0"></p>
                           <h4 className="title mb-20">September 2021</h4>
                         </div>
                         <div
-                          style={{
-                            width: "50px",
-                            display: "inline",
-                            marginTop: "-25px",
-                          }}
+                          className="rm-photo"
                         >
-                          <img src="/Avatar-Large.18.png" alt="" width="80" />
+                          <img src="/Avatar-Large.18.png" alt="" className="rm-icon"/>
                         </div>
                       </div>
 
@@ -224,19 +216,15 @@ export default function Home() {
                       <span data-aos="zoom-in" data-aos-offset={300}>
                         <i className="fa fa-check" />
                       </span>
-                      <div style={{ display: "flex", flexDirection: "row" }}>
-                        <div style={{ width: "300px", display: "inline" }}>
+                      <div className="rm-box">
+                        <div className="rm-tite full-width">
                           <p className="fs-16 color-main mb-2"></p>
                           <h4 className="title mb-10">October 2021</h4>
                         </div>
                         <div
-                          style={{
-                            width: "50px",
-                            display: "inline",
-                            marginTop: "-25px",
-                          }}
+                          className="rm-photo"
                         >
-                          <img src="/Avatar-Large.17.png" alt="" width="80" />
+                          <img src="/Avatar-Large.17.png" alt="" className="rm-icon" />
                         </div>
                       </div>
 
@@ -277,19 +265,15 @@ export default function Home() {
                       <span data-aos="zoom-in" data-aos-offset={300}>
                         <i className="fa fa-check" />
                       </span>
-                      <div style={{ display: "flex", flexDirection: "row" }}>
-                        <div style={{ width: "300px", display: "inline" }}>
+                      <div className="rm-box">
+                        <div className="rm-tite full-width">
                           <p className="fs-16 color-main mb-0"></p>
                           <h4 className="title mb-20">November 2021</h4>
                         </div>
                         <div
-                          style={{
-                            width: "50px",
-                            display: "inline",
-                            marginTop: "-25px",
-                          }}
+                          className="rm-photo"
                         >
-                          <img src="/Avatar-Large.15.png" alt="" width="80" />
+                          <img src="/Avatar-Large.15.png" alt="" className="rm-icon" />
                         </div>
                       </div>
 
@@ -314,19 +298,15 @@ export default function Home() {
                       <span data-aos="zoom-in" data-aos-offset={300}>
                         <i className="fa fa-check" />
                       </span>
-                      <div style={{ display: "flex", flexDirection: "row" }}>
-                        <div style={{ width: "300px", display: "inline" }}>
+                      <div className="rm-box">
+                        <div className="rm-tite full-width">
                           <p className="fs-16 color-main mb-2"></p>
                           <h4 className="title mb-10">December 2021</h4>
                         </div>
                         <div
-                          style={{
-                            width: "50px",
-                            display: "inline",
-                            marginTop: "-25px",
-                          }}
+                          className="rm-photo"
                         >
-                          <img src="/Avatar-Large.16.png" alt="" width="80" />
+                          <img src="/Avatar-Large.16.png" alt="" className="rm-icon" />
                         </div>
                       </div>
 
@@ -346,19 +326,15 @@ export default function Home() {
                       <span data-aos="zoom-in" data-aos-offset={300}>
                         <i className="fa fa-check" />
                       </span>
-                      <div style={{ display: "flex", flexDirection: "row" }}>
-                        <div style={{ width: "300px", display: "inline" }}>
+                      <div className="rm-box">
+                        <div className="rm-tite full-width">
                           <p className="fs-16 color-main mb-0"></p>
                           <h4 className="title mb-20">January 2022</h4>
                         </div>
                         <div
-                          style={{
-                            width: "50px",
-                            display: "inline",
-                            marginTop: "-25px",
-                          }}
+                          className="rm-photo"
                         >
-                          <img src="/Avatar-Large.14.png" alt="" width="80" />
+                          <img src="/Avatar-Large.14.png" alt="" className="rm-icon" />
                         </div>
                       </div>
 
@@ -383,19 +359,15 @@ export default function Home() {
                       <span data-aos="zoom-in" data-aos-offset={300}>
                         <i className="fa fa-check" />
                       </span>
-                      <div style={{ display: "flex", flexDirection: "row" }}>
-                        <div style={{ width: "300px", display: "inline" }}>
+                      <div className="rm-box">
+                        <div className="rm-tite full-width">
                           <p className="fs-16 color-main mb-2"></p>
                           <h4 className="title mb-10">February 2022</h4>
                         </div>
                         <div
-                          style={{
-                            width: "50px",
-                            display: "inline",
-                            marginTop: "-25px",
-                          }}
+                          className="rm-photo"
                         >
-                          <img src="/Avatar-Large.12.png" alt="" width="80" />
+                          <img src="/Avatar-Large.12.png" alt="" className="rm-icon" />
                         </div>
                       </div>
 
@@ -419,8 +391,8 @@ export default function Home() {
                       <span data-aos="zoom-in" data-aos-offset={300}>
                         <i className="fa fa-check" />
                       </span>
-                      <div style={{ display: "flex", flexDirection: "row" }}>
-                        <div style={{ width: "300px", display: "inline" }}>
+                      <div className="rm-box">
+                        <div className="rm-tite full-width">
                           <p className="fs-16 color-main mb-0"></p>
                           <h4 className="title mb-20">March 2022</h4>
                         </div>
@@ -430,8 +402,9 @@ export default function Home() {
                             display: "inline",
                             marginTop: "-25px",
                           }}
+                          
                         >
-                          <img src="/Avatar-Large.13.png" alt="" width="80" />
+                          <img src="/Avatar-Large.13.png" alt="" className="rm-icon" />
                         </div>
                       </div>
 

@@ -123,10 +123,10 @@ export default function Home() {
         className={classes.root}
       >
         <Header />
+        
+        <iframe src="https://pillman-beta.netlify.app/" style={{width: '100vw', height: '100vh', border: 'none', marginTop: '-100px'}}/>
 
-        <iframe src="https://pillman-beta.netlify.app/" />
-
-        <Container
+        {/* <Container
           maxWidth={false}
           component="div"
           className={classes.bannerSection}
@@ -159,7 +159,7 @@ export default function Home() {
           >
             Play Game
           </Button>
-        </Container>
+        </Container> */}
       </Container>
       <Footer />
     </>

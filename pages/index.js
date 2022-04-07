@@ -831,7 +831,7 @@ export default function Home() {
                 OpenSea Bundles
               </h3>
               <div style={{ flexDirection: "row" }}>
-                {filteredMoedas.map((moeda, index) => {
+                {filteredMoedas.reverse().map((moeda, index) => {
                   return (
                     index < 12 && (
                       <>

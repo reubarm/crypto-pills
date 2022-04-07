@@ -7,13 +7,8 @@ import { ethers } from "ethers";
 
 import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { red } from "@material-ui/core/colors";
 import Container from "@material-ui/core/Container";
-import Typography from "@material-ui/core/Typography";
-import TextField from "@material-ui/core/TextField";
-import Button from "@material-ui/core/Button";
-import Grid from "@material-ui/core/Grid";
-import Divider from "@material-ui/core/Divider";
+import WalletButton from "../components/Header/WalletButton";
 
 import Head from "next/head";
 import Header from "../components/Header/Header";
@@ -394,55 +389,72 @@ export default function Admin() {
         className={classes.root}
       >
         <Header />
+        {!CryptoPillsContract ? (
+          <>
+            <section className="tf-section page-title mt-50">
+              <div className="container">
+                <div className="col-md-12">
+                  <div className="page-title__body rm">
+                    <div className="block-text pt-12 center">
+                      <h3 className="sub-title mb-33">
+                        Please login to your MetaMask wallet with Crypto Pills
+                        to access your account
+                      </h3>
+                      <br />
+                      <br />
 
-        {/* PageTitle */}
-        <section className="tf-section page-title mt-50">
-          <div className="container">
-            <div className="col-md-12">
-              <div className="page-title__body rm">
-                <div className="block-text pt-12 center-mb">
-                  <h3 className="sub-title mb-33">Good morning @{username}</h3>
-                  {/* <h5 className="fs-30 mb-10">
-                    {CryptoPillsContract
-                      ? `You have ${howmany} Crypto Pills`
-                      : "You don't have any Crypto Pills"}
-                  </h5> */}
-
-                  <h5 className="fs-24 mb-10">
-                    {CryptoPillsContract
-                      ? `You are officially a Gold Member with ${howmany} Crypto Pills.`
-                      : "If you own a Crypto Pill, you can become an exclusive member of the community and mint for free."}
-                  </h5>
-                  <h5 className="fs-24 mb-10">
-                    {CryptoPillsContract
-                      ? `Mint some of the rarest and best because you're amazing!`
-                      : `Mint our new 3D Crypto Pills for 0.1 ETH`}
-                  </h5>
-                  <br />
-                  <br />
-                  <a href="#" className="btn-action style-3">
-                    {CryptoPillsContract
-                      ? "Mint 3D Crypto Pill for FREE"
-                      : "Mint 3D Crypto Pill for 0.1 ETH"}
-                  </a>
+                      <WalletButton />
+                    </div>
+                  </div>
                 </div>
-
-                {filteredNfts.map((nft, index) => {
-                  return (
-                    index < 1 && (
-                      <>
-                        <a href={nft.permalink} target="_blank" rel="noopener">
-                          <img src={nft.image_url} className="hide-mb" />
-                        </a>
-                      </>
-                    )
-                  );
-                })}
               </div>
-            </div>
-          </div>
-        </section>
-        {/* end PageTitle */}
+            </section>
+          </>
+        ) : (
+          <>
+            <section className="tf-section page-title mt-50">
+              <div className="container">
+                <div className="col-md-12">
+                  <div className="page-title__body rm">
+                    <div className="block-text pt-12 center-mb">
+                      <h3 className="sub-title mb-33">
+                        Good morning @{username}
+                      </h3>
+                      <h5 className="fs-24 mb-10">
+                        You are officially a Gold Member with {howmany} Crypto
+                        Pills.
+                      </h5>
+                      <h5 className="fs-24 mb-10">
+                        Mint new collections for free because you're amazing!
+                      </h5>
+                      <br />
+                      <br />
+                      <a href="#" className="btn-action style-3">
+                        Extra Benefits Coming Soon
+                      </a>
+                    </div>
+
+                    {filteredNfts.map((nft, index) => {
+                      return (
+                        index < 1 && (
+                          <>
+                            <a
+                              href={nft.permalink}
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img src={nft.image_url} className="hide-mb" />
+                            </a>
+                          </>
+                        )
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+            </section>
+          </>
+        )}
 
         {/* <Container
           maxWidth={false}

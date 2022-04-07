@@ -70,8 +70,8 @@ export default function Home() {
               <div className="col-md-12">
                 <div className="page-title__body rm"  style={{background: '#3e61b9'}}>
                   <div className="block-text">
-                    <h2 className="sub-title mb-20"style={{color:'white!important'}}>Crypto Pills News</h2>
-                    <p className="fs-24 mb-33"style={{color:'white!important'}}>
+                    <h2 className="sub-title mb-20 whitetext">Crypto Pills News</h2>
+                    <p className="fs-24 mb-33 whitetext">
                     We have made headlines with Crypto Pills so far;<br/>and there's many more exciting stories to come!
                     </p>
                   </div>

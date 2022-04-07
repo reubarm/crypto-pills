@@ -43,21 +43,21 @@ const useStyles = makeStyles((theme) => ({
     height: "100vh",
     padding: "10rem 0",
     textAlign: "center",
-    '@media (max-width: 575px)': {
+    "@media (max-width: 575px)": {
       padding: "6rem 0",
     },
   },
   title: {
     color: "#fff",
     fontSize: "4rem",
-    '@media (max-width: 575px)': {
+    "@media (max-width: 575px)": {
       fontSize: "2rem",
     },
   },
   subtitle: {
     color: "#fff",
     fontSize: "1.5rem",
-    '@media (max-width: 575px)': {
+    "@media (max-width: 575px)": {
       fontSize: "1rem",
     },
   },
@@ -75,7 +75,7 @@ const useStyles = makeStyles((theme) => ({
     "&:hover": {
       backgroundColor: "#873fbd",
     },
-    '@media (max-width: 520px)': {
+    "@media (max-width: 520px)": {
       margin: "2rem 0 0",
     },
   },
@@ -344,35 +344,42 @@ export default function Admin() {
   };
 
   const [nfts, setNfts] = React.useState([]);
+  const [username, setUsername] = React.useState([]);
   const [howmany, setHowmany] = React.useState([]);
   const options = { method: "GET", headers: { Accept: "application/json" } };
+
+  // 0xb41F146670Ce3DEdac51D79956Cd5E292be26EC4
 
   useEffect(() => {
     if (!!CryptoPillsContract) {
       let accountAddress = "";
       accountAddress = account;
       fetch(
-        `https://api.opensea.io/api/v1/assets?format=json&owner=${account}`,
+        `https://api.opensea.io/api/v1/assets?format=json&owner=${accountAddress}`,
         options
       )
         .then((response) => response.json())
         .then((response) => {
           setNfts(response.assets);
           setHowmany(response.assets.length);
+          setUsername(response.assets[0].owner.user.username);
         })
         .catch((err) => console.error(err));
     }
   }, [CryptoPillsContract, account]);
 
-
- const filteredNfts = nfts.filter((nft) => nft.collection.payout_address === "0xb41f146670ce3dedac51d79956cd5e292be26ec4");
+  const filteredNfts = nfts.filter(
+    (nft) =>
+      nft.collection.payout_address ===
+      "0xb41f146670ce3dedac51d79956cd5e292be26ec4"
+  );
 
   console.log(nfts);
   console.log(howmany);
+  console.log(username);
 
   return (
     <>
-      
       <Head>
         <title>3D Crypto Pills | Crypto Pills</title>
         <meta
@@ -388,18 +395,70 @@ export default function Admin() {
       >
         <Header />
 
-        <Container
+        {/* PageTitle */}
+        <section className="tf-section page-title mt-50">
+          <div className="container">
+            <div className="col-md-12">
+              <div className="page-title__body rm">
+                <div className="block-text pt-12 center-mb">
+                  <h3 className="sub-title mb-33">Good morning @{username}</h3>
+                  {/* <h5 className="fs-30 mb-10">
+                    {CryptoPillsContract
+                      ? `You have ${howmany} Crypto Pills`
+                      : "You don't have any Crypto Pills"}
+                  </h5> */}
+
+                  <h5 className="fs-24 mb-10">
+                    {CryptoPillsContract
+                      ? `You are officially a Gold Member with ${howmany} Crypto Pills.`
+                      : "If you own a Crypto Pill, you can become an exclusive member of the community and mint for free."}
+                  </h5>
+                  <h5 className="fs-24 mb-10">
+                    {CryptoPillsContract
+                      ? `Mint some of the rarest and best because you're amazing!`
+                      : `Mint our new 3D Crypto Pills for 0.1 ETH`}
+                  </h5>
+                  <br />
+                  <br />
+                  <a href="#" className="btn-action style-3">
+                    {CryptoPillsContract
+                      ? "Mint 3D Crypto Pill for FREE"
+                      : "Mint 3D Crypto Pill for 0.1 ETH"}
+                  </a>
+                </div>
+
+                {filteredNfts.map((nft, index) => {
+                  return (
+                    index < 1 && (
+                      <>
+                        <a href={nft.permalink} target="_blank" rel="noopener">
+                          <img src={nft.image_url} className="hide-mb" />
+                        </a>
+                      </>
+                    )
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* end PageTitle */}
+
+        {/* <Container
           maxWidth={false}
           component="div"
           className={classes.bannerSection}
         >
+          <Typography variant="h3" component="p" className={classes.title}>
+          Welcome @{username}
+          </Typography>
           <Typography variant="h3" component="p" className={classes.title}>
            {(CryptoPillsContract ? `You have ${howmany} Crypto Pills` : "You don't have any Crypto Pills")}
            <span style={{display: 'block', margin: '1.5rem'}}>💊😊</span>
           </Typography>
           <br />
           <Grid item sx={12} md={12} className={classes.gridCell}>
-          {filteredNfts.map((nft, index) => {
+          {filteredNfts.reverse().map((nft, index) => {
             return (
               index < 6 && (
                 <>
@@ -445,12 +504,10 @@ export default function Admin() {
           >
             {(CryptoPillsContract ? "Mint 3D Crypto Pill for FREE" : "Mint 3D Crypto Pill for 0.1 ETH" )}
           </Button>
-        </Container>
+        </Container> */}
       </Container>
 
-
-
-          {/* <Grid item sx={12} md={12} className={classes.gridCell}>
+      {/* <Grid item sx={12} md={12} className={classes.gridCell}>
             <Typography
               variant="h4"
               component="p"

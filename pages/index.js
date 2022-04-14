@@ -107,6 +107,69 @@ export default function Home() {
     volume = datastats.total_volume.toFixed(1);
   }
 
+  const sales = [
+    {
+      url: "https://opensea.io/assets/0x7dd04448c6cd405345d03529bff9749fd89f8f4f/5037",
+      photo: "https://lh3.googleusercontent.com/_s9b8kwrwjb03LjT5uxPv6IaLA9YkkQ67sp70HUTWDH-76rVDpawMpRLy9D5U0BJAxaIXP4anTZaa1CgQtvKiMPdggnHluAQEO5yEg=w600",
+      price: "18.0",
+    },
+    {
+      url: "https://opensea.io/assets/0x7dd04448c6cd405345d03529bff9749fd89f8f4f/7379",
+      photo: "https://lh3.googleusercontent.com/IFLMXqDoa6LTpH6pBExHackLUbeTg2epmv8PKfm9eO8HUIKHhvRa_XhD_MiTEaYDDohGBE74oiCnBfEjhUYymgp7C-zJADMdVYFd=w600",
+      price: "16.0",
+    },
+    {
+      url: "https://opensea.io/assets/0x7dd04448c6cd405345d03529bff9749fd89f8f4f/6564",
+      photo: "https://lh3.googleusercontent.com/qn34aLMham2euwotgBOBXqDaQ2mrRyASVVfHQ2h93SjSqc_gEBrfLDYHTdBoh5Jm-1UNZuaVGU6mYJwSUagnacBb6eg2KRNfjPW-8Q=w600",
+      price: "12.9",
+    },
+    {
+      url: "https://opensea.io/assets/0x7dd04448c6cd405345d03529bff9749fd89f8f4f/5273",
+      photo: "https://lh3.googleusercontent.com/sjuasaqWlG1xdJFCupFLWqvIk-6qXVy7F8LnvNxqIphj9EH1SOj4tOHoy1-jk1t5UvICQ-FUFacInoZ91ih1TBQdUClc3bnP6idWSA=w600",
+      price: "11.99",
+    },
+    {
+      url: "https://opensea.io/assets/0x7dd04448c6cd405345d03529bff9749fd89f8f4f/9830",
+      photo: "https://lh3.googleusercontent.com/bFwT0nV8a1OvPUH8DK9UwhZAseUEJlP6oBLk1jAqk4kIwe_aiD5NiNHU-Qw7FkpfMhos3dwFHB_HfbIb4BlAO0ZpMa8Iu6gqhYrT=w600",
+      price: "10",
+    },
+    {
+      url: "https://opensea.io/assets/0x7dd04448c6cd405345d03529bff9749fd89f8f4f/6018",
+      photo: "https://lh3.googleusercontent.com/TVALARV_eA5XIIe3KnTPHUqb4I4P7Dm9sc86x9xvBLAFiHxhIKwjXwfcrAcJjoC59BYfljCUvXmMnqk3xQX420yWc2vY6IjtrYKlXg=w600",
+      price: "10",
+    },
+    {
+      url: "https://opensea.io/assets/0x7dd04448c6cd405345d03529bff9749fd89f8f4f/6429",
+      photo: "https://lh3.googleusercontent.com/zE7njHeqVFuOAspkNpNREG4HIuZ0b_R5VOfASK-ROukRyIz0tQeRqKGibZGgT8ZIIXFJvPp3F_FgcKxsiIa5CYO0daMZIpXqt__BDqQ=w600",
+      price: "8",
+    },
+    {
+      url: "https://opensea.io/assets/0x7dd04448c6cd405345d03529bff9749fd89f8f4f/9044",
+      photo: "https://lh3.googleusercontent.com/XB5zO41nlQFYtDfIRJaqTsDLfSfMfiR7scSDw-Es-XmThkJFGDtO6uICoAUVLv6Zyxd2N6YOuCII0HC833c_uYpSDOmAyiFyE5PMBg=w600",
+      price: "7.75",
+    },
+    {
+      url: "https://opensea.io/assets/0x7dd04448c6cd405345d03529bff9749fd89f8f4f/6312",
+      photo: "https://lh3.googleusercontent.com/cFdVa3f6xe2GQ5x5tmkMCZMFCiCgAyvhhzSrmwDJ4LpW8j-FAdJcaAaaiz4pLJd1kv2Na3t_drZxVZKeLAMd_dcMoL4ey3p5eWJy=w600",
+      price: "7.4",
+    },
+    {
+      url: "https://opensea.io/assets/0x7dd04448c6cd405345d03529bff9749fd89f8f4f/7042",
+      photo: "https://lh3.googleusercontent.com/wXm7xHh7aNnz0SjJcpL1sBKAyTeYYTA0qtXFSRgsZIGl6a0FqArQyYpIZie8uKpTrC2NN8M24906LaEUwFo8DpaoPZqQpEUWfUAxZg=w600",
+      price: "7",
+    },
+    {
+      url: "https://opensea.io/assets/0x7dd04448c6cd405345d03529bff9749fd89f8f4f/386",
+      photo: "https://lh3.googleusercontent.com/NDdPHbvxqTd-no1e5iJleHIEMqHIn3iTQsiJ3EA_43CHBMp7zgnqZIuVKQn9IMX9OfR57fhdiVfb330IDU8rtJS4sHiUT82_Trd6vA=w600",
+      price: "7",
+    },
+    {
+      url: "https://opensea.io/assets/0x7dd04448c6cd405345d03529bff9749fd89f8f4f/4951",
+      photo: "https://lh3.googleusercontent.com/ELcUSVwKen0YHZjrLtdno_72iQl-38v67BRyTwUEE8TI-VJK59C_Rknl4DiV6xwm6bPl-8EmUFIemUFTgE9JrU-RDVz9Wy7S-sE8u3U=w600",
+      price: "5.5",
+    },
+  ];
+
   const title = [
     "How do I purchase Crypto-Pills?",
     "How do I know which Crypto-Pill I get?",
@@ -205,7 +268,7 @@ export default function Home() {
                     Crypto Pill Roadmap
                   </a>
                   <a
-                    href="https://pillman-beta.netlify.app/"
+                    href="/play"
                     className="btn-action style-2"
                     data-aos="fade-up"
                     data-aos-duration={1200}
@@ -572,11 +635,19 @@ export default function Home() {
                   </p>
                   <a
                     href="https://opensea.io/collection/crypto-pills-by-micha-klein"
-                    className="btn-action style-2"
+                    className="btn-action style-3"
                     data-aos="fade-up"
                     data-aos-duration={1200}
                   >
                     Buy on OpenSea
+                  </a>
+                  <a
+                    href="https://looksrare.org/collections/0x7DD04448c6CD405345D03529Bff9749fd89F8F4F"
+                    className="btn-action style-2"
+                    data-aos="fade-up"
+                    data-aos-duration={1200}
+                  >
+                    View on LooksRare
                   </a>
                 </div>
               </div>
@@ -668,7 +739,7 @@ export default function Home() {
                       &amp; Android.
                     </p>
                     <a
-                      href="https://pillman-beta.netlify.app/"
+                      href="/play"
                       className="btn-action style-3"
                       data-aos="fade-up"
                       data-aos-duration={1200}
@@ -744,8 +815,144 @@ export default function Home() {
           </div>
         </section>
         {/* end Portfolio */}
+
+         {/* Team */}
+         <section className="tf-section team">
+          <div className="container">
+            <div className="row">
+              <div className="col-12">
+                <div className="block-text center">
+                  <h1
+                    className="heading-bg"
+                    data-aos="fade-in"
+                    data-aos-duration={1000}
+                  >
+                    <span>Artist</span>
+                  </h1>
+                  <h5
+                    className="sub-title mb-10"
+                    data-aos="fade-up"
+                    data-aos-duration={1000}
+                  >
+                    The Artist
+                  </h5>
+                  <h2
+                    className="title mb-28"
+                    data-aos="fade-up"
+                    data-aos-duration={1000}
+                  >
+                    Micha Klein
+                  </h2>
+                  <img
+                    src="/images/micha-portrait.webp"
+                    width="200"
+                    height="200"
+                    style={{ borderRadius: "30px" }}
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="row mt-53">
+              <div className="col-md-12">
+                <div className="team-box">
+                  <div className="team-info">
+                    <p className="fs-21">
+                      <a href="https://michaklein.com">Micha Klein</a> has been
+                      a pioneer in digital 3D animation since before Steve Jobs
+                      invested in Pixar. Blockchain technology has allowed Micha
+                      to fulfill a dream of his, bringing his legendary
+                      (Eminem’s Anger Management Tour) OG Pillman to the masses
+                      and to the metaverse. He has created 10,000 wildly
+                      intricate and unique, computer-generated avatars. Every
+                      pill is represented by a token that has a 3000x3000 pixel
+                      depth.
+                      <br />
+                      <br />
+                      Micha is dedicated to adding value to this project, every
+                      step of the way, for his fans and collectors. Immediately,
+                      Micha has donated 5% of the total proceeds to Save The
+                      Children, a charity that helps less fortunate children
+                      receive the medicine that they need. This donation was
+                      written directly into the smart contract.
+                      <br />
+                      <br />
+                      Micha Klein’s digital art has been around for over 30
+                      years and has stood the test of time. He has delivered
+                      huge projects for the likes of Disney and Coca-Cola and is
+                      dedicated to the digital art and NFT community.
+                    </p><br/>
+                    <a
+                    href="#roadmap"
+                    className="btn-action style-3"
+                    data-aos="fade-up"
+                    data-aos-duration={1200}
+                  >
+                    Micha Klein Portfolio
+                  </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* end Team */}
+        <section className="tf-section mb-58">
+          <div className="container">
+            <div className="row" style={{ textAlign: "center" }}>
+              <h3
+                className="title mb-28"
+                data-aos="fade-up"
+                data-aos-duration={1000}
+              >
+                Highest Last Sale
+              </h3>
+              <div style={{ flexDirection: "row" }}>
+                {sales.map((sale, index) => {
+                  return (
+                    index < 12 && (
+                      <>
+                        <a
+                          href={sale.url}
+                          target="_blank"
+                          rel="noopener"
+                        >
+                          <img
+                            src={sale.photo}
+                            className="os-photo"
+                          /><br/>
+                          {sale.price} ETH
+                        </a>
+                      </>
+                    )
+                  );
+                })}
+              </div>
+              {/* <div style={{ flexDirection: "row" }}>
+                {filteredMoedas.reverse().map((moeda, index) => {
+                  return (
+                    index < 12 && (
+                      <>
+                        <a
+                          href={moeda.assets[0].permalink}
+                          target="_blank"
+                          rel="noopener"
+                        >
+                          <img
+                            src={moeda.assets[0].image_url}
+                            className="os-photo"
+                          /><br/>
+                          asdf
+                        </a>
+                      </>
+                    )
+                  );
+                })}
+              </div> */}
+            </div>
+          </div>
+        </section>
         {/* Speciality */}
-        <section className="tf-section section-speciality">
+        <section className="tf-section section-speciality mt-107">
           <div className="container">
             <div className="row">
               <div className="col-xl-5 col-md-12">
@@ -820,39 +1027,7 @@ export default function Home() {
         </section>
         {/* end Speciality */}
 
-        <section className="tf-section mt-200 mb-58">
-          <div className="container">
-            <div className="row" style={{ textAlign: "center" }}>
-              <h3
-                className="title mb-28"
-                data-aos="fade-up"
-                data-aos-duration={1000}
-              >
-                OpenSea Bundles
-              </h3>
-              <div style={{ flexDirection: "row" }}>
-                {filteredMoedas.reverse().map((moeda, index) => {
-                  return (
-                    index < 12 && (
-                      <>
-                        <a
-                          href={moeda.assets[0].permalink}
-                          target="_blank"
-                          rel="noopener"
-                        >
-                          <img
-                            src={moeda.assets[0].image_url}
-                            className="os-photo"
-                          />
-                        </a>
-                      </>
-                    )
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-        </section>
+       
 
         {/* Road Map */}
         <section className="tf-section road-map mt-107" id="roadmap">
@@ -916,7 +1091,7 @@ export default function Home() {
                       <strong>all created by artist Micha Klein.</strong>
                     </p>
                     <a
-                      href="/nfts"
+                      href="https://looksrare.org/collections/0x7DD04448c6CD405345D03529Bff9749fd89F8F4F"
                       className="btn-action style-3"
                       data-aos="fade-up"
                       data-aos-duration={1200}
@@ -984,7 +1159,7 @@ export default function Home() {
                       next release on iOS & Android.
                     </p>
                     <a
-                      href="https://pillman-beta.netlify.app/"
+                      href="/play"
                       className="btn-action style-3"
                       data-aos="fade-up"
                       data-aos-duration={1200}
@@ -1199,80 +1374,9 @@ export default function Home() {
           </div>
         </section>
         {/* end Newsletter */}
-        {/* Team */}
-        <section className="tf-section team mt-61">
-          <div className="container">
-            <div className="row">
-              <div className="col-12">
-                <div className="block-text center">
-                  <h1
-                    className="heading-bg"
-                    data-aos="fade-in"
-                    data-aos-duration={1000}
-                  >
-                    <span>Artist</span>
-                  </h1>
-                  <h5
-                    className="sub-title mb-10"
-                    data-aos="fade-up"
-                    data-aos-duration={1000}
-                  >
-                    The Artist
-                  </h5>
-                  <h2
-                    className="title mb-28"
-                    data-aos="fade-up"
-                    data-aos-duration={1000}
-                  >
-                    Micha Klein
-                  </h2>
-                  <img
-                    src="/images/micha-portrait.webp"
-                    width="200"
-                    height="200"
-                    style={{ borderRadius: "30px" }}
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="row mt-53">
-              <div className="col-md-12">
-                <div className="team-box">
-                  <div className="team-info">
-                    <p className="fs-21">
-                      <a href="https://michaklein.com">Micha Klein</a> has been
-                      a pioneer in digital 3D animation since before Steve Jobs
-                      invested in Pixar. Blockchain technology has allowed Micha
-                      to fulfill a dream of his, bringing his legendary
-                      (Eminem’s Anger Management Tour) OG Pillman to the masses
-                      and to the metaverse. He has created 10,000 wildly
-                      intricate and unique, computer-generated avatars. Every
-                      pill is represented by a token that has a 3000x3000 pixel
-                      depth.
-                      <br />
-                      <br />
-                      Micha is dedicated to adding value to this project, every
-                      step of the way, for his fans and collectors. Immediately,
-                      Micha has donated 5% of the total proceeds to Save The
-                      Children, a charity that helps less fortunate children
-                      receive the medicine that they need. This donation was
-                      written directly into the smart contract.
-                      <br />
-                      <br />
-                      Micha Klein’s digital art has been around for over 30
-                      years and has stood the test of time. He has delivered
-                      huge projects for the likes of Disney and Coca-Cola and is
-                      dedicated to the digital art and NFT community.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* end Team */}
+       
         {/* Partners */}
-        <section className="tf-section partners">
+        <section className="tf-section partners mt-200">
           <div className="container">
             <div className="row">
               <div className="col-12">
@@ -1482,12 +1586,116 @@ export default function Home() {
             </div>
           </div>
         </section>
-        {/* end FAQ */}
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+
+      <section style={{width: '50%', margin: '100px auto'}}>
+        <Grid item xs={12}>
+              <Typography
+                variant="h4"
+                component="p"
+                align="center"
+              >
+                Terms &amp; Conditions
+              </Typography>
+              <br/><br/>
+              <Typography
+                variant="body2"
+                component="p"
+                align="center"
+              >
+                Crypto-Pills is a collection of Fine Art Digital Collectibles
+                (NFTs) running on the Ethereum network. This website is only an
+                interface allowing participants to purchase these digital
+                collectibles. 
+                Users are entirely responsible for the safety and management of
+                their own private Ethereum wallets and validating all
+                transactions and contracts generated by this website before
+                approval. 
+                Furthermore, as the Crypto-Pills smart contract runs on the
+                Ethereum network, there is no ability to undo, reverse, or
+                restore any transactions. 
+                This website and its connected services are provided “as is” and
+                “as available” without warranty of any kind. 
+                By using this website you are accepting sole responsibility for
+                any an all transactions involving Crypto-Pills digital
+                collectibles. 
+                You, the owner, agree that you purchase our non-fungible token
+                as a Fine Art Digital Collectible. 
+                Non-fungible tokens should not be seen as an investment. 
+                The Crypto-Pill is a Fine Art Digital Collectible to be used as
+                an avatar, displayed on screens, or to be printed in any format
+                on any medium for your personal use. The associated Digital Art
+                is high resolution and suitable for large format prints. 
+                It's a non-fungible token for you to collect. 
+                You, the owner, understand that the monetary value of this
+                Digital Art Asset is in the eye of the beholder, and determined
+                by the market, and that it should be treated as a Fine Art
+                Digital Collectible, purchased for it’s artistic and cultural
+                values. 
+                You, the owner are entirely responsible for any tax liability
+                which may arise from minting or reselling the Crypto-Pill
+                non-fungible token. 
+                You, the owner, agree to waive any class action status, and any
+                legal dispute around the project which you may choose to bring
+                can only be done on an individual basis. 
+                The project is not targeted towards children. You agree that you
+                are over the age of 18 when you purchase a Crypto-Pill, or above
+                the legal age of your jurisdiction, whichever is greater.
+              </Typography>
+<br/><br/>
+              <Typography
+                variant="h4"
+                component="p"
+                align="center"
+              >
+                Ownership
+              </Typography><br/>
+              <Typography
+                variant="body2"
+                component="p"
+                align="center"
+              >
+                <strong>
+                  1. You Own the NFT. Each Crypto-Pill is an NFT on the Ethereum
+                  blockchain.
+                </strong><br/>
+                When you purchase an NFT, you own the underlying Crypto-Pill;
+                the High Resolution Digital Art, completely. Ownership of the
+                NFT is mediated entirely by the Smart Contract and the Ethereum
+                Network: at no point may we seize, freeze, or otherwise modify
+                the ownership of any Crypto-Pill.<br/>
+                <strong>2. Personal Use.</strong> <br/>
+                Subject to your continued compliance with these Terms,
+                Crypto-Pills grants you a worldwide, royalty-free license to
+                use, copy, display, and print out the purchased Art in any
+                medium, solely for the following purposes: 
+                (<b>A</b>) for your own personal, non-commercial use; 
+                (<b>B</b>) as part of a marketplace that permits the purchase
+                and sale of your Crypto-Pill / NFT, provided that the
+                marketplace cryptographically verifies each Crypto-Pills owner’s
+                rights to display the Art for their Crypto-Pill to ensure that
+                only the actual owner can display the Art; 
+                or (<b>C</b>) as part of a third party website or application
+                that permits the inclusion, involvement, or participation of
+                your Crypto-Pill, provided that the website/application
+                cryptographically verifies each Crypto-Pills owner’s rights to
+                display the Art for their Crypto-Pills, to ensure that only the
+                actual owner can display the Art, and provided that the Art is
+                no longer visible once the owner of the Crypto-Pill leaves the
+                website/application.<br/>
+              
+                <strong>3. Disclaimer</strong><br/>
+                Crypto-Pills have been designed by established pop artist Micha
+                Klein, and represent a legit part of digital art history, and a
+                recognized cultural value. After all, artwork featuring the
+                Pillman character is featured in important international museum
+                collections. Therefore we have explicitly chosen not to allow
+                commercial use and derivatives, as to not undermine the value of
+                the Digital Art Asset as a unique cultural artifact, created and
+                authorized by the artist.
+              </Typography>
+            </Grid>
+            </section>
+
       </>
 
       <Footer />

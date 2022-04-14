@@ -217,6 +217,9 @@ export default function WalletButton(props) {
           <ClickAwayListener onClickAway={handleCloseDropdown}>
             <MenuList autoFocusItem={dropDownOpen} id="menu-list-grow" onKeyDown={handleListKeyDown} className={classes.dropdownMenuList}>
               <div className={classes.dropdownAccount}>
+                <Typography variant='caption' className={classes.dropdownDisconnect} style={{width: '100%', color: '#333', fontSize: '14px', fontWeight: '900'}}><a href="/account">Your Account</a></Typography>
+              </div>
+              <div className={classes.dropdownAccount}>
                 <Typography variant='body1' style={{marginRight: '20px', font: 'inherit'}}>{addressDisplay}</Typography>
                 <Typography variant='caption' >connected ✔</Typography>
               </div>

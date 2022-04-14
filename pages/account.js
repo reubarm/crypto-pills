@@ -376,7 +376,7 @@ export default function Admin() {
   return (
     <>
       <Head>
-        <title>3D Crypto Pills | Crypto Pills</title>
+        <title>Your Pillman Account | Crypto Pills</title>
         <meta
           name="description"
           content="Micha Klein’s digital art has been around for over 30 years, and is not going away."
@@ -453,6 +453,45 @@ export default function Admin() {
                 </div>
               </div>
             </section>
+            <section className="tf-section hero-slider">
+          <div className="container">
+            <div className="row">
+              <div className="col-xl-6 col-md-6 col-12">
+                <div className="block-text pt-24 mt-27">
+                  <h6 className="sub-title mb-6" data-aos={"fade-up"}>
+                    Crypto Pills Benefits for You
+                  </h6>
+                  <h2 className="title mb-26" data-aos="fade-up">
+                    Exclusive 50% Off Merchandise
+                  </h2>
+                  <p className="mb-20 fs-18" data-aos="fade-up">
+                    Enjoy the benefits of being a Crypto Pills Gold Member with a 50% discount on the new Crypto Pills merchandise that was dropped this week, with lots more cool merch to come!
+                    <br />
+                    <br />
+                    </p>
+                  <a
+                    href="https://dropthepill.com/collections/crypto-pills"
+                    className="btn-action style-2"
+                    data-aos="fade-up"
+                    data-aos-duration={1200}
+                  >
+                    Visit Exclusive Store
+                  </a>
+                </div>
+              </div>
+              <div className="col-xl-6 col-md-6 col-12">
+                <div className="content-right d-flex mt-50">
+                  <div style={{ borderRadius: "30px", overflow: "hidden" }}>
+                    <a href="https://dropthepill.com/products/blue-bucket-hat-gang-hoodie"><img src="/images/store4.png" width="240" height="260" style={{display: 'inline'}} /></a>
+                    <a href="https://dropthepill.com/collections/crypto-pills/products/crypto-pill-mint-t-shirt"><img src="/images/store3.png" width="240" height="260" style={{display: 'inline'}} /></a>
+                    <a href="https://dropthepill.com/collections/crypto-pills/products/crypto-pills-origins-t-shirt"><img src="/images/store1.png" width="240" height="260" style={{display: 'inline'}} /></a>
+                    <a href="https://dropthepill.com/collections/crypto-pills/products/pink-peruvian-raver-hoodie"><img src="/images/store2.png" width="240" height="260" style={{display: 'inline'}} /></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
           </>
         )}
 

@@ -156,6 +156,15 @@ export default function Home() {
                         <br />
                         Upgraded role in Discord for holders by number of pills.
                       </p>
+                      <img
+                      src="/images/banner.jpeg"
+                      style={{
+                        width: "100%",
+                        height: "150px",
+                        margin: "10px 0 0",
+                        borderRadius: "20px",
+                      }}
+                    />
                     </div>
                     <div
                       className="box-time right mt-223"
@@ -349,6 +358,15 @@ export default function Home() {
                         t-shirt is raffled.
                         <br />
                         <br />
+                        <img 
+                      src="/gamescreens.png"
+                      style={{
+                        width: "100%",
+                        height: "150px",
+                        margin: "10px 0 0",
+                        borderRadius: "20px",
+                      }}
+                    />
                       </p>
                     </div>
                     <div
@@ -419,7 +437,15 @@ export default function Home() {
                         many others. Launch new Crypto Pills Website Bridge
                         merch store and Metamask.
                         <br />
-                        <br />
+                        <br /><img 
+                      src="/images/film.png"
+                      style={{
+                        width: "100%",
+                        height: "150px",
+                        margin: "10px 0 0",
+                        borderRadius: "20px",
+                      }}
+                    />
                       </p>
                     </div>
                   </div>

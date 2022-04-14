@@ -103,7 +103,7 @@ export default function Header(props) {
             <Link
               variant="h6"
               color="textPrimary"
-              href="https://pillman-beta.netlify.app/"
+              href="/play"
               className={classes.headerLink}
             >
               Play Game

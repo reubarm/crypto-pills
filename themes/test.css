@@ -1192,7 +1192,7 @@ a:hover {
 }
 
 .team {
-  padding: 139px 0 128px;
+  padding: 0 0 128px;
 }
 @media only screen and (max-width: 1024px) {
   .team {

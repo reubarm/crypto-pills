@@ -82,7 +82,7 @@ export default function MobileMenu(props) {
                 }}
               />
             </ListItem>
-            <ListItem button component="a" href="https://pillman-beta.netlify.app/">
+            <ListItem button component="a" href="/play">
               <ListItemText
                 primary="Play"
                 primaryTypographyProps={{

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 import { useWeb3React } from "@web3-react/core";
 import { useEagerConnect, useInactiveListener } from "../hooks/web3-react";
 import Head from "next/head";
@@ -78,20 +79,34 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    fetch(
-      `https://api.opensea.io/api/v1/bundles?asset_contract_address=0x7dd04448c6cd405345d03529bff9749fd89f8f4f&limit=${limit}&offset=0`,
-      options
-    )
-      .then((response) => response.json())
-      .then((response) => {
-        setMoedas(response.bundles);
+    axios
+      .get(
+        "https://api.coingecko.com/api/v3/coins/ethereum?tickers=true&market_data=true&community_data=true&developer_data=true&sparkline=true"
+      )
+      .then((res) => {
+        setMoedas(res.data.market_data.current_price.usd);
+        console.log(res.data.market_data.current_price.usd);
       })
-      .catch((err) => console.error(err));
+      .catch((error) => console.log(error));
   }, []);
+  // console.log(moedas);
+  const test = JSON.stringify(moedas);
 
-  console.log(moedas);
+  // useEffect(() => {
+  //   fetch(
+  //     `https://api.opensea.io/api/v1/bundles?asset_contract_address=0x7dd04448c6cd405345d03529bff9749fd89f8f4f&limit=${limit}&offset=0`,
+  //     options
+  //   )
+  //     .then((response) => response.json())
+  //     .then((response) => {
+  //       setMoedas(response.bundles);
+  //     })
+  //     .catch((err) => console.error(err));
+  // }, []);
 
-  const filteredMoedas = moedas.filter((moeda) => moeda);
+  // console.log(moedas);
+
+  // const filteredMoedas = moedas.filter((moeda) => moeda);
 
   let marketcap = 0;
   let avgprice = 0;
@@ -110,65 +125,79 @@ export default function Home() {
   const sales = [
     {
       url: "https://opensea.io/assets/0x7dd04448c6cd405345d03529bff9749fd89f8f4f/5037",
-      photo: "https://lh3.googleusercontent.com/_s9b8kwrwjb03LjT5uxPv6IaLA9YkkQ67sp70HUTWDH-76rVDpawMpRLy9D5U0BJAxaIXP4anTZaa1CgQtvKiMPdggnHluAQEO5yEg=w600",
-      price: "18.0",
+      photo:
+        "https://lh3.googleusercontent.com/_s9b8kwrwjb03LjT5uxPv6IaLA9YkkQ67sp70HUTWDH-76rVDpawMpRLy9D5U0BJAxaIXP4anTZaa1CgQtvKiMPdggnHluAQEO5yEg=w600",
+      price: 18.0,
     },
     {
       url: "https://opensea.io/assets/0x7dd04448c6cd405345d03529bff9749fd89f8f4f/7379",
-      photo: "https://lh3.googleusercontent.com/IFLMXqDoa6LTpH6pBExHackLUbeTg2epmv8PKfm9eO8HUIKHhvRa_XhD_MiTEaYDDohGBE74oiCnBfEjhUYymgp7C-zJADMdVYFd=w600",
-      price: "16.0",
+      photo:
+        "https://lh3.googleusercontent.com/IFLMXqDoa6LTpH6pBExHackLUbeTg2epmv8PKfm9eO8HUIKHhvRa_XhD_MiTEaYDDohGBE74oiCnBfEjhUYymgp7C-zJADMdVYFd=w600",
+      price: 16.0,
     },
     {
       url: "https://opensea.io/assets/0x7dd04448c6cd405345d03529bff9749fd89f8f4f/6564",
-      photo: "https://lh3.googleusercontent.com/qn34aLMham2euwotgBOBXqDaQ2mrRyASVVfHQ2h93SjSqc_gEBrfLDYHTdBoh5Jm-1UNZuaVGU6mYJwSUagnacBb6eg2KRNfjPW-8Q=w600",
-      price: "12.9",
+      photo:
+        "https://lh3.googleusercontent.com/qn34aLMham2euwotgBOBXqDaQ2mrRyASVVfHQ2h93SjSqc_gEBrfLDYHTdBoh5Jm-1UNZuaVGU6mYJwSUagnacBb6eg2KRNfjPW-8Q=w600",
+      price: 12.9,
     },
     {
       url: "https://opensea.io/assets/0x7dd04448c6cd405345d03529bff9749fd89f8f4f/5273",
-      photo: "https://lh3.googleusercontent.com/sjuasaqWlG1xdJFCupFLWqvIk-6qXVy7F8LnvNxqIphj9EH1SOj4tOHoy1-jk1t5UvICQ-FUFacInoZ91ih1TBQdUClc3bnP6idWSA=w600",
-      price: "11.99",
+      photo:
+        "https://lh3.googleusercontent.com/sjuasaqWlG1xdJFCupFLWqvIk-6qXVy7F8LnvNxqIphj9EH1SOj4tOHoy1-jk1t5UvICQ-FUFacInoZ91ih1TBQdUClc3bnP6idWSA=w600",
+      price: 11.99,
     },
     {
       url: "https://opensea.io/assets/0x7dd04448c6cd405345d03529bff9749fd89f8f4f/9830",
-      photo: "https://lh3.googleusercontent.com/bFwT0nV8a1OvPUH8DK9UwhZAseUEJlP6oBLk1jAqk4kIwe_aiD5NiNHU-Qw7FkpfMhos3dwFHB_HfbIb4BlAO0ZpMa8Iu6gqhYrT=w600",
-      price: "10",
+      photo:
+        "https://lh3.googleusercontent.com/bFwT0nV8a1OvPUH8DK9UwhZAseUEJlP6oBLk1jAqk4kIwe_aiD5NiNHU-Qw7FkpfMhos3dwFHB_HfbIb4BlAO0ZpMa8Iu6gqhYrT=w600",
+      price: 10,
     },
     {
       url: "https://opensea.io/assets/0x7dd04448c6cd405345d03529bff9749fd89f8f4f/6018",
-      photo: "https://lh3.googleusercontent.com/TVALARV_eA5XIIe3KnTPHUqb4I4P7Dm9sc86x9xvBLAFiHxhIKwjXwfcrAcJjoC59BYfljCUvXmMnqk3xQX420yWc2vY6IjtrYKlXg=w600",
-      price: "10",
+      photo:
+        "https://lh3.googleusercontent.com/TVALARV_eA5XIIe3KnTPHUqb4I4P7Dm9sc86x9xvBLAFiHxhIKwjXwfcrAcJjoC59BYfljCUvXmMnqk3xQX420yWc2vY6IjtrYKlXg=w600",
+      price: 10,
     },
     {
       url: "https://opensea.io/assets/0x7dd04448c6cd405345d03529bff9749fd89f8f4f/6429",
-      photo: "https://lh3.googleusercontent.com/zE7njHeqVFuOAspkNpNREG4HIuZ0b_R5VOfASK-ROukRyIz0tQeRqKGibZGgT8ZIIXFJvPp3F_FgcKxsiIa5CYO0daMZIpXqt__BDqQ=w600",
-      price: "8",
+      photo:
+        "https://lh3.googleusercontent.com/zE7njHeqVFuOAspkNpNREG4HIuZ0b_R5VOfASK-ROukRyIz0tQeRqKGibZGgT8ZIIXFJvPp3F_FgcKxsiIa5CYO0daMZIpXqt__BDqQ=w600",
+      price: 8,
     },
     {
       url: "https://opensea.io/assets/0x7dd04448c6cd405345d03529bff9749fd89f8f4f/9044",
-      photo: "https://lh3.googleusercontent.com/XB5zO41nlQFYtDfIRJaqTsDLfSfMfiR7scSDw-Es-XmThkJFGDtO6uICoAUVLv6Zyxd2N6YOuCII0HC833c_uYpSDOmAyiFyE5PMBg=w600",
-      price: "7.75",
+      photo:
+        "https://lh3.googleusercontent.com/XB5zO41nlQFYtDfIRJaqTsDLfSfMfiR7scSDw-Es-XmThkJFGDtO6uICoAUVLv6Zyxd2N6YOuCII0HC833c_uYpSDOmAyiFyE5PMBg=w600",
+      price: 7.75,
     },
     {
       url: "https://opensea.io/assets/0x7dd04448c6cd405345d03529bff9749fd89f8f4f/6312",
-      photo: "https://lh3.googleusercontent.com/cFdVa3f6xe2GQ5x5tmkMCZMFCiCgAyvhhzSrmwDJ4LpW8j-FAdJcaAaaiz4pLJd1kv2Na3t_drZxVZKeLAMd_dcMoL4ey3p5eWJy=w600",
-      price: "7.4",
+      photo:
+        "https://lh3.googleusercontent.com/cFdVa3f6xe2GQ5x5tmkMCZMFCiCgAyvhhzSrmwDJ4LpW8j-FAdJcaAaaiz4pLJd1kv2Na3t_drZxVZKeLAMd_dcMoL4ey3p5eWJy=w600",
+      price: 7.4,
     },
     {
       url: "https://opensea.io/assets/0x7dd04448c6cd405345d03529bff9749fd89f8f4f/7042",
-      photo: "https://lh3.googleusercontent.com/wXm7xHh7aNnz0SjJcpL1sBKAyTeYYTA0qtXFSRgsZIGl6a0FqArQyYpIZie8uKpTrC2NN8M24906LaEUwFo8DpaoPZqQpEUWfUAxZg=w600",
-      price: "7",
+      photo:
+        "https://lh3.googleusercontent.com/wXm7xHh7aNnz0SjJcpL1sBKAyTeYYTA0qtXFSRgsZIGl6a0FqArQyYpIZie8uKpTrC2NN8M24906LaEUwFo8DpaoPZqQpEUWfUAxZg=w600",
+      price: 7,
     },
     {
       url: "https://opensea.io/assets/0x7dd04448c6cd405345d03529bff9749fd89f8f4f/386",
-      photo: "https://lh3.googleusercontent.com/NDdPHbvxqTd-no1e5iJleHIEMqHIn3iTQsiJ3EA_43CHBMp7zgnqZIuVKQn9IMX9OfR57fhdiVfb330IDU8rtJS4sHiUT82_Trd6vA=w600",
-      price: "7",
+      photo:
+        "https://lh3.googleusercontent.com/NDdPHbvxqTd-no1e5iJleHIEMqHIn3iTQsiJ3EA_43CHBMp7zgnqZIuVKQn9IMX9OfR57fhdiVfb330IDU8rtJS4sHiUT82_Trd6vA=w600",
+      price: 7,
     },
     {
       url: "https://opensea.io/assets/0x7dd04448c6cd405345d03529bff9749fd89f8f4f/4951",
-      photo: "https://lh3.googleusercontent.com/ELcUSVwKen0YHZjrLtdno_72iQl-38v67BRyTwUEE8TI-VJK59C_Rknl4DiV6xwm6bPl-8EmUFIemUFTgE9JrU-RDVz9Wy7S-sE8u3U=w600",
-      price: "5.5",
+      photo:
+        "https://lh3.googleusercontent.com/ELcUSVwKen0YHZjrLtdno_72iQl-38v67BRyTwUEE8TI-VJK59C_Rknl4DiV6xwm6bPl-8EmUFIemUFTgE9JrU-RDVz9Wy7S-sE8u3U=w600",
+      price: 5.5,
     },
   ];
+
+  // const calc = sales[0].price * moedas;
 
   const title = [
     "How do I purchase Crypto-Pills?",
@@ -816,8 +845,8 @@ export default function Home() {
         </section>
         {/* end Portfolio */}
 
-         {/* Team */}
-         <section className="tf-section team">
+        {/* Team */}
+        <section className="tf-section team">
           <div className="container">
             <div className="row">
               <div className="col-12">
@@ -880,15 +909,16 @@ export default function Home() {
                       years and has stood the test of time. He has delivered
                       huge projects for the likes of Disney and Coca-Cola and is
                       dedicated to the digital art and NFT community.
-                    </p><br/>
+                    </p>
+                    <br />
                     <a
-                    href="#roadmap"
-                    className="btn-action style-3"
-                    data-aos="fade-up"
-                    data-aos-duration={1200}
-                  >
-                    Micha Klein Portfolio
-                  </a>
+                      href="#roadmap"
+                      className="btn-action style-3"
+                      data-aos="fade-up"
+                      data-aos-duration={1200}
+                    >
+                      Micha Klein Portfolio
+                    </a>
                   </div>
                 </div>
               </div>
@@ -911,16 +941,11 @@ export default function Home() {
                   return (
                     index < 12 && (
                       <>
-                        <a
-                          href={sale.url}
-                          target="_blank"
-                          rel="noopener"
-                        >
-                          <img
-                            src={sale.photo}
-                            className="os-photo"
-                          /><br/>
-                          {sale.price} ETH
+                        <a href={sale.url} target="_blank" rel="noopener">
+                          <img src={sale.photo} className="os-photo" />
+                          <br />
+                          {sale.price} ETH <br />
+                          (${(sale.price * moedas).toLocaleString()})
                         </a>
                       </>
                     )
@@ -978,8 +1003,10 @@ export default function Home() {
                   >
                     Since launch on <strong>August 27th 2021</strong>, Cryto
                     Pills has created a total volume of{" "}
-                    <strong>{volume} ETH ($7,267,340.47)</strong>, whilst the
-                    current OpenSea floor price is{" "}
+                    <strong>
+                      {volume} ETH (${(volume * moedas).toLocaleString()})
+                    </strong>
+                    , whilst the current OpenSea floor price is{" "}
                     <strong>{datastats.floor_price} ETH</strong>.
                   </p>
                 </div>
@@ -1026,8 +1053,6 @@ export default function Home() {
           </div>
         </section>
         {/* end Speciality */}
-
-       
 
         {/* Road Map */}
         <section className="tf-section road-map mt-107" id="roadmap">
@@ -1374,7 +1399,7 @@ export default function Home() {
           </div>
         </section>
         {/* end Newsletter */}
-       
+
         {/* Partners */}
         <section className="tf-section partners mt-200">
           <div className="container">
@@ -1417,7 +1442,7 @@ export default function Home() {
                     </p>
                     <a
                       href="https://www.techtimes.com/articles/264990/20210904/crypto-pills-nfts-offered-artist-who-created-pillman-character-used.htm"
-                      className="btn-action style-3"
+                      className="btn-action style-2"
                       data-aos="fade-up"
                       data-aos-duration={1200}
                     >
@@ -1437,7 +1462,7 @@ export default function Home() {
                     </p>
                     <a
                       href="https://twitter.com/timman_d/status/1476634196735049733"
-                      className="btn-action style-3"
+                      className="btn-action style-2"
                       data-aos="fade-up"
                       data-aos-duration={1200}
                     >
@@ -1457,7 +1482,7 @@ export default function Home() {
                     </p>
                     <a
                       href="https://lawire.com/blockchain-creative-powerhouse-micha-klein-bags-first-ever-best-digital-nft-artist-award/"
-                      className="btn-action style-3"
+                      className="btn-action style-2"
                       data-aos="fade-up"
                       data-aos-duration={1200}
                     >
@@ -1466,6 +1491,16 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+            </div>
+            <div style={{ width: "100%", textAlign: "center" }}>
+              <a
+                href="/press"
+                className="btn-action style-3"
+                data-aos="fade-up"
+                data-aos-duration={1200}
+              >
+                View All Press Articles
+              </a><br/><br/><br/>
             </div>
           </div>
         </section>
@@ -1587,115 +1622,96 @@ export default function Home() {
           </div>
         </section>
 
-      <section style={{width: '50%', margin: '100px auto'}}>
-        <Grid item xs={12}>
-              <Typography
-                variant="h4"
-                component="p"
-                align="center"
-              >
-                Terms &amp; Conditions
-              </Typography>
-              <br/><br/>
-              <Typography
-                variant="body2"
-                component="p"
-                align="center"
-              >
-                Crypto-Pills is a collection of Fine Art Digital Collectibles
-                (NFTs) running on the Ethereum network. This website is only an
-                interface allowing participants to purchase these digital
-                collectibles. 
-                Users are entirely responsible for the safety and management of
-                their own private Ethereum wallets and validating all
-                transactions and contracts generated by this website before
-                approval. 
-                Furthermore, as the Crypto-Pills smart contract runs on the
-                Ethereum network, there is no ability to undo, reverse, or
-                restore any transactions. 
-                This website and its connected services are provided “as is” and
-                “as available” without warranty of any kind. 
-                By using this website you are accepting sole responsibility for
-                any an all transactions involving Crypto-Pills digital
-                collectibles. 
-                You, the owner, agree that you purchase our non-fungible token
-                as a Fine Art Digital Collectible. 
-                Non-fungible tokens should not be seen as an investment. 
-                The Crypto-Pill is a Fine Art Digital Collectible to be used as
-                an avatar, displayed on screens, or to be printed in any format
-                on any medium for your personal use. The associated Digital Art
-                is high resolution and suitable for large format prints. 
-                It's a non-fungible token for you to collect. 
-                You, the owner, understand that the monetary value of this
-                Digital Art Asset is in the eye of the beholder, and determined
-                by the market, and that it should be treated as a Fine Art
-                Digital Collectible, purchased for it’s artistic and cultural
-                values. 
-                You, the owner are entirely responsible for any tax liability
-                which may arise from minting or reselling the Crypto-Pill
-                non-fungible token. 
-                You, the owner, agree to waive any class action status, and any
-                legal dispute around the project which you may choose to bring
-                can only be done on an individual basis. 
-                The project is not targeted towards children. You agree that you
-                are over the age of 18 when you purchase a Crypto-Pill, or above
-                the legal age of your jurisdiction, whichever is greater.
-              </Typography>
-<br/><br/>
-              <Typography
-                variant="h4"
-                component="p"
-                align="center"
-              >
-                Ownership
-              </Typography><br/>
-              <Typography
-                variant="body2"
-                component="p"
-                align="center"
-              >
-                <strong>
-                  1. You Own the NFT. Each Crypto-Pill is an NFT on the Ethereum
-                  blockchain.
-                </strong><br/>
-                When you purchase an NFT, you own the underlying Crypto-Pill;
-                the High Resolution Digital Art, completely. Ownership of the
-                NFT is mediated entirely by the Smart Contract and the Ethereum
-                Network: at no point may we seize, freeze, or otherwise modify
-                the ownership of any Crypto-Pill.<br/>
-                <strong>2. Personal Use.</strong> <br/>
-                Subject to your continued compliance with these Terms,
-                Crypto-Pills grants you a worldwide, royalty-free license to
-                use, copy, display, and print out the purchased Art in any
-                medium, solely for the following purposes: 
-                (<b>A</b>) for your own personal, non-commercial use; 
-                (<b>B</b>) as part of a marketplace that permits the purchase
-                and sale of your Crypto-Pill / NFT, provided that the
-                marketplace cryptographically verifies each Crypto-Pills owner’s
-                rights to display the Art for their Crypto-Pill to ensure that
-                only the actual owner can display the Art; 
-                or (<b>C</b>) as part of a third party website or application
-                that permits the inclusion, involvement, or participation of
-                your Crypto-Pill, provided that the website/application
-                cryptographically verifies each Crypto-Pills owner’s rights to
-                display the Art for their Crypto-Pills, to ensure that only the
-                actual owner can display the Art, and provided that the Art is
-                no longer visible once the owner of the Crypto-Pill leaves the
-                website/application.<br/>
-              
-                <strong>3. Disclaimer</strong><br/>
-                Crypto-Pills have been designed by established pop artist Micha
-                Klein, and represent a legit part of digital art history, and a
-                recognized cultural value. After all, artwork featuring the
-                Pillman character is featured in important international museum
-                collections. Therefore we have explicitly chosen not to allow
-                commercial use and derivatives, as to not undermine the value of
-                the Digital Art Asset as a unique cultural artifact, created and
-                authorized by the artist.
-              </Typography>
-            </Grid>
-            </section>
-
+        <section style={{ width: "50%", margin: "100px auto" }}>
+          <Grid item xs={12}>
+            <Typography variant="h4" component="p" align="center">
+              Terms &amp; Conditions
+            </Typography>
+            <br />
+            <br />
+            <Typography variant="body2" component="p" align="center">
+              Crypto-Pills is a collection of Fine Art Digital Collectibles
+              (NFTs) running on the Ethereum network. This website is only an
+              interface allowing participants to purchase these digital
+              collectibles. Users are entirely responsible for the safety and
+              management of their own private Ethereum wallets and validating
+              all transactions and contracts generated by this website before
+              approval. Furthermore, as the Crypto-Pills smart contract runs on
+              the Ethereum network, there is no ability to undo, reverse, or
+              restore any transactions. This website and its connected services
+              are provided “as is” and “as available” without warranty of any
+              kind. By using this website you are accepting sole responsibility
+              for any an all transactions involving Crypto-Pills digital
+              collectibles. You, the owner, agree that you purchase our
+              non-fungible token as a Fine Art Digital Collectible. Non-fungible
+              tokens should not be seen as an investment. The Crypto-Pill is a
+              Fine Art Digital Collectible to be used as an avatar, displayed on
+              screens, or to be printed in any format on any medium for your
+              personal use. The associated Digital Art is high resolution and
+              suitable for large format prints. It's a non-fungible token for
+              you to collect. You, the owner, understand that the monetary value
+              of this Digital Art Asset is in the eye of the beholder, and
+              determined by the market, and that it should be treated as a Fine
+              Art Digital Collectible, purchased for it’s artistic and cultural
+              values. You, the owner are entirely responsible for any tax
+              liability which may arise from minting or reselling the
+              Crypto-Pill non-fungible token. You, the owner, agree to waive any
+              class action status, and any legal dispute around the project
+              which you may choose to bring can only be done on an individual
+              basis. The project is not targeted towards children. You agree
+              that you are over the age of 18 when you purchase a Crypto-Pill,
+              or above the legal age of your jurisdiction, whichever is greater.
+            </Typography>
+            <br />
+            <br />
+            <Typography variant="h4" component="p" align="center">
+              Ownership
+            </Typography>
+            <br />
+            <Typography variant="body2" component="p" align="center">
+              <strong>
+                1. You Own the NFT. Each Crypto-Pill is an NFT on the Ethereum
+                blockchain.
+              </strong>
+              <br />
+              When you purchase an NFT, you own the underlying Crypto-Pill; the
+              High Resolution Digital Art, completely. Ownership of the NFT is
+              mediated entirely by the Smart Contract and the Ethereum Network:
+              at no point may we seize, freeze, or otherwise modify the
+              ownership of any Crypto-Pill.
+              <br />
+              <strong>2. Personal Use.</strong> <br />
+              Subject to your continued compliance with these Terms,
+              Crypto-Pills grants you a worldwide, royalty-free license to use,
+              copy, display, and print out the purchased Art in any medium,
+              solely for the following purposes: (<b>A</b>) for your own
+              personal, non-commercial use; (<b>B</b>) as part of a marketplace
+              that permits the purchase and sale of your Crypto-Pill / NFT,
+              provided that the marketplace cryptographically verifies each
+              Crypto-Pills owner’s rights to display the Art for their
+              Crypto-Pill to ensure that only the actual owner can display the
+              Art; or (<b>C</b>) as part of a third party website or application
+              that permits the inclusion, involvement, or participation of your
+              Crypto-Pill, provided that the website/application
+              cryptographically verifies each Crypto-Pills owner’s rights to
+              display the Art for their Crypto-Pills, to ensure that only the
+              actual owner can display the Art, and provided that the Art is no
+              longer visible once the owner of the Crypto-Pill leaves the
+              website/application.
+              <br />
+              <strong>3. Disclaimer</strong>
+              <br />
+              Crypto-Pills have been designed by established pop artist Micha
+              Klein, and represent a legit part of digital art history, and a
+              recognized cultural value. After all, artwork featuring the
+              Pillman character is featured in important international museum
+              collections. Therefore we have explicitly chosen not to allow
+              commercial use and derivatives, as to not undermine the value of
+              the Digital Art Asset as a unique cultural artifact, created and
+              authorized by the artist.
+            </Typography>
+          </Grid>
+        </section>
       </>
 
       <Footer />

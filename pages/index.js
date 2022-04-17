@@ -912,7 +912,7 @@ export default function Home() {
                     </p>
                     <br />
                     <a
-                      href="#roadmap"
+                      href="https://michaklein.com/"
                       className="btn-action style-3"
                       data-aos="fade-up"
                       data-aos-duration={1200}
@@ -1431,17 +1431,48 @@ export default function Home() {
               </div>
             </div>
             <div className="row">
-              <div className="col-md-4">
+              <div className="col-12">
                 <div className="icon-box bg-2" data-aos="fade-up">
-                  <div className="content center">
-                    <a className="h4">Slim Shady Feat. Pillman Tour</a>
-                    <p className="fs-18">
-                      Eminem commissioned Pillman animations for his first US &
+                  <div className="content">
+                    <a className="h4">Slim Shady Feat. Pillman Tour</a><br/><br/>
+                    <p className="fs-21">
+                      Eminem commissioned Pillman animations for his first <br/>US &amp;
                       European Tour for his incredible 2000 Anger Management
                       Tour
                     </p>
                     <a
                       href="https://www.techtimes.com/articles/264990/20210904/crypto-pills-nfts-offered-artist-who-created-pillman-character-used.htm"
+                      className="btn-action style-2"
+                      data-aos="fade-up"
+                      data-aos-duration={1200}
+                    >
+                      Read Article
+                    </a>
+                  </div>
+                  <div className="content" style={{width: '100%', maxWidth: '500px', height: '281px', alignItems: 'flex-start!important'}}>
+                  <iframe
+                  width="500"
+                  height="281"
+                  src={`https://player.vimeo.com/video/575656466?title=0&byline=0&portrait=0`}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  title="Embedded youtube"
+                  style={{width: '100%', alignItems: 'flex-start!important'}}
+                  
+                />
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-4">
+                <div className="icon-box bg-2" data-aos="fade-up">
+                  <div className="content center">
+                    <a className="h4">In conversation with the pioneer of digital art</a>
+                    <p className="fs-18">
+                    Micha Klein is considered the pioneer in digital art and computer graphics since creating Pillman in 1992.
+                    </p>
+                    <a
+                      href="https://ashadedviewonfashion.com/2021/04/20/in-conversation-with-the-digital-artist-micha-klein/"
                       className="btn-action style-2"
                       data-aos="fade-up"
                       data-aos-duration={1200}
@@ -1456,9 +1487,9 @@ export default function Home() {
                   <div className="content center">
                     <a className="h4">International Space Station Launch</a>
                     <p className="fs-18">
-                      There's been a Pillman sent to the International Space
-                      Station for 1 year in February, before moving to it's new
-                      home… the #MOON!
+                      There's a Pillman sent to the International Space
+                      Station for 1 year, before moving to it's new
+                      home (to the moon 🚀).
                     </p>
                     <a
                       href="https://twitter.com/timman_d/status/1476634196735049733"

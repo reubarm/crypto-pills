@@ -356,7 +356,6 @@ export default function Admin() {
         .then((response) => response.json())
         .then((response) => {
           setNfts(response.assets);
-          setHowmany(response.assets.length);
           setUsername(response.assets[0].owner.user.username);
         })
         .catch((err) => console.error(err));
@@ -369,9 +368,20 @@ export default function Admin() {
       "0xb41f146670ce3dedac51d79956cd5e292be26ec4"
   );
 
-  console.log(nfts);
-  console.log(howmany);
-  console.log(username);
+  useEffect(() => {
+    setHowmany(filteredNfts.length);
+  }, [filteredNfts]);
+
+  var today = new Date();
+  var curHr = today.getHours();
+  let welcome;
+  if (curHr < 12) {
+    welcome = "Good morning";
+  } else if (curHr < 18) {
+    welcome = "Good afternoon";
+  } else {
+    welcome = "Good evening";
+  }
 
   return (
     <>
@@ -418,19 +428,19 @@ export default function Admin() {
                   <div className="page-title__body rm">
                     <div className="block-text pt-12 center-mb">
                       <h3 className="sub-title mb-33">
-                        Good morning @{username}
+                        {welcome}{" "}
+                        <span style={{ color: "#3b5397" }}>@{username} </span>
                       </h3>
                       <h5 className="fs-24 mb-10">
-                        You are officially a Gold Member with {howmany} Crypto
-                        Pills.
+                        You have {howmany} Crypto Pills - that's awesome.
                       </h5>
                       <h5 className="fs-24 mb-10">
                         Mint new collections for free because you're amazing!
                       </h5>
                       <br />
                       <br />
-                      <a href="#" className="btn-action style-3">
-                        Extra Benefits Coming Soon
+                      <a href="/play" className="btn-action style-3">
+                        Play Pillman Origins
                       </a>
                     </div>
 
@@ -453,45 +463,108 @@ export default function Admin() {
                 </div>
               </div>
             </section>
-            <section className="tf-section hero-slider">
-          <div className="container">
-            <div className="row">
-              <div className="col-xl-6 col-md-6 col-12">
-                <div className="block-text pt-24 mt-27">
-                  <h6 className="sub-title mb-6" data-aos={"fade-up"}>
-                    Crypto Pills Benefits for You
-                  </h6>
-                  <h2 className="title mb-26" data-aos="fade-up">
-                    Exclusive 50% Off Merchandise
-                  </h2>
-                  <p className="mb-20 fs-18" data-aos="fade-up">
-                    Enjoy the benefits of being a Crypto Pills Gold Member with a 50% discount on the new Crypto Pills merchandise that was dropped this week, with lots more cool merch to come!
-                    <br />
-                    <br />
-                    </p>
-                  <a
-                    href="https://dropthepill.com/collections/crypto-pills"
-                    className="btn-action style-2"
+            <section className="tf-section mt-53">
+              <div className="container">
+                <div className="row" style={{ textAlign: "center" }}>
+                  <h3
+                    className="title mb-28"
                     data-aos="fade-up"
-                    data-aos-duration={1200}
+                    data-aos-duration={1000}
                   >
-                    Visit Exclusive Store
-                  </a>
-                </div>
-              </div>
-              <div className="col-xl-6 col-md-6 col-12">
-                <div className="content-right d-flex mt-50">
-                  <div style={{ borderRadius: "30px", overflow: "hidden" }}>
-                    <a href="https://dropthepill.com/products/blue-bucket-hat-gang-hoodie"><img src="/images/store4.png" width="240" height="260" style={{display: 'inline'}} /></a>
-                    <a href="https://dropthepill.com/collections/crypto-pills/products/crypto-pill-mint-t-shirt"><img src="/images/store3.png" width="240" height="260" style={{display: 'inline'}} /></a>
-                    <a href="https://dropthepill.com/collections/crypto-pills/products/crypto-pills-origins-t-shirt"><img src="/images/store1.png" width="240" height="260" style={{display: 'inline'}} /></a>
-                    <a href="https://dropthepill.com/collections/crypto-pills/products/pink-peruvian-raver-hoodie"><img src="/images/store2.png" width="240" height="260" style={{display: 'inline'}} /></a>
+                    Your Crypto Pills
+                  </h3>
+
+                  <div style={{ flexDirection: "row" }}>
+                    {filteredNfts.map((nft, index) => {
+                      return (
+                        index < 12 && (
+                          <>
+                            <a
+                              href={nft.permalink}
+                              target="_blank"
+                              rel="noopener"
+                            >
+                              <img src={nft.image_url} className="os-photo" />
+                              <br />
+                            </a>
+                          </>
+                        )
+                      );
+                    })}
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
+            </section>
+            <section className="tf-section hero-slider">
+              <div className="container">
+                <div className="row">
+                  <div className="col-xl-6 col-md-6 col-12">
+                    <div className="block-text pt-24 mt-27">
+                      <h6 className="sub-title mb-6" data-aos={"fade-up"}>
+                        Crypto Pills Benefits for You
+                      </h6>
+                      <h2 className="title mb-26" data-aos="fade-up">
+                        Exclusive 50% Off Merchandise
+                      </h2>
+                      <p className="mb-20 fs-18" data-aos="fade-up">
+                        Enjoy the benefits of being a Crypto Pills Gold Member
+                        with a 50% discount on the new Crypto Pills merchandise
+                        that was dropped this week, with lots more cool merch to
+                        come!
+                        <br />
+                        <br />
+                      </p>
+                      <a
+                        href="https://dropthepill.com/collections/crypto-pills"
+                        className="btn-action style-2"
+                        data-aos="fade-up"
+                        data-aos-duration={1200}
+                      >
+                        Visit Exclusive Store
+                      </a>
+                    </div>
+                  </div>
+                  <div className="col-xl-6 col-md-6 col-12">
+                    <div className="content-right d-flex mt-50">
+                      <div style={{ borderRadius: "30px", overflow: "hidden" }}>
+                        <a href="https://dropthepill.com/products/blue-bucket-hat-gang-hoodie">
+                          <img
+                            src="/images/store4.png"
+                            width="240"
+                            height="260"
+                            style={{ display: "inline" }}
+                          />
+                        </a>
+                        <a href="https://dropthepill.com/collections/crypto-pills/products/crypto-pill-mint-t-shirt">
+                          <img
+                            src="/images/store3.png"
+                            width="240"
+                            height="260"
+                            style={{ display: "inline" }}
+                          />
+                        </a>
+                        <a href="https://dropthepill.com/collections/crypto-pills/products/crypto-pills-origins-t-shirt">
+                          <img
+                            src="/images/store1.png"
+                            width="240"
+                            height="260"
+                            style={{ display: "inline" }}
+                          />
+                        </a>
+                        <a href="https://dropthepill.com/collections/crypto-pills/products/pink-peruvian-raver-hoodie">
+                          <img
+                            src="/images/store2.png"
+                            width="240"
+                            height="260"
+                            style={{ display: "inline" }}
+                          />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
           </>
         )}
 

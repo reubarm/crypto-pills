@@ -952,27 +952,7 @@ export default function Home() {
                   );
                 })}
               </div>
-              {/* <div style={{ flexDirection: "row" }}>
-                {filteredMoedas.reverse().map((moeda, index) => {
-                  return (
-                    index < 12 && (
-                      <>
-                        <a
-                          href={moeda.assets[0].permalink}
-                          target="_blank"
-                          rel="noopener"
-                        >
-                          <img
-                            src={moeda.assets[0].image_url}
-                            className="os-photo"
-                          /><br/>
-                          asdf
-                        </a>
-                      </>
-                    )
-                  );
-                })}
-              </div> */}
+         
             </div>
           </div>
         </section>

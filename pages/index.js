@@ -571,61 +571,9 @@ export default function Home() {
                     </SwiperSlide>
                   </Swiper>
                 </div>
-
-                {/* <div className="group-image">
-                  <div className="left">
-                    <div
-                      className="item bg-1"
-                      style={{
-                        background:
-                          "url(/images/Background_GoldShine.png), top center",
-                        backgroundSize: "cover",
-                      }}
-                    >
-                      <img
-                        src="images/item-10.png"
-                        width="315"
-                        height="360"
-                        alt="Monteno"
-                      />
-                    </div>
-                  </div>
-                  <div className="right">
-                    <div
-                      className="item bg-2"
-                      style={{
-                        background:
-                          "url(/images/Background_Diamond-Age.png), top center",
-                        backgroundSize: "cover",
-                      }}
-                    >
-                      <img
-                        src="images/item-11.png"
-                        width="315"
-                        height="360"
-                        alt="Monteno"
-                      />
-                    </div>
-                    <div
-                      className="item bg-3"
-                      style={{
-                        background:
-                          "url(/images/Background_AstralPink.png), top center",
-                        backgroundSize: "cover",
-                      }}
-                    >
-                      <img
-                        src="images/item-12.png"
-                        width="315"
-                        height="360"
-                        alt="Monteno"
-                      />
-                    </div>
-                  </div>
-                </div> */}
               </div>
               <div className="col-xl-6 col-md-12">
-                <div className="block-text pt-12 pl-30">
+                <div className="block-text pl-30">
                   <h5
                     className="sub-title mb-10"
                     data-aos={"fade-up"}
@@ -653,14 +601,15 @@ export default function Home() {
                     <br />
                     Crypto-Pills are Fine Art Collectibles, offering you a
                     unique chance to obtain an original Micha Klein artwork. His
-                    work has firm roots in digital art history.
+                    work has firm roots in digital art history, can be seen in
+                    several international museums, and has been auctioned by
+                    Sotheby's, Christie and Phillips.
                     <br />
-                    <br />
-                    Your Crypto-Pill serves as your digital identity, allowing
-                    you access to the Crypto Pills Origins P2E videogame, as
-                    well as other perks like discount on merch, airdrops of
-                    $PILL coins and NFTs , white list on future NFT drops by
-                    Micha Klein, and entry to raffles.
+                    <br /> Your Crypto-Pill serves as your digital identity,
+                    allowing you access to the Crypto Pills Origins P2E
+                    videogame, as well as other perks like discount on merch,
+                    airdrops of $PILL coins and NFTs , white list on future NFT
+                    drops by Micha Klein, and entry to raffles.
                   </p>
                   <a
                     href="https://opensea.io/collection/crypto-pills-by-micha-klein"
@@ -894,7 +843,7 @@ export default function Home() {
                       and to the metaverse. He has created 10,000 wildly
                       intricate and unique, computer-generated avatars. Every
                       pill is represented by a token that has a 3000x3000 pixel
-                      depth.
+                      depth. depth.
                       <br />
                       <br />
                       Micha is dedicated to adding value to this project, every
@@ -905,7 +854,7 @@ export default function Home() {
                       written directly into the smart contract.
                       <br />
                       <br />
-                      Micha Klein’s digital art has been around for over 30
+                      Micha Klein's digital art has been around for over 30
                       years and has stood the test of time. He has delivered
                       huge projects for the likes of Disney and Coca-Cola and is
                       dedicated to the digital art and NFT community.
@@ -952,7 +901,6 @@ export default function Home() {
                   );
                 })}
               </div>
-         
             </div>
           </div>
         </section>
@@ -1414,11 +1362,14 @@ export default function Home() {
               <div className="col-12">
                 <div className="icon-box bg-2" data-aos="fade-up">
                   <div className="content">
-                    <a className="h4">Slim Shady Feat. Pillman Tour</a><br/><br/>
+                    <a className="h4">Slim Shady Feat. Pillman Tour</a>
+                    <br />
+                    <br />
                     <p className="fs-21">
-                      Eminem commissioned Pillman animations for his first <br/>US &amp;
-                      European Tour for his incredible 2000 Anger Management
-                      Tour
+                      Eminem commissioned Pillman animations for his first{" "}
+                      <br />
+                      US &amp; European Tour for his incredible 2000 Anger
+                      Management Tour
                     </p>
                     <a
                       href="https://www.techtimes.com/articles/264990/20210904/crypto-pills-nfts-offered-artist-who-created-pillman-character-used.htm"
@@ -1429,27 +1380,40 @@ export default function Home() {
                       Read Article
                     </a>
                   </div>
-                  <div className="content" style={{width: '100%', maxWidth: '500px', height: '281px', alignItems: 'flex-start!important'}}>
-                  <iframe
-                  width="500"
-                  height="281"
-                  src={`https://player.vimeo.com/video/575656466?title=0&byline=0&portrait=0`}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  title="Embedded youtube"
-                  style={{width: '100%', alignItems: 'flex-start!important'}}
-                  
-                />
+                  <div
+                    className="content"
+                    style={{
+                      width: "100%",
+                      maxWidth: "500px",
+                      height: "281px",
+                      alignItems: "flex-start!important",
+                    }}
+                  >
+                    <iframe
+                      width="500"
+                      height="281"
+                      src={`https://player.vimeo.com/video/575656466?title=0&byline=0&portrait=0`}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      title="Embedded youtube"
+                      style={{
+                        width: "100%",
+                        alignItems: "flex-start!important",
+                      }}
+                    />
                   </div>
                 </div>
               </div>
               <div className="col-md-4">
                 <div className="icon-box bg-2" data-aos="fade-up">
                   <div className="content center">
-                    <a className="h4">In conversation with the pioneer of digital art</a>
+                    <a className="h4">
+                      In conversation with the pioneer of digital art
+                    </a>
                     <p className="fs-18">
-                    Micha Klein is considered the pioneer in digital art and computer graphics since creating Pillman in 1992.
+                      Micha Klein is considered the pioneer in digital art and
+                      computer graphics since creating Pillman in 1992.
                     </p>
                     <a
                       href="https://ashadedviewonfashion.com/2021/04/20/in-conversation-with-the-digital-artist-micha-klein/"
@@ -1467,9 +1431,9 @@ export default function Home() {
                   <div className="content center">
                     <a className="h4">International Space Station Launch</a>
                     <p className="fs-18">
-                      There's a Pillman sent to the International Space
-                      Station for 1 year, before moving to it's new
-                      home (to the moon 🚀).
+                      There's a Pillman sent to the International Space Station
+                      for 1 year, before moving to it's new home (to the moon
+                      🚀).
                     </p>
                     <a
                       href="https://twitter.com/timman_d/status/1476634196735049733"
@@ -1511,7 +1475,10 @@ export default function Home() {
                 data-aos-duration={1200}
               >
                 View All Press Articles
-              </a><br/><br/><br/>
+              </a>
+              <br />
+              <br />
+              <br />
             </div>
           </div>
         </section>

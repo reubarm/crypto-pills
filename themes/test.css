@@ -269,7 +269,16 @@ h6,
   padding-top: 24px;
 }
 
+.title-text {
+  width: 60%;
+}
+
 @media only screen and (max-width: 1024px) {
+
+  .title-text {
+    width: 100%;
+  }
+
   .pd-0 {
     padding: 0;
   }

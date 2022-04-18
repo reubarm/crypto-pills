@@ -69,16 +69,14 @@ export default function Home() {
             <div className="container">
               <div className="col-md-12">
                 <div className="page-title__body rm">
-                  <div className="block-text pt-12 center-mb">
+                  <div className="block-text pt-12 center-mb title-text">
                     <h2 className="sub-title mb-20">
                       Roadmap &amp;
                       <br />
                       Achievements
                     </h2>
                     <p className="fs-24 mb-33">
-                      We have already rolled out a large portion of <br/>our roadmap
-                      and have some very exciting perks,<br/> projects and benefits
-                      coming soon!
+                    Since the Crypto Pills sell out on August 27, 2021 we have already rolled out a large portion of our roadmap and have some cool perks to come!
                     </p>
                   </div>
                   <img src="/roadmap.jpeg" alt="Road Map" className="hide-mb" />
@@ -145,26 +143,42 @@ export default function Home() {
                       </div>
 
                       <p className="fs-18">
-                        <br />
-                        Artist donates 5% of of sales to Save The Children
-                        Charity for children in need worldwide, which is written
-                        in the Smart Contract for full transparency.
-                        <br />
-                        <br />
-                        Airdrop of 10 Crypto-Pills to random Pill owners.
-                        <br />
-                        <br />
-                        Upgraded role in Discord for holders by number of pills.
-                      </p>
-                      <img
-                      src="/images/banner.jpeg"
+        <br/>
+                        Project sales start with physical exhibition in STart Gallery, K11 Museum, Hong Kong
+              
+                        <img
+                      src="/images/gallery.jpg"
                       style={{
                         width: "100%",
-                        height: "150px",
-                        margin: "10px 0 0",
+                        height: "190px",
+                        margin: "30px 0",
                         borderRadius: "20px",
                       }}
                     />
+                 
+                        Artist donates 5% of of sales to Save The Children Charity for children in need worldwide, which is written in the Smart Contract for full transparency
+               
+                        <img
+                      src="/images/stc.jpeg"
+                      style={{
+                        width: "100%",
+                        height: "77px",
+                        margin: "30px 0",
+                        borderRadius: "20px",
+                      }}
+                    />
+                 
+                        Airdrop of 10 Crypto-Pills to random Pill owners and upgraded role in Discord for holders by number of pills
+                    
+                      <img
+                      src="/images/discord.png"
+                      style={{
+                        width: "100%",
+                        height: "140px",
+                        margin: "30px 0 0",
+                        borderRadius: "20px",
+                      }}
+                    />  </p>
                     </div>
                     <div
                       className="box-time right mt-223"
@@ -220,7 +234,7 @@ export default function Home() {
                       className="box-time left"
                       data-aos="fade-right"
                       data-aos-offset={0}
-                      style={{marginTop: '-400px'}}
+                      style={{marginTop: '0px'}}
                     >
                       <span data-aos="zoom-in" data-aos-offset={300}>
                         <i className="fa fa-check" />

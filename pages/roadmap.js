@@ -76,7 +76,9 @@ export default function Home() {
                       Achievements
                     </h2>
                     <p className="fs-24 mb-33">
-                    Since the Crypto Pills sell out on August 27, 2021 we have already rolled out a large portion of our roadmap and have some cool perks to come!
+                      Since the Crypto Pills sell out on August 27, 2021 we have
+                      already rolled out a large portion of our roadmap and have
+                      some cool perks to come!
                     </p>
                   </div>
                   <img src="/roadmap.jpeg" alt="Road Map" className="hide-mb" />
@@ -135,50 +137,53 @@ export default function Home() {
                           <p className="fs-16 color-main mb-2"></p>
                           <h4 className="title mb-10">August 2021</h4>
                         </div>
-                        <div
-                          className="rm-photo"
-                        >
-                          <img src="/Avatar-Large.19.png" alt="" className="rm-icon" />
+                        <div className="rm-photo">
+                          <img
+                            src="/Avatar-Large.19.png"
+                            alt=""
+                            className="rm-icon"
+                          />
                         </div>
                       </div>
 
                       <p className="fs-18">
-        <br/>
-                        Project sales start with physical exhibition in STart Gallery, K11 Museum, Hong Kong
-              
+                        <br />
+                        Project sales start with physical exhibition in STart
+                        Gallery, K11 Museum, Hong Kong
                         <img
-                      src="/images/gallery.jpg"
-                      style={{
-                        width: "100%",
-                        height: "190px",
-                        margin: "30px 0",
-                        borderRadius: "20px",
-                      }}
-                    />
-                 
-                        Artist donates 5% of of sales to Save The Children Charity for children in need worldwide, which is written in the Smart Contract for full transparency
-               
+                          src="/images/gallery.jpg"
+                          style={{
+                            width: "100%",
+                            height: "190px",
+                            margin: "30px 0",
+                            borderRadius: "20px",
+                          }}
+                        />
+                        Artist donates 5% of of sales to Save The Children
+                        Charity for children in need worldwide, which is written
+                        in the Smart Contract for full transparency
                         <img
-                      src="/images/stc.jpeg"
-                      style={{
-                        width: "100%",
-                        height: "77px",
-                        margin: "30px 0",
-                        borderRadius: "20px",
-                      }}
-                    />
-                 
-                        Airdrop of 10 Crypto-Pills to random Pill owners and upgraded role in Discord for holders by number of pills
-                    
-                      <img
-                      src="/images/discord.png"
-                      style={{
-                        width: "100%",
-                        height: "140px",
-                        margin: "30px 0 0",
-                        borderRadius: "20px",
-                      }}
-                    />  </p>
+                          src="/images/stc.jpeg"
+                          style={{
+                            width: "100%",
+                            height: "90px",
+                            margin: "30px 0",
+                            border: "15px solid white",
+                            borderRadius: "20px"
+                          }}
+                        />
+                        Airdrop of 10 Crypto-Pills to random Pill owners and
+                        upgraded role in Discord for holders by number of pills
+                        <img
+                          src="/images/discord.png"
+                          style={{
+                            width: "100%",
+                            height: "140px",
+                            margin: "30px 0 0",
+                            borderRadius: "20px",
+                          }}
+                        />{" "}
+                      </p>
                     </div>
                     <div
                       className="box-time right mt-223"
@@ -193,10 +198,12 @@ export default function Home() {
                           <p className="fs-16 color-main mb-0"></p>
                           <h4 className="title mb-20">September 2021</h4>
                         </div>
-                        <div
-                          className="rm-photo"
-                        >
-                          <img src="/Avatar-Large.18.png" alt="" className="rm-icon"/>
+                        <div className="rm-photo">
+                          <img
+                            src="/Avatar-Large.18.png"
+                            alt=""
+                            className="rm-icon"
+                          />
                         </div>
                       </div>
 
@@ -208,6 +215,24 @@ export default function Home() {
                         <br />2 POAPS with future utility released for white
                         list and official launch minters
                         <br />
+                        <img
+                      src="/images/poap.png"
+                      style={{
+                        width: "40%",
+                        height: "140px",
+                        margin: "30px 10px",
+                        borderRadius: "20px",
+                      }}
+                    /> 
+                    <img
+                  src="/images/nyc.jpg"
+                  style={{
+                    width: "40%",
+                    height: "140px",
+                    margin: "30px 10px",
+                    borderRadius: "20px",
+                  }}
+                /> 
                         <br />
                         The 20 most active Pill owner members in the Discord
                         server received a physical OG Pillman Giclee print of
@@ -217,10 +242,28 @@ export default function Home() {
                         Crypto Pills Billboard on Times Square with release POAP
                         for all holders
                         <br />
+                        <img
+                      src="/images/ts.png"
+                      style={{
+                        width: "100%",
+                        height: "340px",
+                        margin: "30px 0",
+                        borderRadius: "20px",
+                      }}
+                    /> 
                         <br />
                         Production of a pair of handmade custom Crypto Pills
                         sneakers started for winner raffle
                         <br />
+                        <img
+                      src="/images/shoes.jpeg"
+                      style={{
+                        width: "100%",
+                        height: "190px",
+                        margin: "30px 0",
+                        borderRadius: "20px",
+                      }}
+                    /> 
                         <br />
                         The project enters the Metaverse; CryptoVoxels land
                         purchased on Vibes Island for Pill Parties, and Crypto
@@ -234,7 +277,7 @@ export default function Home() {
                       className="box-time left"
                       data-aos="fade-right"
                       data-aos-offset={0}
-                      style={{marginTop: '0px'}}
+                      style={{ marginTop: "-700px" }}
                     >
                       <span data-aos="zoom-in" data-aos-offset={300}>
                         <i className="fa fa-check" />
@@ -244,10 +287,12 @@ export default function Home() {
                           <p className="fs-16 color-main mb-2"></p>
                           <h4 className="title mb-10">October 2021</h4>
                         </div>
-                        <div
-                          className="rm-photo"
-                        >
-                          <img src="/Avatar-Large.17.png" alt="" className="rm-icon" />
+                        <div className="rm-photo">
+                          <img
+                            src="/Avatar-Large.17.png"
+                            alt=""
+                            className="rm-icon"
+                          />
                         </div>
                       </div>
 
@@ -257,6 +302,15 @@ export default function Home() {
                         the most active and loyal members on our Discord and
                         Clubhouse
                         <br />
+                        <img
+                      src="/images/gold.jpg"
+                      style={{
+                        width: "100%",
+                        height: "270px",
+                        margin: "30px 0",
+                        borderRadius: "20px",
+                      }}
+                    /> 
                         <br />
                         Airdrops of Crypto Pills wearables by Eddy Gangland for
                         Cryptovoxels with big party in Cryptovoxels
@@ -278,6 +332,15 @@ export default function Home() {
                         60 Spooky Pills limited edition and 1/1 NFTs Halloween
                         POAP in 3K resolution for all holders with future
                         utility released
+                        <img
+                      src="/images/halloween.jpg"
+                      style={{
+                        width: "100%",
+                        height: "230px",
+                        margin: "30px 0 0",
+                        borderRadius: "20px",
+                      }}
+                    /> 
                       </p>
                     </div>
                     <div
@@ -293,10 +356,12 @@ export default function Home() {
                           <p className="fs-16 color-main mb-0"></p>
                           <h4 className="title mb-20">November 2021</h4>
                         </div>
-                        <div
-                          className="rm-photo"
-                        >
-                          <img src="/Avatar-Large.15.png" alt="" className="rm-icon" />
+                        <div className="rm-photo">
+                          <img
+                            src="/Avatar-Large.15.png"
+                            alt=""
+                            className="rm-icon"
+                          />
                         </div>
                       </div>
 
@@ -317,6 +382,7 @@ export default function Home() {
                       className="box-time left"
                       data-aos="fade-right"
                       data-aos-offset={300}
+                      style={{ marginTop: "100px" }}
                     >
                       <span data-aos="zoom-in" data-aos-offset={300}>
                         <i className="fa fa-check" />
@@ -326,19 +392,27 @@ export default function Home() {
                           <p className="fs-16 color-main mb-2"></p>
                           <h4 className="title mb-10">December 2021</h4>
                         </div>
-                        <div
-                          className="rm-photo"
-                        >
-                          <img src="/Avatar-Large.16.png" alt="" className="rm-icon" />
+                        <div className="rm-photo">
+                          <img
+                            src="/Avatar-Large.16.png"
+                            alt=""
+                            className="rm-icon"
+                          />
                         </div>
                       </div>
 
                       <p className="fs-18">
                         <br />
-                        Release Crypto Pill Rap Anthem by US Rap artist Artzy<br/><br/>
-                        Thanksgiving Pills airdrops for qualified holders<br/><br/>
+                        Release Crypto Pill Rap Anthem by US Rap artist Artzy
+                        <br />
+                        <br />
+                        Thanksgiving Pills airdrops for qualified holders
+                        <br />
+                        <br />
                         Christmas Pills drop, all sales were donated to Save The
-                        Children charity <br/><br/>New Year's Party in Cryptovoxels.
+                        Children charity <br />
+                        <br />
+                        New Year's Party in Cryptovoxels.
                       </p>
                     </div>
                     <div
@@ -354,39 +428,56 @@ export default function Home() {
                           <p className="fs-16 color-main mb-0"></p>
                           <h4 className="title mb-20">January 2022</h4>
                         </div>
-                        <div
-                          className="rm-photo"
-                        >
-                          <img src="/Avatar-Large.14.png" alt="" className="rm-icon" />
+                        <div className="rm-photo">
+                          <img
+                            src="/Avatar-Large.14.png"
+                            alt=""
+                            className="rm-icon"
+                          />
                         </div>
                       </div>
 
                       <p className="fs-18">
                         <br />
-                        Release of Crypto Pills Origins web3 video game beta.<br/><br/>
+                        Release of Crypto Pills Origins web3 video game beta.
+                        <br />
+                        <img
+                          src="/gamescreens.png"
+                          style={{
+                            width: "100%",
+                            height: "150px",
+                            margin: "30px 0",
+                            borderRadius: "20px",
+                          }}
+                        />
+                        <br />
                         Holders can login with Metamask and use one of their
-                        Crypto Pills as character. <br/><br/>Start of the Crypto Pills
-                        Merch give aways. <br/><br/>Everyone buying 3 pills in Q1 gets
-                        free t-shirt. 6 pills: free sweater, 9 pills free
-                        hoodie, 15 pills free skateboard. for every 25 sales a
-                        t-shirt is raffled.
+                        Crypto Pills as character. <br />
                         <br />
-                        <br />
-                        <img 
-                      src="/gamescreens.png"
+                        Start of the Crypto Pills Merch give aways. <br />
+
+                     <img src="/images/merch.png"
                       style={{
                         width: "100%",
-                        height: "150px",
-                        margin: "10px 0 0",
+                        height: "190px",
+                        margin: "30px 0",
                         borderRadius: "20px",
                       }}
-                    />
+                    /> 
+                        <br />
+                        Everyone buying 3 pills in Q1 gets free t-shirt. 6
+                        pills: free sweater, 9 pills free hoodie, 15 pills free
+                        skateboard. for every 25 sales a t-shirt is raffled.
+                        <br />
+                        <br />
+                       
                       </p>
                     </div>
                     <div
                       className="box-time left"
                       data-aos="fade-right"
                       data-aos-offset={300}
+                      style={{marginTop: "-400px"}}
                     >
                       <span data-aos="zoom-in" data-aos-offset={300}>
                         <i className="fa fa-check" />
@@ -396,10 +487,12 @@ export default function Home() {
                           <p className="fs-16 color-main mb-2"></p>
                           <h4 className="title mb-10">February 2022</h4>
                         </div>
-                        <div
-                          className="rm-photo"
-                        >
-                          <img src="/Avatar-Large.12.png" alt="" className="rm-icon" />
+                        <div className="rm-photo">
+                          <img
+                            src="/Avatar-Large.12.png"
+                            alt=""
+                            className="rm-icon"
+                          />
                         </div>
                       </div>
 
@@ -409,10 +502,20 @@ export default function Home() {
                         physical Crypto Pill was launched into space, and
                         received at the International Space Station, where it
                         will stay and circle the earth for one year, before it
-                        returns to earth. <br/><br/>Part 2; It's next journey, will be in
-                        2023, to it's final destination. It will be aboard the
-                        moon lander and stay on the moon forever, as the first
-                        NFT project on the moon.
+                        returns to earth. <br />
+                        <img src="/images/iss.png"
+                      style={{
+                        width: "100%",
+                        height: "370px",
+                        margin: "30px 0",
+                        borderRadius: "20px",
+                      }}
+                    /> 
+                        <br />
+                        Part 2; It's next journey, will be in 2023, to it's
+                        final destination. It will be aboard the moon lander and
+                        stay on the moon forever, as the first NFT project on
+                        the moon.
                       </p>
                     </div>
                     <div
@@ -434,9 +537,12 @@ export default function Home() {
                             display: "inline",
                             marginTop: "-25px",
                           }}
-                          
                         >
-                          <img src="/Avatar-Large.13.png" alt="" className="rm-icon" />
+                          <img
+                            src="/Avatar-Large.13.png"
+                            alt=""
+                            className="rm-icon"
+                          />
                         </div>
                       </div>
 
@@ -444,22 +550,23 @@ export default function Home() {
                         <br />
                         A custom pair of Nike / Crypto Pills sneakers is sent
                         out to raffle winner. filming for NFT.me documentary,
-                        with interview Micha is done in Bali. 
-                        
-                        <br/><br/>It will be
-                        broadcasted internationally and channels like Amazon and
-                        many others. Launch new Crypto Pills Website Bridge
-                        merch store and Metamask.
+                        with interview Micha is done in Bali.
                         <br />
-                        <br /><img 
-                      src="/images/film.png"
-                      style={{
-                        width: "100%",
-                        height: "150px",
-                        margin: "10px 0 0",
-                        borderRadius: "20px",
-                      }}
-                    />
+                        <br />
+                        It will be broadcasted internationally and channels like
+                        Amazon and many others. Launch new Crypto Pills Website
+                        Bridge merch store and Metamask.
+                        <br />
+                        <br />
+                        <img
+                          src="/images/film.png"
+                          style={{
+                            width: "100%",
+                            height: "150px",
+                            margin: "10px 0 0",
+                            borderRadius: "20px",
+                          }}
+                        />
                       </p>
                     </div>
                   </div>

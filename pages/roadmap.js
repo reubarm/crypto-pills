@@ -569,6 +569,185 @@ export default function Home() {
                         />
                       </p>
                     </div>
+                    <div
+                      className="box-time left"
+                      data-aos="fade-right"
+                      data-aos-offset={300}
+                      style={{ marginTop: "-200px" }}
+                    >
+                      <span data-aos="zoom-in" data-aos-offset={300}>
+                        <i className="fa fa-check" />
+                      </span>
+                      <div className="rm-box">
+                        <div className="rm-tite full-width">
+                          <p className="fs-16 color-main mb-2"></p>
+                          <h4 className="title mb-10">April 2022</h4>
+                        </div>
+                        <div className="rm-photo">
+                          <img
+                            src="/Avatar-Large.12.png"
+                            alt=""
+                            className="rm-icon"
+                          />
+                        </div>
+                      </div>
+
+                      <p className="fs-18">
+                        <br />
+                        <strong>Partnership Traits Sniper</strong>
+                        <br /><br />
+Launch new Crypto Pills Website
+<br /><br />
+Bridge DTP merch store and Metamask.
+<br /><br />
+Release of first exclusive Crypto Pills Merch collection, with regular drops planned throughout the year.
+<br /><br />
+<strong>Release Crypto Pills Anthem 3D animated video clip / NFT</strong><br /><br />
+This is the Crypto Pills project's first musical NFT with original music by US rapper Artzy, who worked with Busta Rhymes.
+The NFT will be free to mint for all Crypto Pills holders.
+                      </p>
+                    </div>
+                    <div
+                      className="box-time right mt-223"
+                      data-aos="fade-up"
+                      data-aos-offset={300}
+                    >
+                      <span data-aos="zoom-in" data-aos-offset={300}>
+                        <i className="fa fa-check" />
+                      </span>
+                      <div className="rm-box">
+                        <div className="rm-tite full-width">
+                          <p className="fs-16 color-main mb-0"></p>
+                          <h4 className="title mb-20">May 2022</h4>
+                        </div>
+                        <div
+                          style={{
+                            width: "50px",
+                            display: "inline",
+                            marginTop: "-25px",
+                          }}
+                        >
+                          <img
+                            src="/Avatar-Large.13.png"
+                            alt=""
+                            className="rm-icon"
+                          />
+                        </div>
+                      </div>
+
+                      <p className="fs-18">
+                        <br />
+                        <strong>3D OG Pillman NFT drop.</strong><br /><br/>
+This will be a collection of 7 different  Metaverse ready 3D NFTs with unlockable content. 
+They will be free to mint for Crypto Pills holders.<br /><br />
+
+Collaboration with the Zedge mobile customization application for the launch of their Easy NFT platform. 
+The Zedge app has been downloaded more than 436 million times, has 30 million monthly active users as of August 31, 2020 and has consistently averaged in the ‘Top 60’ most popular free apps in Google Play in the US. <br />
+Crypto Pills will launch  animated screensavers as NFT on the platform creating a huge increase in eyeballs on the original collection. 
+There will be full support from Zedge for the marketing of this event.<br /><br />
+
+<strong>Crypto Pills on CoinbaseNFT (when launched).</strong><br /><br />
+
+Updates on the Crypto Pills Origins Video game.
+                      </p>
+                    </div>
+                    <div
+                      className="box-time left"
+                      data-aos="fade-right"
+                      data-aos-offset={300}
+                      style={{ marginTop: "-500px" }}
+                    >
+                      <span data-aos="zoom-in" data-aos-offset={300}>
+                        <i className="fa fa-check" />
+                      </span>
+                      <div className="rm-box">
+                        <div className="rm-tite full-width">
+                          <p className="fs-16 color-main mb-2"></p>
+                          <h4 className="title mb-10">June 2022</h4>
+                        </div>
+                        <div className="rm-photo">
+                          <img
+                            src="/Avatar-Large.12.png"
+                            alt=""
+                            className="rm-icon"
+                          />
+                        </div>
+                      </div>
+
+                      <p className="fs-18">
+                        <br />
+                        <strong>Release generative Lil' Pills PFP project.</strong><br /><br />
+Based on the Crypto Pills with new traits added relevant to younger collectors, this collection will follow the 'head shot' format suitable for use as PFP,<br />
+The collection will be free to mint for a limited time window for all Crypto Pills holders.<br /><br />
+Distribution will be 1 Lil' Pill for each Crypto Pill in the holder's wallet.<br /><br />
+Lil' Pills will be a great way to generate clear visibility in the PFP space, and will get their own P2E game.
+                      </p>
+                    </div>
+                    <div
+                      className="box-time right mt-223"
+                      data-aos="fade-up"
+                      data-aos-offset={300}
+                    >
+                      <span data-aos="zoom-in" data-aos-offset={300}>
+                        <i className="fa fa-check" />
+                      </span>
+                      <div className="rm-box">
+                        <div className="rm-tite full-width">
+                          <p className="fs-16 color-main mb-0"></p>
+                          <h4 className="title mb-20">July 2022</h4>
+                        </div>
+                        <div
+                          style={{
+                            width: "50px",
+                            display: "inline",
+                            marginTop: "-25px",
+                          }}
+                        >
+                          <img
+                            src="/Avatar-Large.13.png"
+                            alt=""
+                            className="rm-icon"
+                          />
+                        </div>
+                      </div>
+
+                      <p className="fs-18">
+                        <br />
+                        <strong>Release Crypto Pills Origins video game for mobile.</strong> <br /><br />
+Collaboration with Zedge for promotion <br /> <br />
+
+<strong>Release Pillcoin token, for use across the Crypto Pills ecosystem</strong>
+                      </p>
+                    </div>
+                    <div
+                      className="box-time left"
+                      data-aos="fade-right"
+                      data-aos-offset={300}
+                      style={{ marginTop: "-300px" }}
+                    >
+                      <span data-aos="zoom-in" data-aos-offset={300}>
+                        <i className="fa fa-check" />
+                      </span>
+                      <div className="rm-box">
+                        <div className="rm-tite full-width">
+                          <p className="fs-16 color-main mb-2"></p>
+                          <h4 className="title mb-10">August 2022</h4>
+                        </div>
+                        <div className="rm-photo">
+                          <img
+                            src="/Avatar-Large.12.png"
+                            alt=""
+                            className="rm-icon"
+                          />
+                        </div>
+                      </div>
+
+                      <p className="fs-18">
+                        <br />
+                       To celebrate the 1 year anniversary of the Crypto Pills collection, we will release the metaverse ready generative 3D Crypto Pills collection.<br/><br/>
+                       <strong>Free to mint for Crypto Pills holders.</strong>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>

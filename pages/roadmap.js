@@ -169,7 +169,7 @@ export default function Home() {
                             height: "90px",
                             margin: "30px 0",
                             border: "15px solid white",
-                            borderRadius: "20px"
+                            borderRadius: "20px",
                           }}
                         />
                         Airdrop of 10 Crypto-Pills to random Pill owners and
@@ -216,23 +216,23 @@ export default function Home() {
                         list and official launch minters
                         <br />
                         <img
-                      src="/images/poap.png"
-                      style={{
-                        width: "40%",
-                        height: "140px",
-                        margin: "30px 10px",
-                        borderRadius: "20px",
-                      }}
-                    /> 
-                    <img
-                  src="/images/nyc.jpg"
-                  style={{
-                    width: "40%",
-                    height: "140px",
-                    margin: "30px 10px",
-                    borderRadius: "20px",
-                  }}
-                /> 
+                          src="/images/poap.png"
+                          style={{
+                            width: "40%",
+                            height: "140px",
+                            margin: "30px 10px",
+                            borderRadius: "20px",
+                          }}
+                        />
+                        <img
+                          src="/images/nyc.jpg"
+                          style={{
+                            width: "40%",
+                            height: "140px",
+                            margin: "30px 10px",
+                            borderRadius: "20px",
+                          }}
+                        />
                         <br />
                         The 20 most active Pill owner members in the Discord
                         server received a physical OG Pillman Giclee print of
@@ -243,27 +243,27 @@ export default function Home() {
                         for all holders
                         <br />
                         <img
-                      src="/images/ts.png"
-                      style={{
-                        width: "100%",
-                        height: "340px",
-                        margin: "30px 0",
-                        borderRadius: "20px",
-                      }}
-                    /> 
+                          src="/images/ts.png"
+                          style={{
+                            width: "100%",
+                            height: "340px",
+                            margin: "30px 0",
+                            borderRadius: "20px",
+                          }}
+                        />
                         <br />
                         Production of a pair of handmade custom Crypto Pills
                         sneakers started for winner raffle
                         <br />
                         <img
-                      src="/images/shoes.jpeg"
-                      style={{
-                        width: "100%",
-                        height: "190px",
-                        margin: "30px 0",
-                        borderRadius: "20px",
-                      }}
-                    /> 
+                          src="/images/shoes.jpeg"
+                          style={{
+                            width: "100%",
+                            height: "190px",
+                            margin: "30px 0",
+                            borderRadius: "20px",
+                          }}
+                        />
                         <br />
                         The project enters the Metaverse; CryptoVoxels land
                         purchased on Vibes Island for Pill Parties, and Crypto
@@ -303,14 +303,14 @@ export default function Home() {
                         Clubhouse
                         <br />
                         <img
-                      src="/images/gold.jpg"
-                      style={{
-                        width: "100%",
-                        height: "270px",
-                        margin: "30px 0",
-                        borderRadius: "20px",
-                      }}
-                    /> 
+                          src="/images/gold.jpg"
+                          style={{
+                            width: "100%",
+                            height: "270px",
+                            margin: "30px 0",
+                            borderRadius: "20px",
+                          }}
+                        />
                         <br />
                         Airdrops of Crypto Pills wearables by Eddy Gangland for
                         Cryptovoxels with big party in Cryptovoxels
@@ -333,14 +333,14 @@ export default function Home() {
                         POAP in 3K resolution for all holders with future
                         utility released
                         <img
-                      src="/images/halloween.jpg"
-                      style={{
-                        width: "100%",
-                        height: "230px",
-                        margin: "30px 0 0",
-                        borderRadius: "20px",
-                      }}
-                    /> 
+                          src="/images/halloween.jpg"
+                          style={{
+                            width: "100%",
+                            height: "230px",
+                            margin: "30px 0 0",
+                            borderRadius: "20px",
+                          }}
+                        />
                       </p>
                     </div>
                     <div
@@ -455,29 +455,28 @@ export default function Home() {
                         Crypto Pills as character. <br />
                         <br />
                         Start of the Crypto Pills Merch give aways. <br />
-
-                     <img src="/images/merch.png"
-                      style={{
-                        width: "100%",
-                        height: "190px",
-                        margin: "30px 0",
-                        borderRadius: "20px",
-                      }}
-                    /> 
+                        <img
+                          src="/images/merch.png"
+                          style={{
+                            width: "100%",
+                            height: "190px",
+                            margin: "30px 0",
+                            borderRadius: "20px",
+                          }}
+                        />
                         <br />
                         Everyone buying 3 pills in Q1 gets free t-shirt. 6
                         pills: free sweater, 9 pills free hoodie, 15 pills free
                         skateboard. for every 25 sales a t-shirt is raffled.
                         <br />
                         <br />
-                       
                       </p>
                     </div>
                     <div
                       className="box-time left"
                       data-aos="fade-right"
                       data-aos-offset={300}
-                      style={{marginTop: "-400px"}}
+                      style={{ marginTop: "-400px" }}
                     >
                       <span data-aos="zoom-in" data-aos-offset={300}>
                         <i className="fa fa-check" />
@@ -503,14 +502,15 @@ export default function Home() {
                         received at the International Space Station, where it
                         will stay and circle the earth for one year, before it
                         returns to earth. <br />
-                        <img src="/images/iss.png"
-                      style={{
-                        width: "100%",
-                        height: "370px",
-                        margin: "30px 0",
-                        borderRadius: "20px",
-                      }}
-                    /> 
+                        <img
+                          src="/images/iss.png"
+                          style={{
+                            width: "100%",
+                            height: "370px",
+                            margin: "30px 0",
+                            borderRadius: "20px",
+                          }}
+                        />
                         <br />
                         Part 2; It's next journey, will be in 2023, to it's
                         final destination. It will be aboard the moon lander and

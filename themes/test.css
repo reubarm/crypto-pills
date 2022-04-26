@@ -786,6 +786,24 @@ a:hover {
   }
 }
 
+.btn-action.style-4 {
+  background: #c44257;
+  padding: 20px 48px;
+  border-radius: 33px;
+  z-index: 1;
+  border: none;
+  color: #fff;
+  margin-right: 10px;
+}
+.btn-action.style-4:hover {
+  color: #fff;
+  transition-delay: 0.5s;
+}
+.btn-action.style-4::before,
+.btn-action.style-4::after {
+  background-color: #c44257;
+}
+
 .btn-action.style-3 {
   background: #4662b3;
   padding: 20px 48px;
@@ -808,6 +826,9 @@ a:hover {
   font-size: 16px;
 }
 @media only screen and (max-width: 767px) {
+  .blog-list .btn-action.style-4 {
+    padding: 12px 15px;
+  }
   .blog-list .btn-action.style-3 {
     padding: 12px 15px;
   }

@@ -290,7 +290,7 @@ export default function Home() {
                   </p>
                   <a
                     href="#roadmap"
-                    className="btn-action style-3"
+                    className="btn-action style-4"
                     data-aos="fade-up"
                     data-aos-duration={1200}
                   >
@@ -298,7 +298,7 @@ export default function Home() {
                   </a>
                   <a
                     href="/play"
-                    className="btn-action style-2"
+                    className="btn-action style-3"
                     data-aos="fade-up"
                     data-aos-duration={1200}
                   >
@@ -746,7 +746,7 @@ export default function Home() {
                       animated series.
                     </p>
                     <a
-                      href="/pills.mp4"
+                      href="/music.mp4"
                       className="btn-action style-3"
                       data-aos="fade-up"
                       data-aos-duration={1200}
@@ -1163,7 +1163,7 @@ export default function Home() {
                     </span>
                     <div className="rm-box">
                       <div className="rm-tite full-width">
-                        <p className="fs-16 color-main mb-0">Date: TBC</p>
+                        <p className="fs-16 color-main mb-0">Coming Soon</p>
                         <h5 className="title mb-20">
                           Pillcoin Token Launch
                         </h5>{" "}
@@ -1188,7 +1188,7 @@ export default function Home() {
                     </span>
                     <div className="rm-box">
                       <div className="rm-tite full-width">
-                        <p className="fs-16 color-main mb-0">Date: TBC</p>
+                        <p className="fs-16 color-main mb-0">Coming Soon</p>
                         <h5 className="title mb-20">Play to Earn Game</h5>{" "}
                       </div>
                       <div className="rm-photo">
@@ -1211,7 +1211,7 @@ export default function Home() {
                     </span>
                     <div className="rm-box">
                       <div className="rm-tite full-width">
-                        <p className="fs-16 color-main mb-0">Date: TBC</p>
+                        <p className="fs-16 color-main mb-0">Coming Soon</p>
                         <h5 className="title mb-20">
                           Live Crypto Pill Exhibition
                         </h5>{" "}
@@ -1237,7 +1237,7 @@ export default function Home() {
                     </span>
                     <div className="rm-box">
                       <div className="rm-tite full-width">
-                        <p className="fs-16 color-main mb-0">Date: TBC</p>
+                        <p className="fs-16 color-main mb-0">Coming Soon</p>
                         <h5 className="title mb-20">
                           Animated Mini-Movie Series
                         </h5>{" "}

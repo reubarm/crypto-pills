@@ -255,6 +255,9 @@ export default function Home() {
         <section className="tf-section hero-slider">
           <div className="container">
             <div className="row">
+              <div className="col-12 show-sm">
+                <img src="123.gif" alt="Pillman 3D" style={{width: '100%', borderRadius: '30px'}} />
+                </div>
               <div className="col-xl-6 col-md-6 col-12">
                 <div className="block-text pt-24 mt-27">
                   <h6 className="sub-title mb-6" data-aos={"fade-up"}>
@@ -306,7 +309,7 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-              <div className="col-xl-6 col-md-6 col-12">
+              <div className="col-xl-6 col-md-6 col-12 hide-sm">
                 <div className="content-right d-flex mt-107">
                   <div style={{ borderRadius: "30px", overflow: "hidden" }}>
                     <ReactPlayer

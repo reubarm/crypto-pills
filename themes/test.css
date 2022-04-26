@@ -4073,7 +4073,17 @@ a:hover {
   border-radius: 15px;
 }
 
+.show-sm {
+  display: none;
+}
+
 @media only screen and (max-width: 768px) {
+  .hide-sm {
+    display: none!important;
+  }
+  .show-sm {
+    display: block!important;
+  }
   .pl-30 {
     padding-left: 0!important;
   }

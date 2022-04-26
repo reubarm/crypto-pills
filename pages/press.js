@@ -100,7 +100,7 @@ export default function Home() {
                     <div className="blog-content">
                     <ul class="meta"><li><a href="https://nfts.wtf/crypto-pills-are-popping-30-years-of-music-and-digital-art-history-nfts/" target="_blank" rel="nofollow">NFTs.wtf</a></li></ul>
                       <a href="https://nfts.wtf/crypto-pills-are-popping-30-years-of-music-and-digital-art-history-nfts/" className="title h4" target="_blank" rel="nofollow">
-                      Crypto-Pills are Popping! 30 Years of Music and Digital Art History NFTs with Micha Klein
+                      Crypto Pills are Popping! 30 Years of Music and Digital Art History NFTs with Micha Klein
                       </a>
                     </div>
                   </div>
@@ -184,7 +184,7 @@ export default function Home() {
                     }}
                   >
                     <Link
-                      href="https://twitter.com/pills_crypto"
+                      href="https://twitter.com/TheCryptoPills"
                       target="_blank"
                       rel="noopener"
                       style={{ color: "#a8c6dc" }}

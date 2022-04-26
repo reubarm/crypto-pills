@@ -126,7 +126,7 @@ export default function Header(props) {
             </Link>
             {/* <Link variant='h6' color="textPrimary" href="#mint-section" className={classes.headerLink}>Mint</Link> */}
             <Link
-              href="https://twitter.com/pills_crypto"
+              href="https://twitter.com/TheCryptoPills"
               target="_blank"
               rel="noopener"
               className={classes.link}

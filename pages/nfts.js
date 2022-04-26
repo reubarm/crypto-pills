@@ -233,7 +233,7 @@ export default function Home() {
               component="p"
               className={classes.subtitle}
             >
-              Crypto-Pills is a collection of Fine Art Digital Collectibles
+              Crypto Pills is a collection of Fine Art Digital Collectibles
               (NFTs) running on the Ethereum network. This website is only an
               interface allowing participants to purchase these digital
               collectibles.

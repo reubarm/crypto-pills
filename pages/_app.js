@@ -28,13 +28,13 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Crypto-Pills by Micha Klein</title>
-        <meta property="twitter:title" content="Crypto-Pills by Micha Klein" />
+        <title>Crypto Pills by Micha Klein</title>
+        <meta property="twitter:title" content="Crypto Pills by Micha Klein" />
         <meta
           property="og:title"
-          content="Crypto-Pills | NFTs, Games, Movies, Exhibitions and Merchandise by Micha Klein"
+          content="Crypto Pills | NFTs, Games, Movies, Exhibitions and Merchandise by Micha Klein"
         />
-        <meta property="og:site_name" content="Crypto-Pills by Micha Klein" />
+        <meta property="og:site_name" content="Crypto Pills by Micha Klein" />
         <meta property="og:url" content="https://pillman.co" />
         <meta
           property="og:description"

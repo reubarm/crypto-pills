@@ -200,17 +200,17 @@ export default function Home() {
   // const calc = sales[0].price * moedas;
 
   const title = [
-    "How do I purchase Crypto-Pills?",
+    "How do I purchase Crypto Pills?",
     "How do I know which Crypto-Pill I get?",
-    "How many Crypto-Pills can I buy per single transaction?",
-    "What will be the price of Crypto-Pills?",
+    "How many Crypto Pills can I buy per single transaction?",
+    "What will be the price of Crypto Pills?",
   ];
 
   const description = [
-    "The easiest way to purchase Crypto-Pills is to install a MetaMask extension in your browser and link your crypto wallet to it. Ensure you have enough ETH in your wallet to cover the cost of purchasing Crypto-Pills, in addition to any associated gas fees. Approve the desired transaction on MetaMask and you are ready to go. For more information, please refer to this link: https://nftyfarm.com/metamask/",
-    "Crypto-Pills will remain hidden until the big reveal on August 27, 2021. Upon reveal, the artwork from the pre-defined collection will be assigned to the NFT placeholder that you purchased. “Blind sales” are chosen to ensure the Crypto-Pills value is protected so no one can determine its rarity, including the project owners.",
-    "There is a limit of twenty (20) Crypto-Pills that can be purchased in one (1) transaction.",
-    "The pricing model is a flat-rate throughout the entire sale. The cost of each Crypto-Pill is set at 0.07 Eth, and 100 Crypto-Pills will be reserved for giveaways.",
+    "The easiest way to purchase Crypto Pills is to install a MetaMask extension in your browser and link your crypto wallet to it. Ensure you have enough ETH in your wallet to cover the cost of purchasing Crypto Pills, in addition to any associated gas fees. Approve the desired transaction on MetaMask and you are ready to go. For more information, please refer to this link: https://nftyfarm.com/metamask/",
+    "Crypto Pills will remain hidden until the big reveal on August 27, 2021. Upon reveal, the artwork from the pre-defined collection will be assigned to the NFT placeholder that you purchased. “Blind sales” are chosen to ensure the Crypto Pills value is protected so no one can determine its rarity, including the project owners.",
+    "There is a limit of twenty (20) Crypto Pills that can be purchased in one (1) transaction.",
+    "The pricing model is a flat-rate throughout the entire sale. The cost of each Crypto-Pill is set at 0.07 Eth, and 100 Crypto Pills will be reserved for giveaways.",
   ];
 
   const mockData = {
@@ -272,7 +272,7 @@ export default function Home() {
                     by a doctor; or simply bought over the counter.
                     <br />
                     <br />
-                    All 10,000 Crypto-Pills are algorithmically generated from
+                    All 10,000 Crypto Pills are algorithmically generated from
                     37 categories and 504 traits, allowing some to be rarer than
                     others.
                     <br />
@@ -589,7 +589,7 @@ export default function Home() {
                     data-aos="fade-up"
                     data-aos-duration={1000}
                   >
-                    Crypto-Pills Artwork
+                    Crypto Pills Artwork
                   </h3>
                   <p
                     className="fs-18 mb-33"
@@ -602,7 +602,7 @@ export default function Home() {
                     crisp prints and avatars without loss of detail.
                     <br />
                     <br />
-                    Crypto-Pills are Fine Art Collectibles, offering you a
+                    Crypto Pills are Fine Art Collectibles, offering you a
                     unique chance to obtain an original Micha Klein artwork. His
                     work has firm roots in digital art history, can be seen in
                     several international museums, and has been auctioned by
@@ -911,8 +911,8 @@ export default function Home() {
         <section className="tf-section section-speciality mt-107">
           <div className="container">
             <div className="row">
-              <div className="col-xl-5 col-md-12">
-                <div className="block-text mt-61 pd-0">
+              <div className="col-lg-5 col-xl-5  col-md-12">
+                <div className="block-text mt-61 pd-10">
                   <h5
                     className="sub-title mb-10"
                     data-aos={"fade-up"}
@@ -942,7 +942,7 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <div className="col-xl-7 col-md-12">
+              <div className="col-xl-7 col-lg-7 col-md-12">
                 <div className="section-speciality__box">
                   <div
                     className="box-item bg-2 mr-28 center"
@@ -1041,7 +1041,7 @@ export default function Home() {
                     </div>
 
                     <p className="fs-18">
-                      All 10,000 Crypto-Pills were algorithmically generated
+                      All 10,000 Crypto Pills were algorithmically generated
                       from 37 categories and 504 traits, allowing some to be
                       rarer than others;{" "}
                       <strong>all created by artist Micha Klein.</strong>
@@ -1226,7 +1226,7 @@ export default function Home() {
                     <p className="fs-18">
                       From large prints and paintings, to video installations
                       and large sculptures, in various materials. Some really
-                      elaborate, like the Crypto-Pills sculptures, some even
+                      elaborate, like the Crypto Pills sculptures, some even
                       incorporating robotics.
                     </p>
                   </div>
@@ -1411,6 +1411,7 @@ export default function Home() {
               <div className="col-md-4">
                 <div className="icon-box bg-2" data-aos="fade-up">
                   <div className="content center">
+                    <img src="/images/micha-portrait.webp" alt="" style={{width: '100%', maxWidth: '350px', margin: '-30px 0 20px 0'}}/>
                     <a className="h4">
                       In conversation with the pioneer of digital art
                     </a>
@@ -1432,6 +1433,7 @@ export default function Home() {
               <div className="col-md-4">
                 <div className="icon-box bg-2" data-aos="fade-up">
                   <div className="content center">
+                    <img src="/press.jpeg" alt="" style={{width: '100%', maxWidth: '350px', margin: '-30px 0 20px 0'}}/>
                     <a className="h4">International Space Station Launch</a>
                     <p className="fs-18">
                       There's a Pillman sent to the International Space Station
@@ -1452,6 +1454,7 @@ export default function Home() {
               <div className="col-md-4">
                 <div className="icon-box bg-2" data-aos="fade-up">
                   <div className="content center">
+                    <img src="/nftnyc.jpeg" alt="" style={{width: '100%', maxWidth: '350px', margin: '-30px 0 20px 0'}}/>
                     <a className="h4">Digital Artist of the Year (2021)</a>
                     <p className="fs-18">
                       Micha Klein was chosen by the NFT community and cemented
@@ -1516,7 +1519,7 @@ export default function Home() {
                     }}
                   >
                     <Link
-                      href="https://twitter.com/pills_crypto"
+                      href="https://twitter.com/TheCryptoPills"
                       target="_blank"
                       rel="noopener"
                       style={{ color: "#a8c6dc" }}
@@ -1611,18 +1614,18 @@ export default function Home() {
             <br />
             <br />
             <Typography variant="body2" component="p" align="center">
-              Crypto-Pills is a collection of Fine Art Digital Collectibles
+              Crypto Pills is a collection of Fine Art Digital Collectibles
               (NFTs) running on the Ethereum network. This website is only an
               interface allowing participants to purchase these digital
               collectibles. Users are entirely responsible for the safety and
               management of their own private Ethereum wallets and validating
               all transactions and contracts generated by this website before
-              approval. Furthermore, as the Crypto-Pills smart contract runs on
+              approval. Furthermore, as the Crypto Pills smart contract runs on
               the Ethereum network, there is no ability to undo, reverse, or
               restore any transactions. This website and its connected services
               are provided “as is” and “as available” without warranty of any
               kind. By using this website you are accepting sole responsibility
-              for any an all transactions involving Crypto-Pills digital
+              for any an all transactions involving Crypto Pills digital
               collectibles. You, the owner, agree that you purchase our
               non-fungible token as a Fine Art Digital Collectible. Non-fungible
               tokens should not be seen as an investment. The Crypto-Pill is a
@@ -1663,26 +1666,26 @@ export default function Home() {
               <br />
               <strong>2. Personal Use.</strong> <br />
               Subject to your continued compliance with these Terms,
-              Crypto-Pills grants you a worldwide, royalty-free license to use,
+              Crypto Pills grants you a worldwide, royalty-free license to use,
               copy, display, and print out the purchased Art in any medium,
               solely for the following purposes: (<b>A</b>) for your own
               personal, non-commercial use; (<b>B</b>) as part of a marketplace
               that permits the purchase and sale of your Crypto-Pill / NFT,
               provided that the marketplace cryptographically verifies each
-              Crypto-Pills owner’s rights to display the Art for their
+              Crypto Pills owner’s rights to display the Art for their
               Crypto-Pill to ensure that only the actual owner can display the
               Art; or (<b>C</b>) as part of a third party website or application
               that permits the inclusion, involvement, or participation of your
               Crypto-Pill, provided that the website/application
-              cryptographically verifies each Crypto-Pills owner’s rights to
-              display the Art for their Crypto-Pills, to ensure that only the
+              cryptographically verifies each Crypto Pills owner’s rights to
+              display the Art for their Crypto Pills, to ensure that only the
               actual owner can display the Art, and provided that the Art is no
               longer visible once the owner of the Crypto-Pill leaves the
               website/application.
               <br />
               <strong>3. Disclaimer</strong>
               <br />
-              Crypto-Pills have been designed by established pop artist Micha
+              Crypto Pills have been designed by established pop artist Micha
               Klein, and represent a legit part of digital art history, and a
               recognized cultural value. After all, artwork featuring the
               Pillman character is featured in important international museum

@@ -172,7 +172,7 @@ export default function Home() {
                             borderRadius: "20px",
                           }}
                         />
-                        Airdrop of 10 Crypto-Pills to random Pill owners and
+                        Airdrop of 10 Crypto Pills to random Pill owners and
                         upgraded role in Discord for holders by number of pills
                         <img
                           src="/images/discord.png"
@@ -210,7 +210,7 @@ export default function Home() {
                       <p className="fs-18">
                         {" "}
                         <br />
-                        Airdrop of 10 Crypto-Pills to random Pill owners
+                        Airdrop of 10 Crypto Pills to random Pill owners
                         <br />
                         <br />2 POAPS with future utility released for white
                         list and official launch minters
@@ -585,7 +585,7 @@ export default function Home() {
                         </div>
                         <div className="rm-photo">
                           <img
-                            src="/Avatar-Large.12.png"
+                            src="/Avatar-Large.16.png"
                             alt=""
                             className="rm-icon"
                           />
@@ -596,6 +596,8 @@ export default function Home() {
                         <br />
                         <strong>Partnership Traits Sniper</strong>
                         <br /><br />
+
+<strong>Crypto Pills on CoinbaseNFT launch.</strong><br /><br />
 Launch new Crypto Pills Website
 <br /><br />
 Bridge DTP merch store and Metamask.
@@ -612,7 +614,7 @@ The NFT will be free to mint for all Crypto Pills holders.
                       data-aos="fade-up"
                       data-aos-offset={300}
                     >
-                      <span data-aos="zoom-in" data-aos-offset={300}>
+                      <span className="incomplete" data-aos="zoom-in" data-aos-offset={300}>
                         <i className="fa fa-check" />
                       </span>
                       <div className="rm-box">
@@ -628,7 +630,7 @@ The NFT will be free to mint for all Crypto Pills holders.
                           }}
                         >
                           <img
-                            src="/Avatar-Large.13.png"
+                            src="/Avatar-Large.19.png"
                             alt=""
                             className="rm-icon"
                           />
@@ -646,8 +648,6 @@ The Zedge app has been downloaded more than 436 million times, has 30 million mo
 Crypto Pills will launch  animated screensavers as NFT on the platform creating a huge increase in eyeballs on the original collection. 
 There will be full support from Zedge for the marketing of this event.<br /><br />
 
-<strong>Crypto Pills on CoinbaseNFT (when launched).</strong><br /><br />
-
 Updates on the Crypto Pills Origins Video game.
                       </p>
                     </div>
@@ -655,9 +655,9 @@ Updates on the Crypto Pills Origins Video game.
                       className="box-time left"
                       data-aos="fade-right"
                       data-aos-offset={300}
-                      style={{ marginTop: "-500px" }}
+                      style={{ marginTop: "-300px" }}
                     >
-                      <span data-aos="zoom-in" data-aos-offset={300}>
+                      <span className="incomplete" data-aos="zoom-in" data-aos-offset={300}>
                         <i className="fa fa-check" />
                       </span>
                       <div className="rm-box">
@@ -667,7 +667,7 @@ Updates on the Crypto Pills Origins Video game.
                         </div>
                         <div className="rm-photo">
                           <img
-                            src="/Avatar-Large.12.png"
+                            src="/Avatar-Large.13.png"
                             alt=""
                             className="rm-icon"
                           />
@@ -688,7 +688,7 @@ Lil' Pills will be a great way to generate clear visibility in the PFP space, an
                       data-aos="fade-up"
                       data-aos-offset={300}
                     >
-                      <span data-aos="zoom-in" data-aos-offset={300}>
+                      <span className="incomplete" data-aos="zoom-in" data-aos-offset={300}>
                         <i className="fa fa-check" />
                       </span>
                       <div className="rm-box">
@@ -704,7 +704,7 @@ Lil' Pills will be a great way to generate clear visibility in the PFP space, an
                           }}
                         >
                           <img
-                            src="/Avatar-Large.13.png"
+                            src="/Avatar-Large.14.png"
                             alt=""
                             className="rm-icon"
                           />
@@ -723,9 +723,9 @@ Collaboration with Zedge for promotion <br /> <br />
                       className="box-time left"
                       data-aos="fade-right"
                       data-aos-offset={300}
-                      style={{ marginTop: "-300px" }}
+                      style={{ marginTop: "-100px" }}
                     >
-                      <span data-aos="zoom-in" data-aos-offset={300}>
+                      <span className="incomplete" data-aos="zoom-in" data-aos-offset={300}>
                         <i className="fa fa-check" />
                       </span>
                       <div className="rm-box">
@@ -735,7 +735,7 @@ Collaboration with Zedge for promotion <br /> <br />
                         </div>
                         <div className="rm-photo">
                           <img
-                            src="/Avatar-Large.12.png"
+                            src="/Avatar-Large.15.png"
                             alt=""
                             className="rm-icon"
                           />
@@ -784,7 +784,7 @@ Collaboration with Zedge for promotion <br /> <br />
                       }}
                     >
                       <Link
-                        href="https://twitter.com/pills_crypto"
+                        href="https://twitter.com/TheCryptoPills"
                         target="_blank"
                         rel="noopener"
                         style={{ color: "#a8c6dc" }}

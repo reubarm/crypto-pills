@@ -273,6 +273,10 @@ h6,
   width: 60%;
 }
 
+.pd-10 {
+  padding: 0 2rem;
+}
+
 @media only screen and (max-width: 1024px) {
 
   .title-text {
@@ -1952,15 +1956,24 @@ a:hover {
   cursor: pointer;
 }
 @media only screen and (max-width: 1200px) {
+  .section-speciality__box {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-wrap: wrap;
+    text-align: center;
+  }
   .box-item {
-    max-width: 48%;
+    max-width: 40%;
+    margin: 0.5rem;
+    padding: 2rem 1rem;
+    min-height: 200px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 }
-@media only screen and (max-width: 1024px) {
-  .box-item {
-    max-width: 100%;
-  }
-}
+
 .box-item h3 {
   margin-bottom: 23px;
 }
@@ -2294,10 +2307,10 @@ a:hover {
 .road-map__content .box-time::before {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 45.5%;
   width: 116px;
   height: 4px;
-  background: #999;
+  background: green;
 }
 .rm-box {
   display: flex;
@@ -2331,7 +2344,7 @@ a:hover {
   }
 }
 .road-map__content .box-time.left span {
-  right: -133px;
+  right: -142px;
 }
 @media only screen and (max-width: 767px) {
   .road-map__content .box-time.left span {
@@ -2345,17 +2358,23 @@ a:hover {
   left: -133px;
 }
 .road-map__content .box-time span {
-  width: 34px;
-  height: 34px;
-  min-height: 34px;
+  width: 44px;
+  height: 44px;
+  min-height: 44px;
   border-radius: 50%;
-  background: #999;
+  background: green;
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 44%;
+  top: 43.5%;
 }
+
+.incomplete {
+  background: #bfd7ea!important;
+  display: none!important;
+}
+
 .road-map__content .box-time span i {
   font-size: 16px;
   color: #bfd7ea;

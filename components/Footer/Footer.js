@@ -41,7 +41,7 @@ export default function Footer() {
       <Typography variant='body2' component='p' align='center'>Send us your best Crypto-Pill stories, crazy ideas, cool music and thoughts or questions you’d like to share with us:</Typography>
       <Grid container spacing={4} justifyContent="space-evenly" style={{marginTop: '1rem'}}>
         <Grid item xs={12} style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
-            <Link variant="button" color="textPrimary" href="https://twitter.com/pills_crypto" target="_blank" rel="noopener" className={classes.link}>
+            <Link variant="button" color="textPrimary" href="https://twitter.com/TheCryptoPills" target="_blank" rel="noopener" className={classes.link}>
               <TwitterIcon style={{ fontSize: 28}}/>
             </Link>
             <Link variant="button" color="textPrimary" href="https://discord.gg/UV4FnNGYdp" target="_blank" rel="noopener" className={classes.link}>

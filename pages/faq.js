@@ -41,17 +41,17 @@ export default function Home() {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   const title = [
-    "How do I purchase Crypto-Pills?",
+    "How do I purchase Crypto Pills?",
     "How do I know which Crypto-Pill I get?",
-    "How many Crypto-Pills can I buy per single transaction?",
-    "What will be the price of Crypto-Pills?",
+    "How many Crypto Pills can I buy per single transaction?",
+    "What will be the price of Crypto Pills?",
   ];
 
   const description = [
-    "The easiest way to purchase Crypto-Pills is to install a MetaMask extension in your browser and link your crypto wallet to it. Ensure you have enough ETH in your wallet to cover the cost of purchasing Crypto-Pills, in addition to any associated gas fees. Approve the desired transaction on MetaMask and you are ready to go. For more information, please refer to this link: https://nftyfarm.com/metamask/",
-    "Crypto-Pills will remain hidden until the big reveal on August 27, 2021. Upon reveal, the artwork from the pre-defined collection will be assigned to the NFT placeholder that you purchased. “Blind sales” are chosen to ensure the Crypto-Pills value is protected so no one can determine its rarity, including the project owners.",
-    "There is a limit of twenty (20) Crypto-Pills that can be purchased in one (1) transaction.",
-    "The pricing model is a flat-rate throughout the entire sale. The cost of each Crypto-Pill is set at 0.07 Eth, and 100 Crypto-Pills will be reserved for giveaways.",
+    "The easiest way to purchase Crypto Pills is to install a MetaMask extension in your browser and link your crypto wallet to it. Ensure you have enough ETH in your wallet to cover the cost of purchasing Crypto Pills, in addition to any associated gas fees. Approve the desired transaction on MetaMask and you are ready to go. For more information, please refer to this link: https://nftyfarm.com/metamask/",
+    "Crypto Pills will remain hidden until the big reveal on August 27, 2021. Upon reveal, the artwork from the pre-defined collection will be assigned to the NFT placeholder that you purchased. “Blind sales” are chosen to ensure the Crypto Pills value is protected so no one can determine its rarity, including the project owners.",
+    "There is a limit of twenty (20) Crypto Pills that can be purchased in one (1) transaction.",
+    "The pricing model is a flat-rate throughout the entire sale. The cost of each Crypto-Pill is set at 0.07 Eth, and 100 Crypto Pills will be reserved for giveaways.",
   ];
 
   const mockData = {
@@ -101,7 +101,7 @@ export default function Home() {
               component="p"
               className={classes.subtitle}
             >
-              Crypto-Pills is a collection of Fine Art Digital Collectibles
+              Crypto Pills is a collection of Fine Art Digital Collectibles
               (NFTs) running on the Ethereum network. This website is only an
               interface allowing participants to purchase these digital
               collectibles.
@@ -210,7 +210,7 @@ export default function Home() {
                 align="left"
                 className={classes.pointHeading}
               >
-                Crypto-Pills is a collection of Fine Art Digital Collectibles
+                Crypto Pills is a collection of Fine Art Digital Collectibles
                 (NFTs) running on the Ethereum network. This website is only an
                 interface allowing participants to purchase these digital
                 collectibles.
@@ -222,7 +222,7 @@ export default function Home() {
                 approval.
               </Typography>
               <Typography variant="body2" component="p" align="left">
-                Furthermore, as the Crypto-Pills smart contract runs on the
+                Furthermore, as the Crypto Pills smart contract runs on the
                 Ethereum network, there is no ability to undo, reverse, or
                 restore any transactions.
               </Typography>
@@ -232,7 +232,7 @@ export default function Home() {
               </Typography>
               <Typography variant="body2" component="p" align="left">
                 By using this website you are accepting sole responsibility for
-                any an all transactions involving Crypto-Pills digital
+                any an all transactions involving Crypto Pills digital
                 collectibles.
               </Typography>
               <Typography variant="body2" component="p" align="left">
@@ -311,7 +311,7 @@ export default function Home() {
               </Typography>
               <Typography variant="body2" component="p" align="left">
                 Subject to your continued compliance with these Terms,
-                Crypto-Pills grants you a worldwide, royalty-free license to
+                Crypto Pills grants you a worldwide, royalty-free license to
                 use, copy, display, and print out the purchased Art in any
                 medium, solely for the following purposes:
               </Typography>
@@ -321,7 +321,7 @@ export default function Home() {
               <Typography variant="body2" component="p" align="left">
                 (<b>B</b>) as part of a marketplace that permits the purchase
                 and sale of your Crypto-Pill / NFT, provided that the
-                marketplace cryptographically verifies each Crypto-Pills owner’s
+                marketplace cryptographically verifies each Crypto Pills owner’s
                 rights to display the Art for their Crypto-Pill to ensure that
                 only the actual owner can display the Art;
               </Typography>
@@ -329,8 +329,8 @@ export default function Home() {
                 or (<b>C</b>) as part of a third party website or application
                 that permits the inclusion, involvement, or participation of
                 your Crypto-Pill, provided that the website/application
-                cryptographically verifies each Crypto-Pills owner’s rights to
-                display the Art for their Crypto-Pills, to ensure that only the
+                cryptographically verifies each Crypto Pills owner’s rights to
+                display the Art for their Crypto Pills, to ensure that only the
                 actual owner can display the Art, and provided that the Art is
                 no longer visible once the owner of the Crypto-Pill leaves the
                 website/application.
@@ -344,7 +344,7 @@ export default function Home() {
                 <strong>3. Disclaimer</strong>
               </Typography>
               <Typography variant="body2" component="p" align="left">
-                Crypto-Pills have been designed by established pop artist Micha
+                Crypto Pills have been designed by established pop artist Micha
                 Klein, and represent a legit part of digital art history, and a
                 recognized cultural value. After all, artwork featuring the
                 Pillman character is featured in important international museum

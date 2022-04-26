@@ -218,7 +218,7 @@ export default function Home() {
                         Week 1
                       </Typography>
                       <Typography variant="body2" align="center">
-                        Airdrop of 10 Crypto-Pills to random Pill owners
+                        Airdrop of 10 Crypto Pills to random Pill owners
                         <br />
                         <br />
                         Upgraded role in Discord for holders by number of pills
@@ -245,7 +245,7 @@ export default function Home() {
                         Week 2
                       </Typography>
                       <Typography variant="body2" align="center">
-                        Airdrop of 10 Crypto-Pills to random Pill owners
+                        Airdrop of 10 Crypto Pills to random Pill owners
                         <br />
                         <br />2 POAPS with future utility released for white
                         list and official launch minters

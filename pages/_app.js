@@ -9,7 +9,7 @@ import { ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import theme from "../themes/theme";
 import getLibrary from "../utils/getLibrary";
-import "../themes/test.css";
+import "../themes/global.css";
 import AOS from "aos";
 
 function MyApp({ Component, pageProps }) {

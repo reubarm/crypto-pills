@@ -287,8 +287,7 @@ export default function Home() {
                       <br />
                       The Crypto Pills Collection dropped on August 27, 2021 and
                       sold out in 11 minutes. They are available on secondary
-                      market at OpenSea and LooksRare; with Coinbase coming
-                      soon.
+                      market at OpenSea, Coinbase and LooksRare.
                     </strong>
                   </p>
                   <a

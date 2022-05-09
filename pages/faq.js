@@ -1,19 +1,11 @@
-import { useWeb3React } from "@web3-react/core";
-import { useEagerConnect, useInactiveListener } from "../hooks/web3-react";
 import Head from "next/head";
-import { useRouter } from "next/router";
-
 import React from "react";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
 import {
-  Link,
   Typography,
   Container,
   Button,
   Grid,
   TextField,
-  Stack,
 } from "@material-ui/core";
 
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
@@ -25,35 +17,20 @@ import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import useStyles from "../themes/useStyles";
 
-export default function Home() {
-  const { active } = useWeb3React();
-  const router = useRouter();
-
-  // handle logic to eagerly connect to the injected ethereum provider, if it exists and has granted access already
-  const triedEager = useEagerConnect();
-
-  // handle logic to connect in reaction to certain events on the injected ethereum provider, if it exists
-  useInactiveListener(!triedEager);
-
-  const theme = useTheme();
+export default function Faqs() {
   const classes = useStyles();
-
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-
   const title = [
     "How do I purchase Crypto Pills?",
     "How do I know which Crypto-Pill I get?",
     "How many Crypto Pills can I buy per single transaction?",
     "What will be the price of Crypto Pills?",
   ];
-
   const description = [
     "The easiest way to purchase Crypto Pills is to install a MetaMask extension in your browser and link your crypto wallet to it. Ensure you have enough ETH in your wallet to cover the cost of purchasing Crypto Pills, in addition to any associated gas fees. Approve the desired transaction on MetaMask and you are ready to go. For more information, please refer to this link: https://nftyfarm.com/metamask/",
     "Crypto Pills will remain hidden until the big reveal on August 27, 2021. Upon reveal, the artwork from the pre-defined collection will be assigned to the NFT placeholder that you purchased. “Blind sales” are chosen to ensure the Crypto Pills value is protected so no one can determine its rarity, including the project owners.",
     "There is a limit of twenty (20) Crypto Pills that can be purchased in one (1) transaction.",
     "The pricing model is a flat-rate throughout the entire sale. The cost of each Crypto-Pill is set at 0.07 Eth, and 100 Crypto Pills will be reserved for giveaways.",
   ];
-
   const mockData = {
     id: (index) => `${index + 1}`,
     text: {
@@ -61,7 +38,6 @@ export default function Home() {
       description: (index) => description[index],
     },
   };
-
   const MOCK_FAQS = [...Array(4)].map((_, index) => ({
     id: mockData.id(index),
     value: `panel${index + 1}`,
@@ -310,10 +286,10 @@ export default function Home() {
                 <strong>2. Personal Use.</strong>
               </Typography>
               <Typography variant="body2" component="p" align="left">
-                Subject to your continued compliance with these Terms,
-                Crypto Pills grants you a worldwide, royalty-free license to
-                use, copy, display, and print out the purchased Art in any
-                medium, solely for the following purposes:
+                Subject to your continued compliance with these Terms, Crypto
+                Pills grants you a worldwide, royalty-free license to use, copy,
+                display, and print out the purchased Art in any medium, solely
+                for the following purposes:
               </Typography>
               <Typography variant="body2" component="p" align="left">
                 (<b>A</b>) for your own personal, non-commercial use;

@@ -6,86 +6,14 @@ import { useSnackbar } from "notistack";
 import { ethers } from "ethers";
 
 import React, { useState, useEffect } from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import WalletButton from "../components/Header/WalletButton";
-
 import Head from "next/head";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
+import useStyles from "../themes/useStyles";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    padding: "0",
-  },
-  headerLink: {
-    margin: theme.spacing(1, 2),
-    cursor: "pointer",
-    fontWeight: "600",
-    fontSize: "1rem",
-    color: "#555",
-    letterSpacing: "-0.5px",
-    "&:hover": {
-      textDecoration: "none",
-      color: "#000",
-    },
-  },
-  bannerSection: {
-    marginTop: "50px",
-    position: "relative",
-    backgroundSize: "cover",
-    backgroundImage: "url(/overlay.svg), url(/game.png)",
-    height: "100vh",
-    padding: "10rem 0",
-    textAlign: "center",
-    "@media (max-width: 575px)": {
-      padding: "6rem 0",
-    },
-  },
-  title: {
-    color: "#fff",
-    fontSize: "4rem",
-    "@media (max-width: 575px)": {
-      fontSize: "2rem",
-    },
-  },
-  subtitle: {
-    color: "#fff",
-    fontSize: "1.5rem",
-    "@media (max-width: 575px)": {
-      fontSize: "1rem",
-    },
-  },
-  openSea: {
-    fontSize: "1rem",
-    fontWeight: "700",
-    letterSpacing: "0",
-    textTransform: "none",
-    borderRadius: "10",
-    margin: "3rem 1rem 0 0",
-    minWidth: "250px",
-    minHeight: "50px",
-    backgroundColor: "#703673",
-    color: "#FFF",
-    "&:hover": {
-      backgroundColor: "#873fbd",
-    },
-    "@media (max-width: 520px)": {
-      margin: "2rem 0 0",
-    },
-  },
-  detailSection: {
-    marginTop: "100px",
-  },
-  majorHeading: {
-    marginBlockStart: "3rem",
-  },
-  pointHeading: {
-    marginBlockStart: "2rem",
-  },
-}));
-
-export default function Admin() {
+export default function Account() {
   const {
     connector,
     library,
@@ -369,14 +297,18 @@ export default function Admin() {
       "0xb41f146670ce3dedac51d79956cd5e292be26ec4"
   );
 
+  console.log(username);
+  console.log(nfts);
+  console.log(howmany);
+
   useEffect(() => {
     setHowmany(filteredNfts.length);
   }, [filteredNfts]);
 
   useEffect(() => {
-    if(howmany > 0){
-    setYessir(true)
-    };
+    if (howmany > 0) {
+      setYessir(true);
+    }
   }, [filteredNfts]);
 
   var today = new Date();
@@ -434,38 +366,54 @@ export default function Admin() {
                 <div className="col-md-12">
                   <div className="page-title__body rm">
                     <div className="block-text pt-12 center-mb">
-                    {(!yessir ? (<>
-                        <h3 className="sub-title mb-33">
-                        {welcome}{" "}
-                        
-                      </h3>
-                      <h5 className="fs-24 mb-10">
-                        You don't have any Crypto Pills in this wallet yet.
-                      </h5>
-                      <h5 className="fs-24 mb-10">
-                        Join our community and enjoy the benefits! 
-                      </h5>
-                      <br />
-                      <a href="https://opensea.io/collection/crypto-pills-by-micha-klein" target="_blank" rel="noopener" className="btn-action style-3">
-                        View Collection on OpenSea
-                      </a>
-                      </>) : (
-                      <>
-                      <h3 className="sub-title mb-33">
-                        {welcome}{" "}
-                        <span style={{ color: "#3b5397" }}>@{username} </span>
-                      </h3>
-                      <h5 className="fs-24 mb-10">
-                        You have {howmany} Pillman - that's awesome.
-                      </h5>
-                      <h5 className="fs-24 mb-10">
-                        Mint new collections for free because you're amazing!
-                      </h5>
-                      <br />
-                      <br />
-                      <a href="/play" className="btn-action style-3">
-                        Play Pillman Origins
-                      </a></>))}
+                      {!yessir ? (
+                        <>
+                          <h3 className="sub-title mb-33">{welcome} </h3>
+                          <h5 className="fs-24 mb-10">
+                            You don't have any Crypto Pills in this wallet yet.
+                          </h5>
+                          <h5 className="fs-24 mb-10">
+                            Join our community and enjoy the benefits!
+                          </h5>
+                          <br />
+                          <a
+                            href="https://opensea.io/collection/crypto-pills-by-micha-klein"
+                            target="_blank"
+                            rel="noopener"
+                            className="btn-action style-3"
+                          >
+                            View Collection on OpenSea
+                          </a>
+                        </>
+                      ) : (
+                        <>
+                          <h3 className="sub-title mb-33">
+                            {welcome}
+                            <span
+                              style={{
+                                color: "#3b5397",
+                                fontSize: "23px",
+                                margin: "0 0 20px",
+                                display: "block",
+                              }}
+                            >
+                              {username}
+                            </span>
+                          </h3>
+                          <h5 className="fs-24 mb-10">
+                            You have {howmany} Pillman - that's awesome.
+                          </h5>
+                          <h5 className="fs-24 mb-10">
+                            Mint new collections for free because you're
+                            amazing!
+                          </h5>
+                          <br />
+                          <br />
+                          <a href="/play" className="btn-action style-3">
+                            Play Pillman Origins
+                          </a>
+                        </>
+                      )}
                     </div>
 
                     {filteredNfts.map((nft, index) => {
@@ -489,42 +437,51 @@ export default function Admin() {
             </section>
 
             {!yessir ? (
+              <></>
+            ) : (
               <>
-        
-            </>) : (<>    <section className="tf-section mt-53">
-              <div className="container">
-                <div className="row" style={{ textAlign: "center" }}>
-                  <h3
-                    className="title mb-28"
-                    data-aos="fade-up"
-                    data-aos-duration={1000}
-                  >
-                    Your Crypto Pills
-                  </h3>
+                {" "}
+                <section className="tf-section mt-53">
+                  <div className="container">
+                    <div className="row" style={{ textAlign: "center" }}>
+                      <h3
+                        className="title mb-28"
+                        data-aos="fade-up"
+                        data-aos-duration={1000}
+                      >
+                        Your Crypto Pills
+                      </h3>
 
-                  <div style={{ flexDirection: "row" }}>
-                    {filteredNfts.map((nft, index) => {
-                      return (
-                        index < 12 && (
-                          <>
-                            <a
-                              href={nft.permalink}
-                              target="_blank"
-                              rel="noopener"
-                            >
-                              <img src={nft.image_url} className="os-photo" />
-                              <br />
-                            </a>
-                          </>
-                        )
-                      );
-                    })}
+                      <div style={{ flexDirection: "row" }}>
+                        {filteredNfts.map((nft, index) => {
+                          return (
+                            index < 12 && (
+                              <>
+                                <a
+                                  href={nft.permalink}
+                                  target="_blank"
+                                  rel="noopener"
+                                >
+                                  <img
+                                    src={nft.image_url}
+                                    className="os-photo"
+                                  />
+                                  <br />
+                                </a>
+                              </>
+                            )
+                          );
+                        })}
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </section></>)}
-            {(!yessir ? (
-              <></>) : (        <>
+                </section>
+              </>
+            )}
+            {!yessir ? (
+              <></>
+            ) : (
+              <>
                 <section className="tf-section hero-slider">
                   <div className="container">
                     <div className="row">
@@ -537,10 +494,10 @@ export default function Admin() {
                             Exclusive 50% Off Merchandise
                           </h2>
                           <p className="mb-20 fs-18" data-aos="fade-up">
-                            Enjoy the benefits of being a Crypto Pills Gold Member
-                            with a 50% discount on the new Crypto Pills merchandise
-                            that was dropped this week, with lots more cool merch to
-                            come!
+                            Enjoy the benefits of being a Crypto Pills Gold
+                            Member with a 50% discount on the new Crypto Pills
+                            merchandise that was dropped this week, with lots
+                            more cool merch to come!
                             <br />
                             <br />
                           </p>
@@ -556,7 +513,9 @@ export default function Admin() {
                       </div>
                       <div className="col-xl-6 col-md-6 col-12">
                         <div className="content-right d-flex mt-50">
-                          <div style={{ borderRadius: "30px", overflow: "hidden" }}>
+                          <div
+                            style={{ borderRadius: "30px", overflow: "hidden" }}
+                          >
                             <a href="https://dropthepill.com/products/blue-bucket-hat-gang-hoodie">
                               <img
                                 src="/images/store4.png"
@@ -594,7 +553,9 @@ export default function Admin() {
                       </div>
                     </div>
                   </div>
-                </section></>))}
+                </section>
+              </>
+            )}
           </>
         )}
 

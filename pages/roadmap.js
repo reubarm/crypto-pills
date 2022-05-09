@@ -1,41 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { useWeb3React } from "@web3-react/core";
-import { useEagerConnect, useInactiveListener } from "../hooks/web3-react";
 import Head from "next/head";
-import { useRouter } from "next/router";
-
-import { makeStyles, useTheme } from "@material-ui/core/styles";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
-import {
-  Link,
-  Typography,
-  Container,
-  Button,
-  Grid,
-  TextField,
-  Stack,
-} from "@material-ui/core";
+import { Link, Container } from "@material-ui/core";
 import { TwitterIcon, DiscordIcon, InstagramIcon } from "../components/Icons";
-
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import AOS from "aos";
 
-export default function Home() {
-  const { active } = useWeb3React();
-  const router = useRouter();
-
-  // handle logic to eagerly connect to the injected ethereum provider, if it exists and has granted access already
-  const triedEager = useEagerConnect();
-
-  // handle logic to connect in reaction to certain events on the injected ethereum provider, if it exists
-  useInactiveListener(!triedEager);
-
-  const theme = useTheme();
-  // const classes = useStyles();
-
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-
+export default function Roadmap() {
   useEffect(() => {
     AOS.init();
     AOS.refresh();
@@ -45,7 +16,7 @@ export default function Home() {
     <>
       <Head>
         <title>
-          Crypto Pills | NFTs, Games, Movies and Merchandise by Micha Klein
+          Roadmap | Crypto Pills NFTs, Games, Movies and Merchandise by Micha Klein
         </title>
         <meta
           name="description"
@@ -595,18 +566,32 @@ export default function Home() {
                       <p className="fs-18">
                         <br />
                         <strong>Partnership Traits Sniper</strong>
-                        <br /><br />
-
-<strong>Crypto Pills on CoinbaseNFT launch.</strong><br /><br />
-Launch new Crypto Pills Website
-<br /><br />
-Bridge DTP merch store and Metamask.
-<br /><br />
-Release of first exclusive Crypto Pills Merch collection, with regular drops planned throughout the year.
-<br /><br />
-<strong>Release Crypto Pills Anthem 3D animated video clip / NFT</strong><br /><br />
-This is the Crypto Pills project's first musical NFT with original music by US rapper Artzy, who worked with Busta Rhymes.
-The NFT will be free to mint for all Crypto Pills holders.
+                        <br />
+                        <br />
+                        <strong>Crypto Pills on CoinbaseNFT launch.</strong>
+                        <br />
+                        <br />
+                        Launch new Crypto Pills Website
+                        <br />
+                        <br />
+                        Bridge DTP merch store and Metamask.
+                        <br />
+                        <br />
+                        Release of first exclusive Crypto Pills Merch
+                        collection, with regular drops planned throughout the
+                        year.
+                        <br />
+                        <br />
+                        <strong>
+                          Release Crypto Pills Anthem 3D animated video clip /
+                          NFT
+                        </strong>
+                        <br />
+                        <br />
+                        This is the Crypto Pills project's first musical NFT
+                        with original music by US rapper Artzy, who worked with
+                        Busta Rhymes. The NFT will be free to mint for all
+                        Crypto Pills holders.
                       </p>
                     </div>
                     <div
@@ -614,7 +599,11 @@ The NFT will be free to mint for all Crypto Pills holders.
                       data-aos="fade-up"
                       data-aos-offset={300}
                     >
-                      <span className="incomplete" data-aos="zoom-in" data-aos-offset={300}>
+                      <span
+                        className="incomplete"
+                        data-aos="zoom-in"
+                        data-aos-offset={300}
+                      >
                         <i className="fa fa-check" />
                       </span>
                       <div className="rm-box">
@@ -639,16 +628,27 @@ The NFT will be free to mint for all Crypto Pills holders.
 
                       <p className="fs-18">
                         <br />
-                        <strong>3D OG Pillman NFT drop.</strong><br /><br/>
-This will be a collection of 7 different  Metaverse ready 3D NFTs with unlockable content. 
-They will be free to mint for Crypto Pills holders.<br /><br />
-
-Collaboration with the Zedge mobile customization application for the launch of their Easy NFT platform. 
-The Zedge app has been downloaded more than 436 million times, has 30 million monthly active users as of August 31, 2020 and has consistently averaged in the ‘Top 60’ most popular free apps in Google Play in the US. <br />
-Crypto Pills will launch  animated screensavers as NFT on the platform creating a huge increase in eyeballs on the original collection. 
-There will be full support from Zedge for the marketing of this event.<br /><br />
-
-Updates on the Crypto Pills Origins Video game.
+                        <strong>3D OG Pillman NFT drop.</strong>
+                        <br />
+                        <br />
+                        This will be a collection of 7 different Metaverse ready
+                        3D NFTs with unlockable content. They will be free to
+                        mint for Crypto Pills holders.
+                        <br />
+                        <br />
+                        Collaboration with the Zedge mobile customization
+                        application for the launch of their Easy NFT platform.
+                        The Zedge app has been downloaded more than 436 million
+                        times, has 30 million monthly active users as of August
+                        31, 2020 and has consistently averaged in the ‘Top 60’
+                        most popular free apps in Google Play in the US. <br />
+                        Crypto Pills will launch animated screensavers as NFT on
+                        the platform creating a huge increase in eyeballs on the
+                        original collection. There will be full support from
+                        Zedge for the marketing of this event.
+                        <br />
+                        <br />
+                        Updates on the Crypto Pills Origins Video game.
                       </p>
                     </div>
                     <div
@@ -657,7 +657,11 @@ Updates on the Crypto Pills Origins Video game.
                       data-aos-offset={300}
                       style={{ marginTop: "-300px" }}
                     >
-                      <span className="incomplete" data-aos="zoom-in" data-aos-offset={300}>
+                      <span
+                        className="incomplete"
+                        data-aos="zoom-in"
+                        data-aos-offset={300}
+                      >
                         <i className="fa fa-check" />
                       </span>
                       <div className="rm-box">
@@ -676,11 +680,26 @@ Updates on the Crypto Pills Origins Video game.
 
                       <p className="fs-18">
                         <br />
-                        <strong>Release generative Lil' Pills PFP project.</strong><br /><br />
-Based on the Crypto Pills with new traits added relevant to younger collectors, this collection will follow the 'head shot' format suitable for use as PFP,<br />
-The collection will be free to mint for a limited time window for all Crypto Pills holders.<br /><br />
-Distribution will be 1 Lil' Pill for each Crypto Pill in the holder's wallet.<br /><br />
-Lil' Pills will be a great way to generate clear visibility in the PFP space, and will get their own P2E game.
+                        <strong>
+                          Release generative Lil' Pills PFP project.
+                        </strong>
+                        <br />
+                        <br />
+                        Based on the Crypto Pills with new traits added relevant
+                        to younger collectors, this collection will follow the
+                        'head shot' format suitable for use as PFP,
+                        <br />
+                        The collection will be free to mint for a limited time
+                        window for all Crypto Pills holders.
+                        <br />
+                        <br />
+                        Distribution will be 1 Lil' Pill for each Crypto Pill in
+                        the holder's wallet.
+                        <br />
+                        <br />
+                        Lil' Pills will be a great way to generate clear
+                        visibility in the PFP space, and will get their own P2E
+                        game.
                       </p>
                     </div>
                     <div
@@ -688,7 +707,11 @@ Lil' Pills will be a great way to generate clear visibility in the PFP space, an
                       data-aos="fade-up"
                       data-aos-offset={300}
                     >
-                      <span className="incomplete" data-aos="zoom-in" data-aos-offset={300}>
+                      <span
+                        className="incomplete"
+                        data-aos="zoom-in"
+                        data-aos-offset={300}
+                      >
                         <i className="fa fa-check" />
                       </span>
                       <div className="rm-box">
@@ -713,10 +736,16 @@ Lil' Pills will be a great way to generate clear visibility in the PFP space, an
 
                       <p className="fs-18">
                         <br />
-                        <strong>Release Crypto Pills Origins video game for mobile.</strong> <br /><br />
-Collaboration with Zedge for promotion <br /> <br />
-
-<strong>Release Pillcoin token, for use across the Crypto Pills ecosystem</strong>
+                        <strong>
+                          Release Crypto Pills Origins video game for mobile.
+                        </strong>{" "}
+                        <br />
+                        <br />
+                        Collaboration with Zedge for promotion <br /> <br />
+                        <strong>
+                          Release Pillcoin token, for use across the Crypto
+                          Pills ecosystem
+                        </strong>
                       </p>
                     </div>
                     <div
@@ -725,7 +754,11 @@ Collaboration with Zedge for promotion <br /> <br />
                       data-aos-offset={300}
                       style={{ marginTop: "-100px" }}
                     >
-                      <span className="incomplete" data-aos="zoom-in" data-aos-offset={300}>
+                      <span
+                        className="incomplete"
+                        data-aos="zoom-in"
+                        data-aos-offset={300}
+                      >
                         <i className="fa fa-check" />
                       </span>
                       <div className="rm-box">
@@ -744,8 +777,12 @@ Collaboration with Zedge for promotion <br /> <br />
 
                       <p className="fs-18">
                         <br />
-                       To celebrate the 1 year anniversary of the Crypto Pills collection, we will release the metaverse ready generative 3D Crypto Pills collection.<br/><br/>
-                       <strong>Free to mint for Crypto Pills holders.</strong>
+                        To celebrate the 1 year anniversary of the Crypto Pills
+                        collection, we will release the metaverse ready
+                        generative 3D Crypto Pills collection.
+                        <br />
+                        <br />
+                        <strong>Free to mint for Crypto Pills holders.</strong>
                       </p>
                     </div>
                   </div>

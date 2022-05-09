@@ -342,31 +342,31 @@ export default function Admin() {
                 : "You are not the contract owner"}
             </Typography>
           </Grid>
-          
+
           <Typography variant="h5" component="h5" align="center">
-              You have {howmany} Crypto Pills 😊
-            </Typography>
+            You have {howmany} Crypto Pills 😊
+          </Typography>
 
           <Grid item sx={12} md={12} className={classes.gridCell}>
-          {filteredNfts.map((nft, index) => {
-            return (
-              index < 6 && (
-                <>
-                  <a href={nft.permalink} target="_blank" rel="noopener">
-                    <img
-                      src={nft.image_url}
-                      width="190"
-                      style={{
-                        display: "inline-block",
-                        margin: "0.4rem",
-                        borderRadius: "15px",
-                      }}
-                    />
-                  </a>
-                </>
-              )
-            );
-          })}
+            {filteredNfts.map((nft, index) => {
+              return (
+                index < 6 && (
+                  <>
+                    <a href={nft.permalink} target="_blank" rel="noopener">
+                      <img
+                        src={nft.image_url}
+                        width="190"
+                        style={{
+                          display: "inline-block",
+                          margin: "0.4rem",
+                          borderRadius: "15px",
+                        }}
+                      />
+                    </a>
+                  </>
+                )
+              );
+            })}
           </Grid>
 
           <Grid item sx={12} md={12}>

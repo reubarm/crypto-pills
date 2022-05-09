@@ -1,67 +1,30 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useWeb3React } from "@web3-react/core";
-import { useEagerConnect, useInactiveListener } from "../hooks/web3-react";
 import Head from "next/head";
-import { useRouter } from "next/router";
 import ReactPlayer from "react-player";
-
-import { makeStyles, useTheme } from "@material-ui/core/styles";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
-import {
-  Link,
-  Typography,
-  Container,
-  Button,
-  Grid,
-  TextField,
-  Stack,
-} from "@material-ui/core";
-
+import { Link, Typography, Container, Grid } from "@material-ui/core";
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import SwiperCore, { Autoplay } from "swiper";
-
-// swiper bundle styles
 import "swiper/swiper-bundle.min.css";
-// swiper core styles
 import "swiper/swiper.min.css";
-// modules styles
 import "swiper/components/navigation/navigation.min.css";
 import "swiper/components/pagination/pagination.min.css";
-
 import { TwitterIcon, DiscordIcon, InstagramIcon } from "../components/Icons";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import AOS from "aos";
-
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Accordion from "@material-ui/core/Accordion";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
 
 export default function Home() {
-  const { active } = useWeb3React();
-  const router = useRouter();
-
-  // handle logic to eagerly connect to the injected ethereum provider, if it exists and has granted access already
-  const triedEager = useEagerConnect();
-
-  // handle logic to connect in reaction to certain events on the injected ethereum provider, if it exists
-  useInactiveListener(!triedEager);
-
-  const theme = useTheme();
-  // const classes = useStyles();
-
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-
   useEffect(() => {
     AOS.init();
     AOS.refresh();
   }, []);
-
   const [datastats, setDatastats] = useState([]);
-  const [moedas, setMoedas] = useState([]);
+  const [eth, setEth] = useState([]);
   const options = { method: "GET", headers: { Accept: "application/json" } };
   const limit = 16;
 
@@ -84,29 +47,12 @@ export default function Home() {
         "https://api.coingecko.com/api/v3/coins/ethereum?tickers=true&market_data=true&community_data=true&developer_data=true&sparkline=true"
       )
       .then((res) => {
-        setMoedas(res.data.market_data.current_price.usd);
+        setEth(res.data.market_data.current_price.usd);
         console.log(res.data.market_data.current_price.usd);
       })
       .catch((error) => console.log(error));
   }, []);
-  // console.log(moedas);
-  const test = JSON.stringify(moedas);
-
-  // useEffect(() => {
-  //   fetch(
-  //     `https://api.opensea.io/api/v1/bundles?asset_contract_address=0x7dd04448c6cd405345d03529bff9749fd89f8f4f&limit=${limit}&offset=0`,
-  //     options
-  //   )
-  //     .then((response) => response.json())
-  //     .then((response) => {
-  //       setMoedas(response.bundles);
-  //     })
-  //     .catch((err) => console.error(err));
-  // }, []);
-
-  // console.log(moedas);
-
-  // const filteredMoedas = moedas.filter((moeda) => moeda);
+  const test = JSON.stringify(eth);
 
   let marketcap = 0;
   let avgprice = 0;
@@ -197,7 +143,7 @@ export default function Home() {
     },
   ];
 
-  // const calc = sales[0].price * moedas;
+  // const calc = sales[0].price * eth;
 
   const title = [
     "How do I purchase Crypto Pills?",
@@ -256,8 +202,12 @@ export default function Home() {
           <div className="container">
             <div className="row">
               <div className="col-12 show-sm">
-                <img src="123.gif" alt="Pillman 3D" style={{width: '100%', borderRadius: '30px'}} />
-                </div>
+                <img
+                  src="123.gif"
+                  alt="Pillman 3D"
+                  style={{ width: "100%", borderRadius: "30px" }}
+                />
+              </div>
               <div className="col-xl-6 col-md-6 col-12">
                 <div className="block-text pt-24 mt-27">
                   <h6 className="sub-title mb-6" data-aos={"fade-up"}>
@@ -896,7 +846,7 @@ export default function Home() {
                           <img src={sale.photo} className="os-photo" />
                           <br />
                           {sale.price} ETH <br />
-                          (${(sale.price * moedas).toLocaleString()})
+                          (${(sale.price * eth).toLocaleString()})
                         </a>
                       </>
                     )
@@ -934,7 +884,7 @@ export default function Home() {
                     Since launch on <strong>August 27th 2021</strong>, Cryto
                     Pills has created a total volume of{" "}
                     <strong>
-                      {volume} ETH (${(volume * moedas).toLocaleString()})
+                      {volume} ETH (${(volume * eth).toLocaleString()})
                     </strong>
                     , whilst the current OpenSea floor price is{" "}
                     <strong>{datastats.floor_price} ETH</strong>.
@@ -1127,15 +1077,19 @@ export default function Home() {
                     data-aos="fade-up"
                     data-aos-offset={300}
                   >
-                    <span data-aos="zoom-in" data-aos-offset={300}>
+                    <span
+                      className="incomplete"
+                      data-aos="zoom-in"
+                      data-aos-offset={300}
+                    >
                       <i className="fa fa-circle color2" />
                     </span>
                     <div className="rm-box">
                       <div className="rm-tite full-width">
-                        <p className="fs-16 color-main mb-0">
-                          March 31st, 2022
-                        </p>
-                        <h5 className="title mb-20">3D Pillman NFT Drop</h5>{" "}
+                        <p className="fs-16 color-main mb-0">Coming Soon</p>
+                        <h5 className="title mb-20">
+                          3D Pillman NFT Drop
+                        </h5>{" "}
                       </div>
                       <div className="rm-photo">
                         <img src="/Avatar-Large.16.png" alt="" width="80" />
@@ -1160,7 +1114,11 @@ export default function Home() {
                     data-aos="fade-right"
                     data-aos-offset={300}
                   >
-                    <span data-aos="zoom-in" data-aos-offset={300}>
+                    <span
+                      className="incomplete"
+                      data-aos="zoom-in"
+                      data-aos-offset={300}
+                    >
                       <i className="fa fa-circle" />
                     </span>
                     <div className="rm-box">
@@ -1185,7 +1143,11 @@ export default function Home() {
                     data-aos="fade-up"
                     data-aos-offset={300}
                   >
-                    <span data-aos="zoom-in" data-aos-offset={300}>
+                    <span
+                      className="incomplete"
+                      data-aos="zoom-in"
+                      data-aos-offset={300}
+                    >
                       <i className="fa fa-circle color2" />
                     </span>
                     <div className="rm-box">
@@ -1208,7 +1170,11 @@ export default function Home() {
                     data-aos="fade-right"
                     data-aos-offset={300}
                   >
-                    <span data-aos="zoom-in" data-aos-offset={300}>
+                    <span
+                      className="incomplete"
+                      data-aos="zoom-in"
+                      data-aos-offset={300}
+                    >
                       <i className="fa fa-circle" />
                     </span>
                     <div className="rm-box">
@@ -1234,7 +1200,11 @@ export default function Home() {
                     data-aos="fade-up"
                     data-aos-offset={300}
                   >
-                    <span data-aos="zoom-in" data-aos-offset={300}>
+                    <span
+                      className="incomplete"
+                      data-aos="zoom-in"
+                      data-aos-offset={300}
+                    >
                       <i className="fa fa-circle color2" />
                     </span>
                     <div className="rm-box">
@@ -1410,7 +1380,15 @@ export default function Home() {
               <div className="col-md-4">
                 <div className="icon-box bg-2" data-aos="fade-up">
                   <div className="content center">
-                    <img src="/images/micha-portrait.webp" alt="" style={{width: '100%', maxWidth: '350px', margin: '-30px 0 20px 0'}}/>
+                    <img
+                      src="/images/micha-portrait.webp"
+                      alt=""
+                      style={{
+                        width: "100%",
+                        maxWidth: "350px",
+                        margin: "-30px 0 20px 0",
+                      }}
+                    />
                     <a className="h4">
                       In conversation with the pioneer of digital art
                     </a>
@@ -1432,7 +1410,15 @@ export default function Home() {
               <div className="col-md-4">
                 <div className="icon-box bg-2" data-aos="fade-up">
                   <div className="content center">
-                    <img src="/press.jpeg" alt="" style={{width: '100%', maxWidth: '350px', margin: '-30px 0 20px 0'}}/>
+                    <img
+                      src="/press.jpeg"
+                      alt=""
+                      style={{
+                        width: "100%",
+                        maxWidth: "350px",
+                        margin: "-30px 0 20px 0",
+                      }}
+                    />
                     <a className="h4">International Space Station Launch</a>
                     <p className="fs-18">
                       There's a Pillman sent to the International Space Station
@@ -1453,7 +1439,15 @@ export default function Home() {
               <div className="col-md-4">
                 <div className="icon-box bg-2" data-aos="fade-up">
                   <div className="content center">
-                    <img src="/nftnyc.jpeg" alt="" style={{width: '100%', maxWidth: '350px', margin: '-30px 0 20px 0'}}/>
+                    <img
+                      src="/nftnyc.jpeg"
+                      alt=""
+                      style={{
+                        width: "100%",
+                        maxWidth: "350px",
+                        margin: "-30px 0 20px 0",
+                      }}
+                    />
                     <a className="h4">Digital Artist of the Year (2021)</a>
                     <p className="fs-18">
                       Micha Klein was chosen by the NFT community and cemented
@@ -1605,7 +1599,13 @@ export default function Home() {
           </div>
         </section>
 
-        <section style={{ width: "50%", margin: "100px auto" }}>
+        <section
+          style={{
+            width: "70%",
+            margin: "100px auto",
+            color: "#999!important",
+          }}
+        >
           <Grid item xs={12}>
             <Typography variant="h4" component="p" align="center">
               Terms &amp; Conditions
@@ -1664,23 +1664,22 @@ export default function Home() {
               ownership of any Crypto-Pill.
               <br />
               <strong>2. Personal Use.</strong> <br />
-              Subject to your continued compliance with these Terms,
-              Crypto Pills grants you a worldwide, royalty-free license to use,
-              copy, display, and print out the purchased Art in any medium,
-              solely for the following purposes: (<b>A</b>) for your own
-              personal, non-commercial use; (<b>B</b>) as part of a marketplace
-              that permits the purchase and sale of your Crypto-Pill / NFT,
-              provided that the marketplace cryptographically verifies each
-              Crypto Pills owner’s rights to display the Art for their
-              Crypto-Pill to ensure that only the actual owner can display the
-              Art; or (<b>C</b>) as part of a third party website or application
-              that permits the inclusion, involvement, or participation of your
-              Crypto-Pill, provided that the website/application
-              cryptographically verifies each Crypto Pills owner’s rights to
-              display the Art for their Crypto Pills, to ensure that only the
-              actual owner can display the Art, and provided that the Art is no
-              longer visible once the owner of the Crypto-Pill leaves the
-              website/application.
+              Subject to your continued compliance with these Terms, Crypto
+              Pills grants you a worldwide, royalty-free license to use, copy,
+              display, and print out the purchased Art in any medium, solely for
+              the following purposes: (<b>A</b>) for your own personal,
+              non-commercial use; (<b>B</b>) as part of a marketplace that
+              permits the purchase and sale of your Crypto-Pill / NFT, provided
+              that the marketplace cryptographically verifies each Crypto Pills
+              owner’s rights to display the Art for their Crypto-Pill to ensure
+              that only the actual owner can display the Art; or (<b>C</b>) as
+              part of a third party website or application that permits the
+              inclusion, involvement, or participation of your Crypto-Pill,
+              provided that the website/application cryptographically verifies
+              each Crypto Pills owner’s rights to display the Art for their
+              Crypto Pills, to ensure that only the actual owner can display the
+              Art, and provided that the Art is no longer visible once the owner
+              of the Crypto-Pill leaves the website/application.
               <br />
               <strong>3. Disclaimer</strong>
               <br />

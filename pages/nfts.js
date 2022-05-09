@@ -3,21 +3,10 @@ import { useWeb3React } from "@web3-react/core";
 import { useEagerConnect, useInactiveListener } from "../hooks/web3-react";
 import Head from "next/head";
 import { useRouter } from "next/router";
-
 import React from "react";
 import { styled, useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-import {
-  Link,
-  Typography,
-  Container,
-  Button,
-  Grid,
-  Box,
-  TextField,
-  Stack,
-} from "@material-ui/core";
-
+import { Typography, Container, Button, Box } from "@material-ui/core";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import useStyles from "../themes/useStyles";
@@ -43,18 +32,6 @@ const ImageIconButton = styled(Button)(({ theme }) => ({
     width: "100% !important",
     height: 100,
   },
-  // "&:hover": {
-  //   zIndex: 1,
-  // },
-  // "&:hover .imageBackdrop": {
-  //   opacity: 0.15,
-  // },
-  // "&:hover .imageMarked": {
-  //   opacity: 0,
-  // },
-  // "&:hover .imageTitle": {
-  //   background: "white",
-  // },
   "& .imageTitle": {
     position: "relative",
     padding: "0 30px",
@@ -181,7 +158,7 @@ export default function Home() {
 
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
-  const [moedas, setMoedas] = useState([]);
+  const [nfts, setNfts] = useState([]);
   const limit = 32;
   const options = { method: "GET" };
 
@@ -192,14 +169,14 @@ export default function Home() {
     )
       .then((response) => response.json())
       .then((response) => {
-        setMoedas(response.bundles);
+        setNfts(response.bundles);
         console.log(response.bundles[0]);
-        console.log(moedas);
+        console.log(nfts);
       })
       .catch((err) => console.error(err));
   }, []);
 
-  const filteredMoedas = moedas.filter((moeda) => moeda);
+  const filteredNfts = nfts.filter((nft) => nft);
 
   return (
     <>
@@ -251,13 +228,13 @@ export default function Home() {
 
         <Container maxWidth="lg" sx={{ mt: 8, mb: 4 }}>
           <Box sx={{ mt: 8, display: "flex", flexWrap: "wrap" }}>
-            {filteredMoedas.map((moeda, index) => {
+            {filteredNfts.map((nft, index) => {
               return (
                 index < 48 && (
                   <ImageIconButton
-                    href={moeda.assets[0].permalink}
+                    href={nft.assets[0].permalink}
                     style={{
-                      width: '25%'
+                      width: "25%",
                     }}
                   >
                     <Box
@@ -269,9 +246,9 @@ export default function Home() {
                         bottom: 0,
                         backgroundSize: "cover",
                         backgroundPosition: "center 40%",
-                        backgroundImage: `url(${moeda.assets[0].image_url})`,
-                        borderRadius: '30px',
-                        margin: '0.5rem'
+                        backgroundImage: `url(${nft.assets[0].image_url})`,
+                        borderRadius: "30px",
+                        margin: "0.5rem",
                       }}
                     />
                     {/* <ImageBackdrop className="imageBackdrop" /> */}

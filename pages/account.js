@@ -77,10 +77,6 @@ export default function Account() {
       "0xb41f146670ce3dedac51d79956cd5e292be26ec4"
   );
 
-  console.log(username);
-  console.log(nfts);
-  console.log(howmany);
-
   useEffect(() => {
     setHowmany(filteredNfts.length);
   }, [filteredNfts]);
@@ -108,7 +104,7 @@ export default function Account() {
         <title>Your Pillman Account | Crypto Pills</title>
         <meta
           name="description"
-          content="Micha Klein’s digital art has been around for over 30 years, and is not going away."
+          content="Micha Klein's digital art has been around for over 30 years, and is not going away."
         />
       </Head>
       <Container

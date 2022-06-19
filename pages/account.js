@@ -98,6 +98,10 @@ export default function Account() {
     welcome = "Good evening";
   }
 
+  function mintAnthem() {
+    CryptoPillsAnthemContract.connect(signer).mint();
+  }
+
   return (
     <>
       <Head>
@@ -185,9 +189,7 @@ export default function Account() {
                           <br />
                           <br />
                           <a
-                            onClick={CryptoPillsAnthemContract.connect(
-                              signer
-                            ).mint()}
+                            onClick={mintAnthem}
                             className="btn-action style-3"
                           >
                             Mint Cryto Pills Anthem

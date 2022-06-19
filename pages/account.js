@@ -14,17 +14,8 @@ import Footer from "../components/Footer/Footer";
 import useStyles from "../themes/useStyles";
 
 export default function Account() {
-  const {
-    connector,
-    library,
-    chainId,
-    account,
-    activate,
-    deactivate,
-    active,
-    error,
-  } = useWeb3React();
-  const { CryptoPillsContract, signer } = useContract();
+  const { account } = useWeb3React();
+  const { CryptoPillsAnthemContract, signer } = useContract();
 
   const { enqueueSnackbar, closeSnackbar } = useSnackbar();
   const displayMessage = (msg, variant) => {
@@ -44,8 +35,8 @@ export default function Account() {
   const [isOwner, setIsOwner] = React.useState(false);
 
   useEffect(() => {
-    if (!!CryptoPillsContract) {
-      CryptoPillsContract.owner()
+    if (!!CryptoPillsAnthemContract) {
+      CryptoPillsAnthemContract.owner()
         .then((value) => {
           setIsOwner(value === account);
         })
@@ -53,218 +44,7 @@ export default function Account() {
     } else {
       displayMessage("Can't find contract", "warning");
     }
-  }, [CryptoPillsContract, account]);
-
-  const [contractData, setContractData] = React.useState({
-    isOwner: false,
-    preSaleActive: false,
-    saleActive: false,
-    baseUri: null,
-    ownerAddress: null,
-    ownedTokens: 0,
-    contractBalance: ethers.BigNumber.from(0),
-  });
-
-  const updateContractData = () => {
-    if (!!CryptoPillsContract) {
-      let p1 = CryptoPillsContract.owner();
-      let p2 = CryptoPillsContract.preSaleActive();
-      let p3 = CryptoPillsContract.saleActive();
-      let p4 = CryptoPillsContract.baseURI();
-      let p5 = CryptoPillsContract.balanceOf(account);
-      let p6 = library.getBalance(CryptoPillsContract.address);
-
-      Promise.all([p1, p2, p3, p4, p5, p6])
-        .then((values) => {
-          setContractData({
-            isOwner: values[0] === account,
-            ownerAddress: values[0],
-            preSaleActive: values[1],
-            saleActive: values[2],
-            baseUri: values[3],
-            ownedTokens: values[4].toNumber(),
-            contractBalance: values[5],
-          });
-        })
-        .catch((error) => displayMessage(error, "error"));
-    } else {
-      console.warn("Can't find smart contract");
-    }
-  };
-
-  useEffect(updateContractData, [CryptoPillsContract, account]);
-
-  const [tokensMinted, setTokensMinted] = React.useState(0);
-
-  const transferEventListener = (from, to, tokenId) => {
-    CryptoPillsContract.totalSupply()
-      .then((value) => setTokensMinted(value.toNumber()))
-      .catch((error) =>
-        displayMessage(
-          `Error retrieving total supply: ${getErrorMessage(error)}`,
-          "error"
-        )
-      );
-  };
-
-  useEffect(() => {
-    if (!!CryptoPillsContract) {
-      CryptoPillsContract.totalSupply()
-        .then((value) => setTokensMinted(value.toNumber()))
-        .catch((error) =>
-          displayMessage(
-            `Error retrieving total supply: ${getErrorMessage(error)}`,
-            "error"
-          )
-        );
-
-      CryptoPillsContract.on("Transfer", transferEventListener);
-
-      return () => CryptoPillsContract.off("Transfer", transferEventListener);
-    } else {
-      console.warn("Can't find smart contract");
-      //setErrorMessage("Contract doesn't exist");
-    }
-  }, [CryptoPillsContract]);
-
-  const [processing, setProcessing] = React.useState(false);
-
-  const [newBaseUri, setNewBaseUri] = React.useState("");
-
-  const setBaseUri = () => {
-    if (!processing) {
-      if (active) {
-        setProcessing(true);
-
-        CryptoPillsContract.connect(signer)
-          .setBaseURI(newBaseUri)
-          .catch((error) =>
-            displayMessage(getTransactionErrorMessage(error), "error")
-          )
-          .then((transaction) => {
-            transaction.wait().then((receipt) => {
-              updateContractData();
-            });
-            setProcessing(false);
-          });
-      }
-    }
-  };
-
-  const withdrawFunds = () => {
-    if (!processing) {
-      if (active) {
-        setProcessing(true);
-
-        CryptoPillsContract.connect(signer)
-          .withdraw()
-          .catch((error) =>
-            displayMessage(getTransactionErrorMessage(error), "error")
-          )
-          .then((transaction) => {
-            transaction.wait().then((receipt) => {
-              updateContractData();
-            });
-            setProcessing(false);
-          });
-      }
-    }
-  };
-
-  const [newOwnerAddress, setNewOwnerAddress] = React.useState("");
-
-  const transferOwnership = () => {
-    if (!processing) {
-      if (active) {
-        setProcessing(true);
-
-        CryptoPillsContract.connect(signer)
-          .transferOwnership(newOwnerAddress)
-          .catch((error) =>
-            displayMessage(getTransactionErrorMessage(error), "error")
-          )
-          .then((transaction) => {
-            transaction.wait().then((receipt) => {
-              updateContractData();
-            });
-            setProcessing(false);
-          });
-      }
-    }
-  };
-
-  const [tokensToReserve, setTokensToReserve] = React.useState(0);
-
-  const reserveTokens = () => {
-    if (!processing) {
-      if (active) {
-        setProcessing(true);
-
-        CryptoPillsContract.connect(signer)
-          .reserve(tokensToReserve)
-          .catch((error) =>
-            displayMessage(getTransactionErrorMessage(error), "error")
-          )
-          .then((transaction) => {
-            transaction.wait().then((receipt) => {
-              updateContractData();
-            });
-            setProcessing(false);
-          });
-      }
-    }
-  };
-
-  const [newWhitelistAddress, setNewWhitelistAddress] = React.useState("");
-
-  const addToWhitelist = () => {
-    if (!processing) {
-      if (active) {
-        setProcessing(true);
-
-        CryptoPillsContract.connect(signer)
-          .addToWhitelist([newWhitelistAddress])
-          .catch((error) =>
-            displayMessage(getTransactionErrorMessage(error), "error")
-          )
-          .then((transaction) => {
-            displayMessage(`adding address`, "info");
-            transaction.wait().then((receipt) => {
-              displayMessage(`address added`, "success");
-              setNewWhitelistAddress("");
-            });
-            setProcessing(false);
-          });
-      }
-    }
-  };
-
-  const [checkWhitelistAddress, setCheckWhitelistAddress] = React.useState("");
-
-  const checkWhitelist = () => {
-    if (!processing) {
-      if (active) {
-        setProcessing(true);
-
-        CryptoPillsContract.connect(signer)
-          .isOnWhitelist(checkWhitelistAddress)
-          .then((isOnWhitelist) => {
-            displayMessage(
-              `${checkWhitelistAddress} is ${
-                isOnWhitelist ? "" : "not"
-              } on the whitelist.`,
-              isOnWhitelist ? "success" : "error"
-            );
-          })
-          .catch((error) =>
-            displayMessage(getTransactionErrorMessage(error), "error")
-          )
-          .then(() => {
-            setProcessing(false);
-          });
-      }
-    }
-  };
+  }, [CryptoPillsAnthemContract, account]);
 
   const [nfts, setNfts] = React.useState([]);
   const [username, setUsername] = React.useState([]);
@@ -275,7 +55,7 @@ export default function Account() {
   // 0xb41F146670Ce3DEdac51D79956Cd5E292be26EC4
 
   useEffect(() => {
-    if (!!CryptoPillsContract) {
+    if (!!CryptoPillsAnthemContract) {
       let accountAddress = "";
       accountAddress = account;
       fetch(
@@ -289,7 +69,7 @@ export default function Account() {
         })
         .catch((err) => console.error(err));
     }
-  }, [CryptoPillsContract, account]);
+  }, [CryptoPillsAnthemContract, account]);
 
   const filteredNfts = nfts.filter(
     (nft) =>
@@ -338,7 +118,7 @@ export default function Account() {
         className={classes.root}
       >
         <Header />
-        {!CryptoPillsContract ? (
+        {!CryptoPillsAnthemContract ? (
           <>
             <section className="tf-section page-title mt-50">
               <div className="container">
@@ -397,20 +177,24 @@ export default function Account() {
                                 display: "block",
                               }}
                             >
-                              {username}
+                              {/* {( username ? username : <></>)} */}
                             </span>
                           </h3>
                           <h5 className="fs-24 mb-10">
-                            You have {howmany} Pillman - that's awesome.
+                            You have {howmany} Pillman - that's awesome 💊
                           </h5>
                           <h5 className="fs-24 mb-10">
-                            Mint new collections for free because you're
-                            amazing!
+                            You can now mint the Crypto Pills Anthem for free 🎵
                           </h5>
                           <br />
                           <br />
-                          <a href="/play" className="btn-action style-3">
-                            Play Pillman Origins
+                          <a
+                            onClick={CryptoPillsAnthemContract.connect(
+                              signer
+                            ).mint()}
+                            className="btn-action style-3"
+                          >
+                            Mint Cryto Pills Anthem
                           </a>
                         </>
                       )}
@@ -507,7 +291,7 @@ export default function Account() {
                             data-aos="fade-up"
                             data-aos-duration={1200}
                           >
-                            Visit Exclusive Store
+                            Visit DropThePill Store
                           </a>
                         </div>
                       </div>
@@ -558,403 +342,7 @@ export default function Account() {
             )}
           </>
         )}
-
-        {/* <Container
-          maxWidth={false}
-          component="div"
-          className={classes.bannerSection}
-        >
-          <Typography variant="h3" component="p" className={classes.title}>
-          Welcome @{username}
-          </Typography>
-          <Typography variant="h3" component="p" className={classes.title}>
-           {(CryptoPillsContract ? `You have ${howmany} Crypto Pills` : "You don't have any Crypto Pills")}
-           <span style={{display: 'block', margin: '1.5rem'}}>💊😊</span>
-          </Typography>
-          <br />
-          <Grid item sx={12} md={12} className={classes.gridCell}>
-          {filteredNfts.reverse().map((nft, index) => {
-            return (
-              index < 6 && (
-                <>
-                  <a href={nft.permalink} target="_blank" rel="noopener">
-                    <img
-                      src={nft.image_url}
-                      width="190"
-                      style={{
-                        display: "inline-block",
-                        margin: "0.4rem",
-                        borderRadius: "15px",
-                      }}
-                    />
-                  </a>
-                </>
-              )
-            );
-          })}
-          </Grid>
-          <br/>
-          <Typography
-            variant="body2"
-            component="p"
-            className={classes.subtitle}
-          >
-            {(CryptoPillsContract ? `You are officially a Gold Member, because you are the owner of ${howmany} Crypto Pills.` : "If you own a Crypto Pill, you can become an exclusive member of the community and mint for free.")}
-            
-          </Typography>
-          <br />
-          <Typography
-            variant="body2"
-            component="p"
-            className={classes.subtitle}
-          >
-            {(CryptoPillsContract ? `Mint some of the rarest and best for FREE - you're amazing!` : `Mint our new 3D Crypto Pills for 0.1 ETH` )}
-            
-          </Typography>
-          <Button
-            variant="contained"
-            color="secondary"
-            className={classes.openSea}
-            onClick={() => alert("Coming soon!")}
-          >
-            {(CryptoPillsContract ? "Mint 3D Crypto Pill for FREE" : "Mint 3D Crypto Pill for 0.1 ETH" )}
-          </Button>
-        </Container> */}
       </Container>
-
-      {/* <Grid item sx={12} md={12} className={classes.gridCell}>
-            <Typography
-              variant="h4"
-              component="p"
-              align="center"
-            >{`Tokens Minted: ${tokensMinted}`}</Typography>
-          </Grid>
-
-          <Grid item sx={12} md={12}>
-            <Divider />
-          </Grid>
-
-          <Grid item sx={12} md={5} className={classes.gridCell}>
-            <Typography
-              variant="body1"
-              component="p"
-              className={classes.textValue}
-            >{`Pre-sale is currently ${
-              contractData.preSaleActive ? "active" : "inactive"
-            }`}</Typography>
-          </Grid>
-          <Grid item sx={12} md={3} className={classes.gridCell}></Grid>
-          <Grid item sx={12} md={4} className={classes.gridCell}>
-            <Typography
-              variant="body1"
-              component="p"
-              className={classes.textValue}
-            >{`Sale is currently ${
-              contractData.saleActive ? "active" : "inactive"
-            }`}</Typography>
-          </Grid>
-
-          <Grid item sx={12} md={12}>
-            <Divider />
-          </Grid>
-
-          <Grid item sx={12} md={5} className={classes.gridCell}>
-            <TextField
-              fullWidth
-              variant="outlined"
-              label="Base URI"
-              className={classes.input}
-              value={newBaseUri}
-              onChange={(e) => setNewBaseUri(e.target.value)}
-            />
-          </Grid>
-          <Grid item sx={12} md={3} className={classes.gridCell}>
-            <Button
-              variant="contained"
-              disabled={!active || !isOwner}
-              onClick={setBaseUri}
-              className={classes.button}
-            >
-              Set Base URI
-            </Button>
-          </Grid>
-          <Grid item sx={12} md={4} className={classes.gridCell}>
-            <Typography
-              variant="body1"
-              component="p"
-              className={classes.textValue}
-            >
-              {contractData.baseUri}
-            </Typography>
-          </Grid>
-
-          <Grid item sx={12} md={12}>
-            <Divider />
-          </Grid>
-
-          <Grid item sx={12} md={5} className={classes.gridCell}>
-            <Typography
-              variant="body1"
-              component="p"
-              className={classes.textValue}
-            >
-              Current contract balance:{" "}
-              {ethers.utils.formatUnits(contractData.contractBalance, "ether")}
-            </Typography>
-          </Grid>
-          <Grid item sx={12} md={3} className={classes.gridCell}>
-            <Button
-              variant="contained"
-              disabled={!active || !isOwner}
-              onClick={withdrawFunds}
-              className={classes.button}
-            >
-              Withdraw Funds
-            </Button>
-          </Grid>
-          <Grid item sx={12} md={4} className={classes.gridCell}>
-            <Typography
-              variant="body1"
-              component="p"
-              className={classes.textValue}
-            >
-              Withdraw to {contractData.ownerAddress}
-            </Typography>
-          </Grid>
-
-          <Grid item sx={12} md={12}>
-            <Divider />
-          </Grid>
-
-          <Grid item sx={12} md={5} className={classes.gridCell}>
-            <TextField
-              fullWidth
-              variant="outlined"
-              label="New Owner Wallet"
-              className={classes.input}
-              value={newOwnerAddress}
-              onChange={(e) => setNewOwnerAddress(e.target.value)}
-            />
-          </Grid>
-          <Grid item sx={12} md={3} className={classes.gridCell}>
-            <Button
-              variant="contained"
-              disabled={!active || !isOwner}
-              onClick={transferOwnership}
-              className={classes.button}
-            >
-              Transfer Ownership
-            </Button>
-          </Grid>
-          <Grid item sx={12} md={4} className={classes.gridCell}>
-            <Typography
-              variant="body1"
-              component="p"
-              className={classes.textValue}
-            >
-              {contractData.ownerAddress}
-            </Typography>
-          </Grid>
-
-          <Grid item sx={12} md={12}>
-            <Divider />
-          </Grid>
-
-          <Grid item sx={12} md={5} className={classes.gridCell}>
-            <TextField
-              fullWidth
-              variant="outlined"
-              type="number"
-              label="# Tokens To Reserve"
-              className={classes.input}
-              value={tokensToReserve}
-              onChange={(e) => setTokensToReserve(e.target.value)}
-            />
-          </Grid>
-          <Grid item sx={12} md={3} className={classes.gridCell}>
-            <Button
-              variant="contained"
-              disabled={!active || !isOwner}
-              onClick={reserveTokens}
-              className={classes.button}
-            >
-              Reserve Tokens
-            </Button>
-          </Grid>
-          <Grid item sx={12} md={4} className={classes.gridCell}>
-            <Typography
-              variant="body1"
-              component="p"
-              className={classes.textValue}
-            >{`You currently hold ${contractData.ownedTokens} NFTs`}</Typography>
-          </Grid>
-
-          <Grid item sx={12} md={12}>
-            <Divider />
-          </Grid>
-
-          <Grid item sx={12} md={5} className={classes.gridCell}>
-            <TextField
-              fullWidth
-              variant="outlined"
-              label="Add Whitelist Address"
-              className={classes.input}
-              value={newWhitelistAddress}
-              onChange={(e) => setNewWhitelistAddress(e.target.value)}
-            />
-          </Grid>
-          <Grid item sx={12} md={3} className={classes.gridCell}>
-            <Button
-              variant="contained"
-              disabled={!active || !isOwner}
-              onClick={() => addToWhitelist()}
-              className={classes.button}
-            >
-              Submit Whitelist
-            </Button>
-          </Grid>
-          <Grid item sx={12} md={4} className={classes.gridCell}></Grid>
-
-          <Grid item sx={12} md={12}>
-            <Divider />
-          </Grid>
-
-          <Grid item sx={12} md={5} className={classes.gridCell}>
-            <TextField
-              fullWidth
-              variant="outlined"
-              label="Check Whitelist Address"
-              className={classes.input}
-              value={checkWhitelistAddress}
-              onChange={(e) => setCheckWhitelistAddress(e.target.value)}
-            />
-          </Grid>
-          <Grid item sx={12} md={3} className={classes.gridCell}>
-            <Button
-              variant="contained"
-              disabled={!active || !isOwner}
-              onClick={() => checkWhitelist()}
-              className={classes.button}
-            >
-              Check Whitelist
-            </Button>
-          </Grid>
-          <Grid item sx={12} md={4} className={classes.gridCell}></Grid>
-          <Grid item sx={12} md={5} className={classes.gridCell}>
-            <TextField
-              fullWidth
-              variant="outlined"
-              label="New Owner Wallet"
-              className={classes.input}
-              value={newOwnerAddress}
-              onChange={(e) => setNewOwnerAddress(e.target.value)}
-            />
-          </Grid>
-          <Grid item sx={12} md={3} className={classes.gridCell}>
-            <Button
-              variant="contained"
-              disabled={!active || !isOwner}
-              onClick={transferOwnership}
-              className={classes.button}
-            >
-              Transfer Ownership
-            </Button>
-          </Grid>
-          <Grid item sx={12} md={4} className={classes.gridCell}>
-            <Typography
-              variant="body1"
-              component="p"
-              className={classes.textValue}
-            >
-              {contractData.ownerAddress}
-            </Typography>
-          </Grid>
-
-          <Grid item sx={12} md={12}>
-            <Divider />
-          </Grid>
-
-          <Grid item sx={12} md={5} className={classes.gridCell}>
-            <TextField
-              fullWidth
-              variant="outlined"
-              type="number"
-              label="# Tokens To Reserve"
-              className={classes.input}
-              value={tokensToReserve}
-              onChange={(e) => setTokensToReserve(e.target.value)}
-            />
-          </Grid>
-          <Grid item sx={12} md={3} className={classes.gridCell}>
-            <Button
-              variant="contained"
-              disabled={!active || !isOwner}
-              onClick={reserveTokens}
-              className={classes.button}
-            >
-              Reserve Tokens
-            </Button>
-          </Grid>
-          <Grid item sx={12} md={4} className={classes.gridCell}>
-            <Typography
-              variant="body1"
-              component="p"
-              className={classes.textValue}
-            >{`You currently hold ${contractData.ownedTokens} NFTs`}</Typography>
-          </Grid>
-
-          <Grid item sx={12} md={12}>
-            <Divider />
-          </Grid>
-
-          <Grid item sx={12} md={5} className={classes.gridCell}>
-            <TextField
-              fullWidth
-              variant="outlined"
-              label="Add Whitelist Address"
-              className={classes.input}
-              value={newWhitelistAddress}
-              onChange={(e) => setNewWhitelistAddress(e.target.value)}
-            />
-          </Grid>
-          <Grid item sx={12} md={3} className={classes.gridCell}>
-            <Button
-              variant="contained"
-              disabled={!active || !isOwner}
-              onClick={() => addToWhitelist()}
-              className={classes.button}
-            >
-              Submit Whitelist
-            </Button>
-          </Grid>
-          <Grid item sx={12} md={4} className={classes.gridCell}></Grid>
-
-          <Grid item sx={12} md={12}>
-            <Divider />
-          </Grid>
-
-          <Grid item sx={12} md={5} className={classes.gridCell}>
-            <TextField
-              fullWidth
-              variant="outlined"
-              label="Check Whitelist Address"
-              className={classes.input}
-              value={checkWhitelistAddress}
-              onChange={(e) => setCheckWhitelistAddress(e.target.value)}
-            />
-          </Grid>
-          <Grid item sx={12} md={3} className={classes.gridCell}>
-            <Button
-              variant="contained"
-              disabled={!active || !isOwner}
-              onClick={() => checkWhitelist()}
-              className={classes.button}
-            >
-              Check Whitelist
-            </Button>
-          </Grid>
-          <Grid item sx={12} md={4} className={classes.gridCell}></Grid>
-        </Grid> */}
       <Footer />
     </>
   );

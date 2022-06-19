@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useMemo } from 'react'
 import { useWeb3React } from '@web3-react/core';
 import { ethers } from 'ethers'
-import CryptoPills_ABI from '../contracts/CryptoPills.json'
+import CryptoPillsAnthem_ABI from '../contracts/CryptoPillsAnthem.json'
 import contractAddresses from '../contracts/contract-address.json'
 
 const networkNames = {
@@ -9,26 +9,26 @@ const networkNames = {
   4: "rinkeby",
 }
 
-const CryptoPillsContractContext = createContext({
+const CryptoPillsAnthemContractContext = createContext({
   signer: null,
-  CryptoPillsContract: null
+  CryptoPillsAnthemContract: null
 })
 
-export const CryptoPillsContractProvider = ({ children }) => {
+export const CryptoPillsAnthemContractProvider = ({ children }) => {
 
-  CryptoPillsContractContext.displayName = `CryptoPillsContractContext`
+  CryptoPillsAnthemContractContext.displayName = `CryptoPillsAnthemContractContext`
 
   const { library, chainId } = useWeb3React();
 
-  const CryptoPillsContract = useMemo(() => {
+  const CryptoPillsAnthemContract = useMemo(() => {
     if (chainId !== undefined && Number.isInteger(chainId) && library !== undefined) {
         let networkName = networkNames[chainId];
-        let address = contractAddresses[networkName]?.CryptoPills;
+        let address = contractAddresses[networkName]?.CryptoPillsAnthem;
         
         if (!address) return undefined;
       
         try {
-          return new ethers.Contract(address, CryptoPills_ABI.abi, library);
+          return new ethers.Contract(address, CryptoPillsAnthem_ABI.abi, library);
         } catch(error) {
           console.error('Failed to get contract', error)
         }
@@ -46,13 +46,13 @@ export const CryptoPillsContractProvider = ({ children }) => {
   )
 
   const contractContext = {
-    CryptoPillsContract,
+    CryptoPillsAnthemContract,
     signer
   }
 
-  return <CryptoPillsContractContext.Provider value={contractContext}>{children}</CryptoPillsContractContext.Provider>
+  return <CryptoPillsAnthemContractContext.Provider value={contractContext}>{children}</CryptoPillsAnthemContractContext.Provider>
 }
 
 export function useContract() {
-  return useContext(CryptoPillsContractContext)
+  return useContext(CryptoPillsAnthemContractContext)
 }

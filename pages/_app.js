@@ -1,6 +1,6 @@
 import React from "react";
 import { Web3ReactProvider } from "@web3-react/core";
-import { CryptoPillsContractProvider } from "../contexts/contractProvider";
+import { CryptoPillsAnthemContractProvider } from "../contexts/contractProvider";
 import { SnackbarProvider } from "notistack";
 import { ethers } from "ethers";
 
@@ -71,17 +71,14 @@ function MyApp({ Component, pageProps }) {
         />
         <link rel="stylesheet" href="/font/font-awesome.css" />
         <link href="/dist/aos.css" rel="stylesheet" />
-
-        {/* <link rel="stylesheet" href="/dist/swiper-bundle.min.css" /> */}
       </Head>
       <ThemeProvider theme={theme}>
-        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
         <SnackbarProvider maxSnack={3}>
           <Web3ReactProvider getLibrary={getLibrary}>
-            <CryptoPillsContractProvider>
+            <CryptoPillsAnthemContractProvider>
               <Component {...pageProps} />
-            </CryptoPillsContractProvider>
+            </CryptoPillsAnthemContractProvider>
           </Web3ReactProvider>
         </SnackbarProvider>
       </ThemeProvider>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Head from "next/head";
 import { Link, Container } from "@material-ui/core";
 import { TwitterIcon, DiscordIcon, InstagramIcon } from "../components/Icons";

@@ -35,7 +35,7 @@ h6,
 .h6 {
   font-family: "vag-rounded-regular";
   font-weight: bold;
-  line-height: 1.2;
+  line-height: 1.5;
 }
 
 h2,
@@ -278,7 +278,6 @@ h6,
 }
 
 @media only screen and (max-width: 1024px) {
-
   .title-text {
     width: 100%;
   }
@@ -1960,7 +1959,7 @@ a:hover {
   .section-speciality__box {
     display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     flex-wrap: wrap;
     text-align: center;
   }
@@ -2372,8 +2371,8 @@ a:hover {
 }
 
 .incomplete {
-  background: #bfd7ea!important;
-  display: none!important;
+  background: #bfd7ea !important;
+  display: none !important;
 }
 
 .road-map__content .box-time span i {
@@ -4070,7 +4069,6 @@ a:hover {
 .rm-photo {
   display: inline;
   margin-top: -25px;
-
 }
 .rm-icon {
   width: 80px;
@@ -4082,7 +4080,7 @@ a:hover {
     right: auto !important;
   }
   .hide-mb {
-    display: none!important;
+    display: none !important;
   }
 }
 
@@ -4099,13 +4097,13 @@ a:hover {
 
 @media only screen and (max-width: 768px) {
   .hide-sm {
-    display: none!important;
+    display: none !important;
   }
   .show-sm {
-    display: block!important;
+    display: block !important;
   }
   .pl-30 {
-    padding-left: 0!important;
+    padding-left: 0 !important;
   }
   .os-photo {
     width: 100px;
@@ -4115,10 +4113,10 @@ a:hover {
     height: 170px;
   }
   .full-width {
-    width: 100%!important;
+    width: 100% !important;
   }
   .center-mb {
-    text-align: center!important;
+    text-align: center !important;
   }
   .rm-photo {
     margin: 0 auto;
@@ -4404,7 +4402,16 @@ a:hover {
 }
 
 .whitetext {
-  color: #FFF!important;
+  color: #fff !important;
+}
+
+@media only screen and (max-width: 1024px) {
+  .mobile-friendly {
+    margin-top: 2rem;
+    width: 100%!important;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */

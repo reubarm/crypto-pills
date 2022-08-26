@@ -145,8 +145,9 @@ export default function Account() {
               <div className="container">
                 <div className="col-md-12">
                   <div className="page-title__body rm">
-                    <div className="block-text pt-12 center-mb">
-                      {/* {!yessir ? (
+                    <div className="col-md-6">
+                      <div className="block-text pt-12 center-mb">
+                        {/* {!yessir ? (
                         <>
                           <h3 className="sub-title mb-33">{welcome} </h3>
                           <h5 className="fs-24 mb-10">
@@ -165,29 +166,45 @@ export default function Account() {
                             View Collection on OpenSea
                           </a>
                         </>*/}
-                      {/* ) : ( */}
-                      <h3 className="sub-title mb-33">
-                        {welcome}
-                        <span
-                          style={{
-                            color: "#3b5397",
-                            fontSize: "23px",
-                            margin: "0 0 20px",
-                            display: "block",
-                          }}
-                        >
-                          {/* {( username ? username : <></>)} */}
-                        </span>
-                      </h3>
+                        {/* ) : ( */}
+                        <h3 className="sub-title mb-33">
+                          {welcome}
+                          <span
+                            style={{
+                              color: "#3b5397",
+                              fontSize: "23px",
+                              margin: "0 0 20px",
+                              display: "block",
+                            }}
+                          >
+                            {/* {( username ? username : <></>)} */}
+                          </span>
+                        </h3>
 
-                      <h5 className="fs-24 mb-10">
-                        You can now mint the Crypto Pills Anthem for free 🎵
-                      </h5>
-                      <br />
-                      <br />
-                      <a onClick={mintAnthem} className="btn-action style-3">
-                        Mint Cryto Pills Anthem
-                      </a>
+                        <h5 className="fs-24 mb-10">
+                          To celebrate the 1 year anniversary of Crypto Pills,
+                          you have been given a free mint of the original 3D OG
+                          Pillman!
+                        </h5>
+                        <br />
+                        <br />
+                        {/* <a onClick={mintAnthem} className="btn-action style-3">
+                          Mint Cryto Pills Anthem
+                        </a> */}
+
+                   
+                        <nk-dropkit
+                          apikey="GJP6wpW1FkJzGiAsOQMk"
+                          mint-text="Mint 3D OG Pillman"
+                          style={{
+                            justifyContent: "flex-start",
+                            alignItems: "flex-start",
+                          }}
+                        />
+                      </div>
+                    </div>
+                    <div className="col-md-6">
+                      <img src="/mint.jpeg" className="mobile-friendly"/>
                     </div>
                   </div>
                 </div>

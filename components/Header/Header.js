@@ -92,6 +92,7 @@ export default function Header(props) {
               <img src="/images/pills-logo.jpeg" className={classes.logo} />
             </a>
             <div className={classes.grow} />
+            
             <Link
               variant="h6"
               color="textPrimary"
@@ -150,7 +151,16 @@ export default function Header(props) {
               <InstagramIcon style={{ fontSize: 18 }} />
             </Link>
           </Hidden>
+
           <WalletButton />
+          <Link
+              variant="h6"
+              color="textPrimary"
+              href="/account"
+              className={classes.headerLink}
+            >
+              <strong style={{color: '#4662b3'}}>Your Account</strong>
+            </Link>
         </Toolbar>
       </AppBar>
     </>

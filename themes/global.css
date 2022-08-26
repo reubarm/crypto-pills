@@ -4134,6 +4134,14 @@ a:hover {
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
 }
+.page-title__body.lm img {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: auto;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
 .page-title__body.rm img.s2 {
   right: 129px;
 }
@@ -4412,6 +4420,10 @@ a:hover {
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
   }
+}
+
+.mlauto {
+  margin-left: auto!important;
 }
 
 /*# sourceMappingURL=app.css.map */

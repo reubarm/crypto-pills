@@ -167,24 +167,12 @@ export default function Account() {
                           </a>
                         </>*/}
                         {/* ) : ( */}
-                        <h3 className="sub-title mb-33">
-                          {welcome}
-                          <span
-                            style={{
-                              color: "#3b5397",
-                              fontSize: "23px",
-                              margin: "0 0 20px",
-                              display: "block",
-                            }}
-                          >
-                            {/* {( username ? username : <></>)} */}
-                          </span>
-                        </h3>
+                        <h3 className="sub-title mb-33">3D OG Pillman</h3>
 
                         <h5 className="fs-24 mb-10">
                           To celebrate the 1 year anniversary of Crypto Pills,
                           you have been given a free mint of the original 3D OG
-                          Pillman!
+                          Pillman, as featured at Eminem's 2000 Tour!
                         </h5>
                         <br />
                         <br />
@@ -200,7 +188,7 @@ export default function Account() {
                       </div>
                     </div>
                     <div className="col-md-6">
-                      <img src="/mint.jpeg" className="mobile-friendly" />
+                      <img src="/mint.jpeg" className="mobile-friendly" style={{borderTopLeftRadius: '30px', borderBottomLeftRadius: '30px'}}/>
                     </div>
                   </div>
                 </div>
@@ -211,16 +199,19 @@ export default function Account() {
                 <br />
 
                 <div className="col-md-12">
-                  <div className="page-title__body rm">
-                    <div className="col-md-12">
-                      <div className="block-text pt-12 center-mb text-center">
+                  <div className="page-title__body lm">
+                    <div className="col-md-6">
+                      <img src="/123.jpeg" className="mobile-friendly" style={{borderTopLeftRadius: '30px', borderBottomLeftRadius: '30px'}} />
+                    </div>
+                    <div className="col-md-6 mlauto">
+                      <div className="block-text pt-12 center-mb">
                         <h3 className="sub-title mb-33">Crypto Pills Anthem</h3>
 
                         <h5 className="fs-24 mb-10">
                           You can now mint the Crypto Pills Anthem for free 🎵
                         </h5>
 
-                        <a onClick={mintAnthem} className="btn-action style-3">
+                        <a onClick={mintAnthem} className="btn-action style-3" style={{background: '#2096f3', padding: '10px 40px', marginTop: '20px'}}>
                           Mint Cryto Pills Anthem
                         </a>
                         <br />

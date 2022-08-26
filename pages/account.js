@@ -188,11 +188,7 @@ export default function Account() {
                         </h5>
                         <br />
                         <br />
-                        {/* <a onClick={mintAnthem} className="btn-action style-3">
-                          Mint Cryto Pills Anthem
-                        </a> */}
 
-                   
                         <nk-dropkit
                           apikey="GJP6wpW1FkJzGiAsOQMk"
                           mint-text="Mint 3D OG Pillman"
@@ -204,7 +200,32 @@ export default function Account() {
                       </div>
                     </div>
                     <div className="col-md-6">
-                      <img src="/mint.jpeg" className="mobile-friendly"/>
+                      <img src="/mint.jpeg" className="mobile-friendly" />
+                    </div>
+                  </div>
+                </div>
+
+                <br />
+                <br />
+                <br />
+                <br />
+
+                <div className="col-md-12">
+                  <div className="page-title__body rm">
+                    <div className="col-md-12">
+                      <div className="block-text pt-12 center-mb text-center">
+                        <h3 className="sub-title mb-33">Crypto Pills Anthem</h3>
+
+                        <h5 className="fs-24 mb-10">
+                          You can now mint the Crypto Pills Anthem for free 🎵
+                        </h5>
+
+                        <a onClick={mintAnthem} className="btn-action style-3">
+                          Mint Cryto Pills Anthem
+                        </a>
+                        <br />
+                        <br />
+                      </div>
                     </div>
                   </div>
                 </div>

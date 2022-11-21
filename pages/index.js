@@ -202,11 +202,11 @@ export default function Home() {
           <div className="container">
             <div className="row">
               <div className="col-12 show-sm">
-                <img
+                {/* <img
                   src="123.gif"
                   alt="Pillman 3D"
                   style={{ width: "100%", borderRadius: "30px" }}
-                />
+                /> */}
               </div>
               <div className="col-xl-6 col-md-6 col-12">
                 <div className="block-text pt-24 mt-27">
@@ -261,7 +261,7 @@ export default function Home() {
               <div className="col-xl-6 col-md-6 col-12 hide-sm">
                 <div className="content-right d-flex mt-107">
                   <div style={{ borderRadius: "30px", overflow: "hidden" }}>
-                    <ReactPlayer
+                    {/* <ReactPlayer
                       url="/123.mp4"
                       playing={true}
                       loop={true}
@@ -270,7 +270,7 @@ export default function Home() {
                       width="560"
                       height="640"
                       style={{ borderRadius: "30px" }}
-                    />
+                    /> */}
                   </div>
                 </div>
               </div>
